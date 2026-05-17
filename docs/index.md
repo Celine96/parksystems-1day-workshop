@@ -38,6 +38,10 @@ features:
     title: "2.4 외부 근거 자동 수집 (3교시 후반)"
     details: "학술 API로 매뉴얼 근거를 자동 수집"
     link: /part2/2-4-api
+  - icon: "📚"
+    title: "부록 — 4개 보기"
+    details: "슬래시 명령어 · 에이전트·하네스 깊이 · HTML 배포 · PRD"
+    link: /part3/3-1-commands
 ---
 
 ## 워크북 사용법
