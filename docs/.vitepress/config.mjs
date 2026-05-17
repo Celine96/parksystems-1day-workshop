@@ -46,7 +46,7 @@ export default defineConfig({
       {
         text: '부록 (본업 적용 참고)',
         items: [
-          { text: '9. 슬래시 명령어 레퍼런스', link: '/part3/3-1-commands' },
+          { text: '9. 자주쓰는 커맨드', link: '/part3/3-1-commands' },
           { text: '10. 에이전트 & 하네스 깊이', link: '/part3/3-2-agents-harness' },
           { text: '11. PRD — AI에게 줄 지시서', link: '/part3/3-4-prd' },
         ]
