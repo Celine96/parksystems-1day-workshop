@@ -40,7 +40,6 @@ You: 이 raw data 가지고 NX-Hybrid WLI Chapter 1 형식으로 매뉴얼 써�
 
 ```
 cd ~/Desktop/parksystems-workshop/5_매뉴얼
-claude
 ```
 > Windows: `cd C:\Users\USER\Desktop\parksystems-workshop\5_매뉴얼`
 
