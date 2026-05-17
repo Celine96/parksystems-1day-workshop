@@ -42,7 +42,7 @@
 
 ```
 [디자인 가이드 폴더]의 자료를 분석해서
-.claude/agents/Design-Applier.md 라는 비서 소개서를 만들어줘.
+.claude/agents/Design-Applier.md 라는 에이전트 소개서를 만들어줘.
 
 내용:
 - 회사 컬러 팔레트 (HEX 코드)
@@ -55,7 +55,7 @@
 ### Step 2. 디자인 적용한 HTML 생성
 
 ```
-Design-Applier 비서에게 우리 디자인 가이드대로
+Design-Applier 에이전트에게 우리 디자인 가이드대로
 output/Chapter1_Intro.md 를 디자인된 HTML 페이지로 만들어달라고 해줘.
 ```
 

@@ -21,14 +21,14 @@ export default defineConfig({
         ]
       },
       {
-        text: '시작 (30분)',
+        text: '시작',
         items: [
           { text: '1. 클로드 vs 클로드 코드', link: '/part1/1-1-intro' },
           { text: '2. 설치 및 첫 실행', link: '/part1/1-2-install' },
         ]
       },
       {
-        text: '메인 — 본 수업 (195분)',
+        text: '메인 — 본 수업',
         items: [
           { text: '3. 프로젝트 #1 : 파일 정리', link: '/part2/2-1-files' },
           { text: '4. 프로젝트 #2 : PM 에이전트', link: '/part2/2-2-pm-agent' },
