@@ -8,8 +8,9 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '홈', link: '/' },
-      { text: '0교시', link: '/part1/1-1-intro' },
-      { text: '본 수업', link: '/part2/2-1-files' },
+      { text: '시작', link: '/part1/1-1-intro' },
+      { text: '메인', link: '/part2/2-1-files' },
+      { text: '추가 실습', link: '/part3/3-3-publish' },
       { text: '부록', link: '/part3/3-1-commands' },
     ],
     sidebar: [
@@ -20,28 +21,34 @@ export default defineConfig({
         ]
       },
       {
-        text: '0교시: 입문',
+        text: '시작 (30분)',
         items: [
-          { text: '1.1 클로드 vs 클로드 코드', link: '/part1/1-1-intro' },
-          { text: '1.2 설치 및 첫 실행', link: '/part1/1-2-install' },
+          { text: '1. 클로드 vs 클로드 코드', link: '/part1/1-1-intro' },
+          { text: '2. 설치 및 첫 실행', link: '/part1/1-2-install' },
         ]
       },
       {
-        text: '본 수업',
+        text: '메인 — 본 수업 (195분)',
         items: [
-          { text: '2.1 파일 정리 (1교시)', link: '/part2/2-1-files' },
-          { text: '2.2 PM 에이전트 (2교시)', link: '/part2/2-2-pm-agent' },
-          { text: '2.3 사내 문체 매뉴얼 자동 생성 (3교시 전반)', link: '/part2/2-3-manual' },
-          { text: '2.4 외부 근거 자동 수집 (3교시 후반)', link: '/part2/2-4-api' },
+          { text: '3. 파일 정리', link: '/part2/2-1-files' },
+          { text: '4. PM 에이전트', link: '/part2/2-2-pm-agent' },
+          { text: '5. 사내 문체 매뉴얼 자동 생성', link: '/part2/2-3-manual' },
+          { text: '6. 외부 근거 자동 수집', link: '/part2/2-4-api' },
+          { text: '7. HTML 변환', link: '/part2/2-5-html' },
         ]
       },
       {
-        text: '부록',
+        text: '추가 실습 (워크숍 후)',
         items: [
-          { text: '3.1 슬래시 명령어 레퍼런스', link: '/part3/3-1-commands' },
-          { text: '3.2 에이전트 & 하네스 깊이', link: '/part3/3-2-agents-harness' },
-          { text: '3.3 추가 실습 — HTML 변환 & 배포', link: '/part3/3-3-publish' },
-          { text: '3.4 PRD — AI에게 줄 지시서', link: '/part3/3-4-prd' },
+          { text: '8. 배포 깊이 들어가기', link: '/part3/3-3-publish' },
+        ]
+      },
+      {
+        text: '부록 (본업 적용 참고)',
+        items: [
+          { text: '9. 슬래시 명령어 레퍼런스', link: '/part3/3-1-commands' },
+          { text: '10. 에이전트 & 하네스 깊이', link: '/part3/3-2-agents-harness' },
+          { text: '11. PRD — AI에게 줄 지시서', link: '/part3/3-4-prd' },
         ]
       }
     ],
