@@ -48,7 +48,7 @@ features:
     link: /part3/3-3-publish
   - icon: "📚"
     title: "부록 — 3개 보기"
-    details: "자주쓰는 커맨드 · 에이전트·하네스 깊이 · PRD"
+    details: "자주쓰는 커맨드 · PRD · 에이전트·하네스 깊이"
     link: /part3/3-1-commands
 ---
 
