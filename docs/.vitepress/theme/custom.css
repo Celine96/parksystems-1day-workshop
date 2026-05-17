@@ -1,0 +1,47 @@
+/* 마크다운 표만 대상 (인라인 style이 있는 HTML table은 제외) */
+table:not([style]) {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* 2컬럼 마크다운 표: 첫 번째 컬럼 좁게, 두 번째 넓게 */
+table:not([style]):not(:has(th:nth-child(3))) th:nth-child(1),
+table:not([style]):not(:has(th:nth-child(3))) td:nth-child(1) {
+  width: 25%;
+}
+
+table:not([style]):not(:has(th:nth-child(3))) th:nth-child(2),
+table:not([style]):not(:has(th:nth-child(3))) td:nth-child(2) {
+  width: 75%;
+}
+
+/* 3컬럼 이상 마크다운 표: 첫 번째 컬럼 넉넉하게, 나머지 균등 */
+table:not([style]):has(th:nth-child(3)) th:nth-child(1),
+table:not([style]):has(th:nth-child(3)) td:nth-child(1) {
+  width: 28%;
+  white-space: nowrap;
+}
+
+table:not([style]):has(th:nth-child(3)) th:nth-child(2),
+table:not([style]):has(th:nth-child(3)) td:nth-child(2),
+table:not([style]):has(th:nth-child(3)) th:nth-child(3),
+table:not([style]):has(th:nth-child(3)) td:nth-child(3) {
+  width: 36%;
+}
+
+/* 모바일 반응형: 표 가로 스크롤 */
+@media (max-width: 768px) {
+  .vp-doc table,
+  .vp-doc table[style] {
+    table-layout: auto;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .vp-doc table th,
+  .vp-doc table td {
+    width: auto !important;
+    min-width: auto !important;
+  }
+}

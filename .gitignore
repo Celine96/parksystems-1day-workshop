@@ -1,0 +1,9 @@
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+output/
+zip_temp/
+*.zip
+*.png
+!docs/public/images/*.png
+!images/*.png
