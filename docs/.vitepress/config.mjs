@@ -31,10 +31,10 @@ export default defineConfig({
         text: '메인 — 본 수업 (195분)',
         items: [
           { text: '3. 프로젝트 #1 : 파일 정리', link: '/part2/2-1-files' },
-          { text: '4. PM 에이전트', link: '/part2/2-2-pm-agent' },
-          { text: '5. 사내 문체 매뉴얼 자동 생성', link: '/part2/2-3-manual' },
-          { text: '6. 외부 근거 자동 수집', link: '/part2/2-4-api' },
-          { text: '7. HTML 변환', link: '/part2/2-5-html' },
+          { text: '4. 프로젝트 #2 : PM 에이전트', link: '/part2/2-2-pm-agent' },
+          { text: '5. 프로젝트 #3 : 사내 문체 매뉴얼 자동 생성', link: '/part2/2-3-manual' },
+          { text: '6. 프로젝트 #4 : 외부 근거 자동 수집', link: '/part2/2-4-api' },
+          { text: '7. 프로젝트 #5 : HTML 변환', link: '/part2/2-5-html' },
         ]
       },
       {
