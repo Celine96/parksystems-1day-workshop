@@ -23,7 +23,7 @@ features:
     details: "설치 → 로그인 → 첫 화면 확인 (시작)"
     link: /part1/1-2-install
   - icon: "📂"
-    title: "3. 파일 정리"
+    title: "3. 프로젝트 #1 : 파일 정리"
     details: "흩어진 폴더를 한 줄 명령으로 정리 (메인)"
     link: /part2/2-1-files
   - icon: "📋"
