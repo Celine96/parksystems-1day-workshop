@@ -35,11 +35,11 @@ features:
     details: "회사 매뉴얼 형식을 학습시켜 같은 톤으로 생성 (메인)"
     link: /part2/2-3-manual
   - icon: "🔍"
-    title: "6. 프로젝트 #4 : 외부 근거 자동 수집"
+    title: "6. 프로젝트 #4.1 : 외부 근거 자동 수집"
     details: "학술 API로 매뉴얼 근거를 자동 수집 (메인)"
     link: /part2/2-4-api
   - icon: "🌐"
-    title: "7. 프로젝트 #5 : HTML 변환"
+    title: "7. 프로젝트 #4.2 : HTML 변환"
     details: "매뉴얼을 누구나 볼 수 있는 웹페이지로 (메인)"
     link: /part2/2-5-html
   - icon: "🚀"
