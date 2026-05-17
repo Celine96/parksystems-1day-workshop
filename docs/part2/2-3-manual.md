@@ -61,8 +61,6 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
         └── NX-Interferom.txt
 ```
 
-Nimbalyst에서도 같은 폴더 열어두세요.
-
 ---
 
 ### Step 2. 매뉴얼 작가 에이전트 만들기 (15분)
