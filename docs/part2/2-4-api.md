@@ -59,11 +59,10 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 ### Step 1. 작업 폴더에서 시작 (1분)
 
-`5_매뉴얼` 폴더에서 계속 작업해요. (2.3에서 만든 매뉴얼 작가 비서가 살고 있는 곳)
+`5_매뉴얼` 폴더에서 계속 작업해요. (5번에서 만든 매뉴얼 작가 에이전트가 살고 있는 곳)
 
 ```
 cd ~/Desktop/parksystems-workshop/5_매뉴얼
-claude
 ```
 
 ---
