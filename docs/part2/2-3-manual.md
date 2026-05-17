@@ -46,15 +46,15 @@ You: 이 raw data 가지고 NX-Hybrid WLI Chapter 1 형식으로 매뉴얼 써�
 ### Step 1. 작업 폴더 확인 (3분)
 
 ```
-cd ~/Desktop/parksystems-workshop/3교시_매뉴얼
+cd ~/Desktop/parksystems-workshop/5_매뉴얼
 claude
 ```
-> Windows: `cd C:\Users\USER\Desktop\parksystems-workshop\3교시_매뉴얼`
+> Windows: `cd C:\Users\USER\Desktop\parksystems-workshop\5_매뉴얼`
 
 폴더 구조:
 
 ```
-3교시_매뉴얼/
+5_매뉴얼/
   ├── 형식/                  ← 회사 매뉴얼 형식 자료 (이미지 4개)
   │     ├── 매뉴얼 형식_Intro.png
   │     ├── 매뉴얼 형식_Preface.png
@@ -80,8 +80,8 @@ Nimbalyst에서도 같은 폴더 열어두세요.
 대화창에 입력:
 
 ```
-3교시_매뉴얼/형식/ 폴더의 이미지 4개와
-3교시_매뉴얼/실제_매뉴얼/ 폴더의 PDF 4개를 모두 봐줘.
+5_매뉴얼/형식/ 폴더의 이미지 4개와
+5_매뉴얼/실제_매뉴얼/ 폴더의 PDF 4개를 모두 봐줘.
 둘 다 우리 회사의 매뉴얼·문서 형식이야.
 
 각각에서 다음을 분석해줘:
@@ -123,7 +123,7 @@ Nimbalyst에서 `.claude/agents/Manual-Writer.md` 파일이 생성되는 걸 보
 
 ```
 Manual-Writer 에이전트를 호출해서,
-3교시_매뉴얼/raw_data/NX-Interferom.txt 의 내용을
+5_매뉴얼/raw_data/NX-Interferom.txt 의 내용을
 NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 형식으로 변환해줘.
 
@@ -131,7 +131,7 @@ NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 - 매뉴얼 형식_Intro.png 와 같은 톤·구조
 - 본문에서 raw data의 핵심 정보를 빠뜨리지 말 것
 - Figure 캡션 자리는 비워두고 (Figure 1.1 NX-Interferom) 정도만
-- 결과는 3교시_매뉴얼/output/Chapter1_Intro.md 로 저장
+- 결과는 5_매뉴얼/output/Chapter1_Intro.md 로 저장
 ```
 
 Nimbalyst를 보면 `output/Chapter1_Intro.md` 파일이 새로 생기는 게 보일 거예요.
@@ -169,7 +169,7 @@ Figure 1.1 NX-Interferom
 NX-Interferom 매뉴얼의 Preface 페이지를 만들어줘.
 형식은 매뉴얼 형식_Preface.png 의 톤·구조를 따라줘.
 5개 챕터 안내까지 포함해서.
-3교시_매뉴얼/output/Preface.md 로 저장.
+5_매뉴얼/output/Preface.md 로 저장.
 ```
 
 > ⏱️ 30초~1분. 사람이 Preface 한 페이지 만들 시간을 생각하면...
@@ -225,5 +225,5 @@ Manual-Writer 에이전트를 호출해서, [raw data 파일]을
 
 ---
 
-> 다음은 3교시 후반 — **2.4 외부 근거 자동 수집** (25분).
+> 다음은 6 — **외부 근거 자동 수집** (20분).
 > 매뉴얼 본문에 필요한 학술 근거를 외부 API로 자동 수집하는 패턴을 체험해볼 거예요. 마지막 5분엔 우리가 만든 매뉴얼을 **HTML 웹페이지로 변환**하는 미리보기도 있어요.

@@ -57,20 +57,20 @@ PM 비서가 하지 않는 일:
 
 ### Step 1. 작업 폴더 확인 (5분)
 
-`parksystems-workshop/2교시_PM에이전트/` 폴더로 이동하세요. (1교시에서 만든 RFM 구조를 미리 정리해둔 버전이에요.)
+`parksystems-workshop/4_PM에이전트/` 폴더로 이동하세요. (3번 파일 정리에서 만든 RFM 구조를 미리 정리해둔 버전이에요.)
 
 ```
-cd ~/Desktop/parksystems-workshop/2교시_PM에이전트
+cd ~/Desktop/parksystems-workshop/4_PM에이전트
 claude
 ```
-> Windows: `cd C:\Users\USER\Desktop\parksystems-workshop\2교시_PM에이전트`
+> Windows: `cd C:\Users\USER\Desktop\parksystems-workshop\4_PM에이전트`
 
 Nimbalyst에서도 같은 폴더 열어두세요.
 
 폴더 구조:
 
 ```
-2교시_PM에이전트/
+4_PM에이전트/
   └── RFM/
         ├── RFM(S)/
         │     ├── raw data/        ← 1단계 자료
@@ -303,5 +303,5 @@ claude
 
 ---
 
-> 다음은 3교시 전반 — **2.3 사내 문체 매뉴얼 자동 생성** (50분).
+> 다음은 5 — **사내 문체 매뉴얼 자동 생성** (45분).
 > 이번엔 두 번째 비서 **매뉴얼 작가 비서**를 만들어볼 거예요. 회사 매뉴얼 형식을 학습시켜서 같은 톤으로 새 매뉴얼을 자동으로 써주는 비서예요.

@@ -51,7 +51,7 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 가장 단순한 방법. 본인 컴퓨터에서만 봐요.
 
 ```
-/publish-manual 3교시_매뉴얼/output/Chapter1_Intro.md
+/publish-manual 5_매뉴얼/output/Chapter1_Intro.md
 ```
 
 생성된 `Chapter1_Intro.html` 파일을 Nimbalyst나 파일 탐색기에서 **더블클릭** 하세요. 기본 브라우저에서 깔끔한 웹페이지로 열려요.
@@ -68,7 +68,7 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 
 **Step 1.** 브라우저에서 https://app.netlify.com/drop 접속.
 
-**Step 2.** HTML 파일이 든 폴더(`3교시_매뉴얼/output/`)를 화면에 **드래그앤드롭**.
+**Step 2.** HTML 파일이 든 폴더(`5_매뉴얼/output/`)를 화면에 **드래그앤드롭**.
 
 **Step 3.** 임시 URL 자동 생성. 클립보드에 복사해서 공유하면 끝.
 
