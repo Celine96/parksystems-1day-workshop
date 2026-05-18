@@ -1,6 +1,6 @@
 # 5. 프로젝트 #3 : 사내 문체 매뉴얼 자동 생성
 
-> 오늘 만들 두 번째 에이전트, **에디터 에이전트**의 시간이에요. (이름은 **Editor** — JARVIS와 짝을 맞춰 영문 이름으로 부를 거예요.)
+> 오늘 만들 두 번째 에이전트, **에디터 에이전트**의 시간이에요. **Introduction 한 페이지** 변환으로 시작합니다.
 
 ---
 
@@ -32,7 +32,7 @@ You: 이 raw data 가지고 NX-Hybrid WLI Chapter 1 형식으로 매뉴얼 써�
 
 처음부터 백지에서 쓰는 게 아니라, **회사 형식을 알고 있는 작가**가 raw data를 받아서 같은 톤으로 옮겨주는 거예요.
 
-> 💡 **포인트**: 풀 매뉴얼 한 권을 자동 생성하지 않아요. **"이런 방향이 가능하다"** 를 Introduction 한 페이지 변환으로 체험하는 게 목표예요.
+> 💡 **포인트**: 풀 매뉴얼 한 권을 자동 생성하지 않아요. **"이런 방향이 가능하다"** 를 **Introduction 한 페이지** 변환으로 체험하는 게 목표예요.
 
 ## [실습] 에디터 에이전트 만들기
 
@@ -63,7 +63,7 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 
 ### Step 2. 에디터 에이전트 만들기
 
-클로드에게 매뉴얼 형식 자료를 보고 에이전트 소개서를 만들어달라고 합니다.
+클로드에게 매뉴얼 형식 자료를 보고 에이전트를 만들어달라고 합니다.
 
 대화창에 입력:
 
@@ -85,9 +85,9 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 - Installation/Maintenance/Operation 섹션 구성
 - 실제 회사가 쓰는 문체·단어 선택
 
-이 둘을 종합해서 .claude/agents/Editor.md 파일에 에디터 에이전트 소개서로 저장해줘.
+이 둘을 종합해서 .claude/agents/Editor.md 파일에 에디터 에이전트를 만들어줘.
 
-소개서 안에 포함되어야 할 것:
+에이전트가 알아야 할 것:
 1. 매뉴얼 톤 (격식·문장 길이·표현 스타일)
 2. 챕터 시작 페이지 구조 (제목·서브헤더·본문)
 3. Preface 구조 (소개 → 챕터 안내 → 모델 안내 → 연락처)
@@ -97,9 +97,9 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 
 Nimbalyst에서 `.claude/agents/Editor.md` 파일이 생성되는 걸 보세요.
 
-> 💡 **포인트**: 클로드가 우리 회사 매뉴얼 4개를 한 번 보고 형식·톤을 추출해서, 에디터 에이전트가 두고두고 참고할 수 있게 소개서로 저장했어요. **사람이 신입에게 "이 매뉴얼들 참고해서 톤 익혀주세요" 라고 1주일 걸려 가르치던 일**이 30초에 끝났어요.
+> 💡 **포인트**: 클로드가 우리 회사 매뉴얼 4개를 한 번 보고 형식·톤을 추출해서, 에디터 에이전트가 두고두고 참고할 수 있게 만들어두었어요. **사람이 신입에게 "이 매뉴얼들 참고해서 톤 익혀주세요" 라고 1주일 걸려 가르치던 일**이 30초에 끝났어요.
 
-생성된 `.claude/agents/Editor.md` 소개서를 Nimbalyst에서 한번 열어보세요. 에이전트가 어떻게 우리 회사 톤을 정리했는지 보실 수 있어요.
+생성된 `.claude/agents/Editor.md` 파일을 Nimbalyst에서 한번 열어보세요. 에이전트가 어떻게 우리 회사 톤을 정리했는지 보실 수 있어요.
 
 ### Step 3. raw data → Introduction 변환
 
@@ -120,7 +120,7 @@ NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 - 결과는 5_매뉴얼/output/Chapter1_Intro.md 로 저장
 ```
 
-Nimbalyst를 보면 `output/Chapter1_Intro.md` 파일이 새로 생기는 게 보일 거예요.
+Nimbalyst를 보면 `5_매뉴얼/output/Chapter1_Intro.md` 파일이 새로 생기는 게 보일 거예요.
 
 <p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 에디터 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 스타일로 변환된 결과</span></p>
 
@@ -164,7 +164,7 @@ NX-Interferom 매뉴얼의 Preface 페이지를 만들어줘.
 
 오늘 만든 두 에이전트를 정리해볼게요.
 
-| 에이전트 | 소개서 파일 | 잘 하는 일 |
+| 에이전트 | 파일 | 잘 하는 일 |
 |---|---|---|
 | **PM 에이전트 JARVIS** | `.claude/agents/PM.md` | 회사 폴더 들여다보고 진행 상황 보고 |
 | **에디터 에이전트** | `.claude/agents/Editor.md` | 회사 매뉴얼 형식을 학습해서 같은 톤으로 새 매뉴얼 생성 |
@@ -197,7 +197,7 @@ Editor 에이전트를 호출해서, [raw data 파일]을
 
 ## [체크포인트]
 
-- [ ] `.claude/agents/Editor.md` 에디터 에이전트 소개서가 만들어짐
+- [ ] `.claude/agents/Editor.md` 에디터 에이전트가 만들어짐
 - [ ] NX-Interferom raw data가 Chapter 1 Introduction 형식으로 변환됨
 - [ ] Preface 또는 Overview PPT 응용 1개 이상 시도
 - [ ] **PM 에이전트**와 **에디터 에이전트** 두 명이 같은 `.claude/agents/` 폴더에 살고 있다는 점을 확인함
