@@ -75,14 +75,14 @@ Nimbalyst에서도 같은 폴더 열어두세요.
 
 각 폴더 안에 몇 개 더미 파일이 들어 있어요. 이게 PM 에이전트가 들여다볼 작업장이에요.
 
-### Step 2. PM 에이전트 만들기 — `.claude/agents/JARVIS.md`
+### Step 2. PM 에이전트 만들기 — `.claude/agents/PM.md`
 
 에이전트에게 **"너는 어떤 역할이고, 어떤 규칙으로 일해"** 를 알려줘야 해요. 이걸 적은 파일이 에이전트의 **소개서**가 돼요.
 
 클로드 코드에 이렇게 입력하세요:
 
 ```
-.claude/agents/JARVIS.md 파일을 새로 만들어줘.
+.claude/agents/PM.md 파일을 새로 만들어줘.
 
 내용은 이렇게:
 
@@ -124,7 +124,7 @@ description: TW 팀 매뉴얼 작업 진행 상황을 RFM 폴더를 들여다보
 - 모르면 추측하지 말고 "확인 불가"라고 답하기
 ```
 
-**Enter 누르세요.** Nimbalyst를 보면 `.claude/agents/JARVIS.md` 파일이 새로 생기는 게 보일 거예요.
+**Enter 누르세요.** Nimbalyst를 보면 `.claude/agents/PM.md` 파일이 새로 생기는 게 보일 거예요.
 
 <p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⚠️ "권한이 막혔어요" 메시지가 떠도 당황 X <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 자동 셋업되어 있어요</span></p>
 
@@ -172,7 +172,7 @@ JARVIS (PM 에이전트)를 호출해서, 4_PM에이전트/RFM/ 폴더의 현재
   - 사용법: 프롬프트에 /progress 입력
   - 범위: 이 프로젝트 (parksystems-workshop/)에서만 인식. 다른 폴더로 가면 안 보임.
   - 동작: .claude/commands/progress.md의 본문이 프롬프트로 주입되고,
-    본문이 PM 에이전트(.claude/agents/JARVIS.md)를 호출하게 되어 있음.
+    본문이 PM 에이전트(.claude/agents/PM.md)를 호출하게 되어 있음.
 
   ⚠️ 한 가지 주의: 슬래시 커맨드/에이전트 목록은 보통 세션 시작 시 스캔돼요.
   방금 생성한 거라 현 세션 자동완성 리스트엔 안 뜰 수 있어요.
@@ -193,7 +193,7 @@ PM 에이전트가 일하는 모습을 보세요.
 <p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 클로드 코드가 알아서 하는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 명령 한 줄로 일어나는 일</span></p>
 
 > 1. `.claude/commands/progress.md` 를 읽고 → 이게 무슨 명령인지 파악
-> 2. `.claude/agents/JARVIS.md` 를 읽고 → PM 에이전트 소개서 불러오기
+> 2. `.claude/agents/PM.md` 를 읽고 → PM 에이전트 소개서 불러오기
 > 3. `RFM/` 폴더를 하나씩 둘러봄 → 작업자별 단계 판정
 > 4. 정리된 보고서로 답변
 
@@ -266,14 +266,14 @@ claude
 | 막힌 부분 | 빠른 해결 |
 |---|---|
 | `/progress` 입력해도 에이전트가 안 움직임 | 슬래시 커맨드 파일(`.claude/commands/progress.md`)이 만들어졌는지 Nimbalyst에서 확인 |
-| 에이전트가 엉뚱한 단계로 판정함 | `.claude/agents/JARVIS.md` 소개서의 규칙을 더 명확히 작성. 예: "feedback 폴더에 .pdf 가 있어야만 3단계, 다른 확장자는 무시" |
+| 에이전트가 엉뚱한 단계로 판정함 | `.claude/agents/PM.md` 소개서의 규칙을 더 명확히 작성. 예: "feedback 폴더에 .pdf 가 있어야만 3단계, 다른 확장자는 무시" |
 | 보고서 형식이 마음에 안 듦 | `/progress` 한 후 추가 명령으로 "표 형식으로 다시 보여줘" 같이 자유롭게 |
 
 ---
 
 ## [체크포인트]
 
-- [ ] `.claude/agents/JARVIS.md` 파일에 PM 에이전트 소개서를 작성함
+- [ ] `.claude/agents/PM.md` 파일에 PM 에이전트 소개서를 작성함
 - [ ] `.claude/commands/progress.md` 슬래시 커맨드를 만듦
 - [ ] `/progress` 한 줄로 PM 에이전트가 RFM 폴더를 분석해 보고하는 걸 직접 봄
 - [ ] 응용 명령 1~2개를 시도해 에이전트를 더 깊이 부려봄

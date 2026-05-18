@@ -105,7 +105,7 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 |---|---|
 | 1·2 시작 | (환경 구축 — 클로드 코드 설치 + Nimbalyst 시각화 도구) |
 | 3 파일 정리 | 흩어진 파일이 자동 분류된 **RFM 폴더 구조** |
-| 4 PM 에이전트 | **PM 에이전트 JARVIS** (`.claude/agents/JARVIS.md`) + **/progress 슬래시 커맨드** |
+| 4 PM 에이전트 | **PM 에이전트 JARVIS** (`.claude/agents/PM.md`) + **/progress 슬래시 커맨드** |
 | 5 매뉴얼 자동 생성 | **에디터 에이전트** (`.claude/agents/Editor.md`) + 변환된 매뉴얼 페이지 |
 | 6 외부 근거 수집 | **/find-evidence 슬래시 커맨드** + 학술 근거 통합된 매뉴얼 |
 | 7 HTML 변환 | **/publish-manual 슬래시 커맨드** + HTML 페이지 |

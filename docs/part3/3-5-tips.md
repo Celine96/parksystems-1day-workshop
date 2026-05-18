@@ -29,6 +29,8 @@ PRD나 에이전트 소개서를 만들었다면, 매번 클로드한테 "이 PR
 > | **`.claude/agents/*.md`** | `.claude/agents/` | 개별 에이전트 소개서 (PRD 위치) |
 > | **`.claude/commands/*.md`** | `.claude/commands/` | 슬래시 커맨드 정의 |
 
+> 💡 **참고**: `.claude/agents/` 파일명과 frontmatter `name:` 필드는 분리할 수 있어요. 예: 파일은 `PM.md` (폴더에서 역할로 식별), 호출명은 `JARVIS` (frontmatter `name: JARVIS`). 본 수업에서도 이 패턴을 썼어요.
+
 **만드는 방법**: 클로드한테 한 줄로 부탁하면 끝.
 
 ```

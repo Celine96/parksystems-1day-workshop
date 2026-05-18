@@ -114,7 +114,7 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 
 | 챕터 | 에이전트 / 커맨드 | 하네스 구성 요소 |
 |---|---|---|
-| **4. PM 에이전트** | PM 에이전트 JARVIS | `.claude/agents/JARVIS.md` (소개서) + `/progress` 슬래시 커맨드 + `RFM/` 폴더 구조 + 5단계 판정 규칙 |
+| **4. PM 에이전트** | PM 에이전트 JARVIS | `.claude/agents/PM.md` (소개서) + `/progress` 슬래시 커맨드 + `RFM/` 폴더 구조 + 5단계 판정 규칙 |
 | **5. 에디터 에이전트** | Editor 에이전트 | `.claude/agents/Editor.md` + `형식/` 폴더 PNG 4개 + `실제_매뉴얼/` PDF 4개 + `output/` 결과 폴더 |
 | **6. 외부 근거 수집** | (에이전트 없음, 슬래시 커맨드만) | `/find-evidence` 슬래시 커맨드 + Semantic Scholar API 약속 |
 | **7. HTML 변환** | (에이전트 없음, 슬래시 커맨드만) | `/publish-manual` 슬래시 커맨드 + 변환 스타일 규칙 |
@@ -230,7 +230,7 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 | **파일 위치** | `.claude/agents/` | `.claude/commands/` |
 | **역할** | "어떤 에이전트인가"의 정체 (지속적) | "어떤 일을 하라"는 명령 (1회성) |
 | **호출** | 다른 명령에서 자동 호출 또는 명시적 호출 | `/이름` 으로 사용자가 직접 |
-| **오늘 만든 예** | `.claude/agents/JARVIS.md`, `Editor.md` | `.claude/commands/progress.md`, `find-evidence.md` |
+| **오늘 만든 예** | `.claude/agents/PM.md`, `Editor.md` | `.claude/commands/progress.md`, `find-evidence.md` |
 
 쉬운 비유:
 

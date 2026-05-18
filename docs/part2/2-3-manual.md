@@ -170,7 +170,7 @@ NX-Interferom 매뉴얼의 Preface 페이지를 만들어줘.
 
 | 에이전트 | 소개서 파일 | 잘 하는 일 |
 |---|---|---|
-| **PM 에이전트 JARVIS** | `.claude/agents/JARVIS.md` | 회사 폴더 들여다보고 진행 상황 보고 |
+| **PM 에이전트 JARVIS** | `.claude/agents/PM.md` | 회사 폴더 들여다보고 진행 상황 보고 |
 | **에디터 에이전트** | `.claude/agents/Editor.md` | 회사 매뉴얼 형식을 학습해서 같은 톤으로 새 매뉴얼 생성 |
 
 두 에이전트 모두 같은 `.claude/agents/` 폴더에 살아요. 한 번 만들어두면 **이 폴더(parksystems-workshop)에서는 언제든 호출 가능**해요.
