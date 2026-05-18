@@ -2,7 +2,7 @@
 
 <div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap; margin: 30px 0;">
 
-<img src="/parksystems-1day-workshop/images/ella-profile.jpg" alt="이수연 (Ella)" style="width: 240px; border-radius: 16px; flex-shrink: 0;" />
+![이수연 (Ella)](/images/ella-profile.jpg){style="width: 240px; border-radius: 16px;"}
 
 <div style="flex: 1; min-width: 280px;">
 
