@@ -63,8 +63,6 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
         └── NX-Interferom.txt
 ```
 
----
-
 ### Step 2. 매뉴얼 작가 에이전트 만들기
 
 클로드에게 매뉴얼 형식 자료를 보고 에이전트 소개서를 만들어달라고 합니다.
@@ -104,8 +102,6 @@ Nimbalyst에서 `.claude/agents/Manual-Writer.md` 파일이 생성되는 걸 보
 > 💡 **포인트**: 클로드가 우리 회사 매뉴얼 4개를 한 번 보고 형식·톤을 추출해서, 매뉴얼 작가 에이전트가 두고두고 참고할 수 있게 소개서로 저장했어요. **사람이 신입에게 "이 매뉴얼들 참고해서 톤 익혀주세요" 라고 1주일 걸려 가르치던 일**이 30초에 끝났어요.
 
 생성된 `.claude/agents/Manual-Writer.md` 소개서를 Nimbalyst에서 한번 열어보세요. 에이전트가 어떻게 우리 회사 톤을 정리했는지 보실 수 있어요.
-
----
 
 ### Step 3. raw data → Introduction 변환
 
@@ -150,8 +146,6 @@ Figure 1.1 NX-Interferom
 > - [ ] 영문 매뉴얼 톤이 형식 PNG와 비슷한가요?
 > - [ ] raw data의 핵심 정보(AFM·AFP·WLI 통합, SEMI 표준 등)가 빠지지 않았나요?
 > - [ ] 문장 흐름이 자연스럽나요?
-
----
 
 ### Step 4. 응용 — Preface 만들기
 

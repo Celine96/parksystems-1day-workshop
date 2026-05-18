@@ -68,8 +68,6 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 cd ~/Desktop/parksystems-workshop/5_매뉴얼
 ```
 
----
-
 ### Step 2. 학술 근거 수집 슬래시 커맨드 만들기
 
 대화창에 입력:
@@ -98,8 +96,6 @@ API 엔드포인트: https://api.semanticscholar.org/graph/v1/paper/search
 ```
 
 Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보세요.
-
----
 
 ### Step 3. 학술 근거 수집 — 첫 호출
 
