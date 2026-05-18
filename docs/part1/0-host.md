@@ -16,6 +16,7 @@
 <div style="margin-top: 20px; padding: 16px 20px; background: var(--vp-c-bg-soft); border-radius: 8px;">
 
 ✉&nbsp; **이메일** &nbsp;·&nbsp; [team.d.labs@gmail.com](mailto:team.d.labs@gmail.com)
+
 🔗&nbsp; **LinkedIn** &nbsp;·&nbsp; [linkedin.com/in/syceline](https://www.linkedin.com/in/syceline/)
 
 </div>
