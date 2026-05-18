@@ -21,6 +21,8 @@
 
 대화창에 입력:
 
+📝 **프롬프트 입력**
+
 ```
 .claude/commands/publish-manual.md 파일을 새로 만들어줘.
 
@@ -47,6 +49,8 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 ## [옵션 A] 로컬에서 보기
 
 가장 단순한 방법. 본인 컴퓨터에서만 봐요.
+
+📝 **프롬프트 입력**
 
 ```
 /publish-manual 5_매뉴얼/output/Chapter1_Intro.md

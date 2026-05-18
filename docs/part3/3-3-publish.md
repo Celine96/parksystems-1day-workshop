@@ -38,6 +38,8 @@
 
 회사 디자인 가이드 PDF·이미지를 준비.
 
+📝 **프롬프트 입력**
+
 ```
 [디자인 가이드 폴더]의 자료를 분석해서
 .claude/agents/Design-Applier.md 라는 에이전트를 만들어줘.
@@ -51,6 +53,8 @@
 ```
 
 ### Step 2. 디자인 적용한 HTML 생성
+
+📝 **프롬프트 입력**
 
 ```
 Design-Applier 에이전트에게 우리 디자인 가이드대로
@@ -103,6 +107,8 @@ source ~/.zshrc
 ### Step 3. 슬래시 커맨드에 키 사용 안내 추가
 
 `.claude/commands/find-evidence.md` 를 클로드에게 수정해달라고:
+
+📝 **프롬프트 입력**
 
 ```
 .claude/commands/find-evidence.md 를 수정해서,

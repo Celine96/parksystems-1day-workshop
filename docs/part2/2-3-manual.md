@@ -67,6 +67,8 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 
 대화창에 입력:
 
+📝 **프롬프트 입력**
+
 ```
 5_매뉴얼/형식/ 폴더의 이미지 4개와
 5_매뉴얼/실제_매뉴얼/ 폴더의 PDF 4개를 모두 봐줘.
@@ -131,6 +133,8 @@ Nimbalyst에서 `.claude/agents/Editor.md` 파일이 생성되는 걸 보세요.
 
 대화창에 입력:
 
+📝 **프롬프트 입력**
+
 ```
 Editor 에이전트를 호출해서,
 5_매뉴얼/raw_data/NX-Interferom.txt 의 내용을
@@ -171,6 +175,8 @@ Figure 1.1 NX-Interferom
 
 **결과 파일 열어보기**: Nimbalyst에서 `5_매뉴얼/output/Chapter1_Intro.md`를 더블클릭하거나, 클로드 코드에 이렇게 물어보세요:
 
+📝 **프롬프트 입력**
+
 ```
 방금 만든 5_매뉴얼/output/Chapter1_Intro.md 파일을 열어서 보여줘.
 ```
@@ -195,11 +201,17 @@ Figure 1.1 NX-Interferom
 **Step 1.** 본인 업무의 **"형식이 정해진 자료" 2~3개**를 한 폴더에 모아둠 (PDF·PPT·Word·이미지 모두 OK).
 
 **Step 2.** 클로드 코드에서:
+
+📝 **프롬프트 입력**
+
 ```
 [폴더]의 자료들을 분석해서, 우리 [업무 종류] 형식 에이전트를 만들어줘.
 ```
 
 **Step 3.** raw data 주고 변환:
+
+📝 **프롬프트 입력**
+
 ```
 [에이전트 이름] 에이전트를 호출해서, [raw data 파일]을
 우리 형식으로 변환해줘.

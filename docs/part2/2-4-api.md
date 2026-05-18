@@ -68,6 +68,8 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 
 대화창에 입력:
 
+📝 **프롬프트 입력**
+
 ```
 .claude/commands/find-evidence.md 파일을 새로 만들어줘.
 
@@ -99,6 +101,8 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 이제 `/find-evidence` 커맨드를 쓸 수 있어요. 호출해봅시다.
 
 대화창에 입력:
+
+📝 **프롬프트 입력**
 
 ```
 /find-evidence
@@ -135,6 +139,8 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 
 5번에서 만든 Chapter 1 Introduction에 학술 근거를 더해봅시다.
 
+📝 **프롬프트 입력**
+
 ```
 5번에서 만든 output/Chapter1_Intro.md 의 본문에
 방금 /find-evidence 로 찾은 학술 자료 중 가장 관련 있는 2개를
@@ -149,6 +155,8 @@ Nimbalyst에서 `Chapter1_Intro.md` 파일이 업데이트되는 걸 확인하�
 ## [마무리] 본인 업무 응용 가이드
 
 본인 업무에 적용하고 싶다면:
+
+📝 **프롬프트 입력**
 
 ```
 [본인 키워드]에 대한 학술 자료 / 산업 표준 / 경쟁사 발표 자료를
