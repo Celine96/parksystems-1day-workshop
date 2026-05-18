@@ -1,11 +1,15 @@
 # 0. 강사 소개
 
+<div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin: 32px 0 48px;">
+
+![이수연 (Ella)](/images/ella-profile.jpg){style="width: 240px; border-radius: 16px;"}
+
+<div style="flex: 1; min-width: 280px;">
+
 ## 이수연 (Ella)
 
 <p style="font-size: 1.05em; color: var(--vp-c-text-2); margin: 4px 0 8px;">AI Technical PM · AX</p>
-<p style="color: var(--vp-c-text-2); margin: 0 0 24px;">서안개발(주) 부동산 컨설팅팀 (신사업팀) 대리</p>
-
-![이수연 (Ella)](/images/ella-profile.jpg){style="width: 240px; border-radius: 16px; display: block; margin: 0 0 24px;"}
+<p style="color: var(--vp-c-text-2); margin: 0 0 16px;">서안개발(주) 부동산 컨설팅팀 (신사업팀) 대리</p>
 
 오늘 4시간 워크숍 동안 함께할 강사예요. RAG·LLM 챗봇부터 콘텐츠·KPI 자동화 파이프라인까지, 부동산 도메인 안에서 AX(AI Transformation)를 직접 운영하고 있어요.
 
@@ -15,6 +19,9 @@
 
 <p style="margin: 0;">🔗 LinkedIn : <a href="https://www.linkedin.com/in/syceline/">linkedin.com/in/syceline</a></p>
 
+</div>
+
+</div>
 </div>
 
 ## 강사가 만든 것들
