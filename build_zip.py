@@ -9,8 +9,9 @@ from pptx import Presentation
 BASE = Path(r"C:\Users\User\Desktop\06_개인\2. ai native workshop\파크시스템스 기업강의\v1-파크시스템스")
 SHARED = Path(r"C:\Users\User\Desktop\06_개인\2. ai native workshop\파크시스템스 기업강의\파크시스템스 (나나님 공유)")
 TEMP = BASE / "zip_temp"
+# zip 파일명 = 안 ROOT 이름 일치 (Windows 자동 풀기 시 깔끔한 단일 폴더 생성)
 ROOT = TEMP / "parksystems-workshop"
-ZIP_OUT = BASE / "파크시스템스 임직원_워크북.zip"
+ZIP_OUT = BASE / "parksystems-workshop.zip"
 
 # 기존 temp 정리
 if TEMP.exists():
