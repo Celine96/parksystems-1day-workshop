@@ -112,7 +112,7 @@ claude
 폴더 구조:
 - 4_PM에이전트/RFM/RFM(작업자)/단계/ 의 위계 구조
 - 단계 폴더 3개: raw_data / working / feedback
-- final 붙은 파일은 별도 4_PM에이전트/LOM/ 폴더 (5단계 배포 완료)
+- final 붙은 파일은 별도 4_PM에이전트/RFM/LOM/ 폴더 (5단계 배포 완료)
 
 분류 규칙:
 - 파일명 앞 (S) (B) 로 작업자 구분
@@ -120,7 +120,7 @@ claude
   - 1단계 원본 자료 → raw_data : 파일명에 'raw'·'input', 또는 .stp 확장자
   - 2~4단계 Draft pdf → working : 파일명에 'working'·'draft', 또는 _v1/_v2/_v3 같은 버전 표시가 붙은 .pdf
   - 3단계 리뷰 받은 자료 → feedback : 파일명에 'feedback'·'review'
-  - 5단계 배포 완료 → LOM/ : 파일명에 'final'
+  - 5단계 배포 완료 → RFM/LOM/ : 파일명에 'final'
 - 위 키워드에 안 맞는 파일은 파일명·확장자 패턴으로 가장 가까운 단계 추론 (확장자만으로도 판단 가능)
 ```
 
@@ -138,7 +138,7 @@ claude
 >            └── RFM(S)/         ← ② 작업자별 폴더 (S, B)
 >                  └── working/  ← ③ 단계별 폴더 (raw_data·working·feedback)
 >    ```
-> 5. `final` 붙은 파일은 위 구조 대신 **별도 `4_PM에이전트/LOM/` 폴더**로 따로 모음
+> 5. `final` 붙은 파일은 위 구조 대신 **별도 `4_PM에이전트/RFM/LOM/` 폴더**로 따로 모음
 >
 > 💡 정리 결과를 `4_PM에이전트/` 안에 만드는 이유는, 다음 챕터(4. PM 에이전트)에서 같은 RFM 폴더를 그대로 분석에 사용하기 때문이에요.
 
@@ -160,7 +160,7 @@ claude
   - RFM(S)/raw data/: (S) NX-Interferom_input.stp, (S) NX-Interferom_v1.stp (.stp 확장자 우선)
   - RFM(S)/working/: (S) NX-Interferom_draft_v2.pdf
   - RFM(S)/feedback/: (S) NX-Interferom_review.pdf
-  - 4_PM에이전트/LOM/ (신규): final_Manual_B.pdf, final_NX_S.pdf
+  - 4_PM에이전트/RFM/LOM/ (신규): final_Manual_B.pdf, final_NX_S.pdf
 ```
 
 > **② 실행하고 결과를 표로 보고해요** — 실행 후 "이렇게 끝났어요"
@@ -186,14 +186,14 @@ claude
   ├─────────────────────────┼──────────────────────────────────────────────────────┤
   │ RFM(S)/feedback/        │ (S) NX-Interferom_review.pdf                         │
   ├─────────────────────────┼──────────────────────────────────────────────────────┤
-  │ 4_PM에이전트/LOM/ (신규)│ final_Manual_B.pdf, final_NX_S.pdf                   │
+  │ 4_PM에이전트/RFM/LOM/ (신규)│ final_Manual_B.pdf, final_NX_S.pdf                   │
   └─────────────────────────┴──────────────────────────────────────────────────────┘
 
   판단 메모:
   - 기존 폴더가 raw data(공백)라 신규 생성 대신 그대로 사용.
   - (S) NX-Interferom_v1.stp는 _v1 버전 표기지만 .stp 확장자라 raw 자료로 분류 (.stp = 원본 CAD).
   - 기존 RFM(S)/feedback, working에 이미 있던 _v1_review.pdf/_v1_draft.pdf는 사전 존재 파일이라 미손댐.
-  - 기존 RFM/LOM/Manual_update_v3_RELEASED.pdf는 그대로 두고, 4_PM에이전트/LOM/을 별도로 신규 생성.
+  - 기존 4_PM에이전트/RFM/LOM/Manual_update_v3_RELEASED.pdf는 그대로 두고, 정리한 final 파일들도 같은 4_PM에이전트/RFM/LOM/에 합쳐서 추가.
 ```
 
 > 💡 **포인트**: 클로드는 그냥 명령 따르는 게 아니라 (1) **계획을 먼저** 보여주고 (2) **판단한 근거까지 메모**로 남겨요. 결과가 의도와 다르면 바로 잡을 수 있고, ".stp 확장자라 raw로 분류" 같은 추론 과정이 투명하게 드러나요.
@@ -213,16 +213,16 @@ parksystems-workshop/
   ├── 3_파일정리/
   │     └── raw_files/        (원본은 그대로 두거나 비워짐)
   └── 4_PM에이전트/
-        ├── RFM/
-        │     ├── RFM(S)/
-        │     │     ├── raw_data/
-        │     │     ├── working/
-        │     │     └── feedback/
-        │     └── RFM(B)/
-        │           ├── raw_data/
-        │           ├── working/
-        │           └── feedback/
-        └── LOM/              (final 파일들 모임)
+        └── RFM/
+              ├── RFM(S)/
+              │     ├── raw_data/
+              │     ├── working/
+              │     └── feedback/
+              ├── RFM(B)/
+              │     ├── raw_data/
+              │     ├── working/
+              │     └── feedback/
+              └── LOM/        (final 파일들 모임, 5단계 배포 완료)
 ```
 
 **결과 체크리스트:**
