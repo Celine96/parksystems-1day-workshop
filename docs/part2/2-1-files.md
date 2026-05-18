@@ -64,6 +64,8 @@ raw_files/
 > - **4단계** : Final Review (종료 또는 일정/Scope 조정)
 > - **5단계** : Next Revision Plan & Data Backup & Release
 
+<br/>
+
 > 📌 **파일 이름 규칙** (위 5단계가 파일명에 어떻게 표시되는지)
 >
 > **👤 누구 파일인지 (작업자 표시)**
