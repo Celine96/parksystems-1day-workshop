@@ -118,48 +118,11 @@ for fname in dummy_files:
 print(f"[OK] 3_파일정리/raw_files 더미 20개 생성")
 
 # ============================================
-# 4. 4_PM에이전트/RFM/ — 5단계가 섞인 정리된 폴더
+# 4. 4_PM에이전트/ — 빈 폴더 (3 챕터에서 학습자가 정리한 RFM이 여기 채워짐)
 # ============================================
-rfm_dir = ROOT / "4_PM에이전트" / "RFM"
-
-# 각 작업자별 + 단계별 파일 (시나리오)
-scenarios = {
-    'S': {
-        '_proj': 'NX-Interferom v1',
-        'raw data': [],
-        'working': ['(S) NX-Interferom_v1_draft.pdf'],
-        'feedback': ['(S) NX-Interferom_v1_review.pdf'],
-    },
-    'B': {
-        '_proj': 'Manual update',
-        'raw data': [],
-        'working': [],
-        'feedback': [],
-    },
-}
-
-for worker, data in scenarios.items():
-    proj = data['_proj']
-    for stage in ['raw data', 'working', 'feedback']:
-        stage_dir = rfm_dir / f"RFM({worker})" / stage
-        stage_dir.mkdir(parents=True, exist_ok=True)
-        if data[stage]:
-            for fname in data[stage]:
-                (stage_dir / fname).write_text(
-                    f"# RFM({worker}) / {stage} / {fname}\n\n프로젝트: {proj}\n(더미 파일)\n",
-                    encoding='utf-8'
-                )
-        else:
-            # 빈 폴더에도 .keep 파일 (zip에 폴더 포함되도록)
-            (stage_dir / ".keep").write_text("", encoding='utf-8')
-
-# LOM/ (5단계 완료)
-lom_dir = rfm_dir / "LOM"
-lom_dir.mkdir(parents=True, exist_ok=True)
-(lom_dir / "Manual_update_v3_RELEASED.pdf").write_text(
-    "# Manual update v3 RELEASED\n\n작업자: B / 5단계 완료\n", encoding='utf-8'
-)
-print(f"[OK] 4_PM에이전트/RFM 시나리오 폴더 생성")
+# RFM/ 폴더는 학습자가 3 챕터 실습으로 직접 만듦.
+# Weekly_Report_Sample.pptx는 위 (1) 단계에서 이미 4_PM에이전트/에 들어가 있음.
+print(f"[OK] 4_PM에이전트/ (RFM 폴더는 3 챕터 학습자 결과로 채움)")
 
 # ============================================
 # 5. .claude/ 빈 폴더
@@ -199,13 +162,13 @@ claude_md = """# 파크시스템스 AX 바이브코딩 연수 — 작업 공간
 ## 폴더 구조
 
 - `3_파일정리/raw_files/` — 1교시 파일 정리 실습용 더미 파일 (흩어진 상태)
-- `4_PM에이전트/RFM/` — 2교시 PM 에이전트 실습용 작업자별 폴더 (작업 진행 시나리오 미리 셋업됨)
+- `4_PM에이전트/` — 2교시 PM 에이전트 실습 공간 (1교시에서 정리한 RFM 폴더가 여기 들어옴)
 - `4_PM에이전트/Weekly_Report_Sample.pptx` — 주간 보고 양식
 - `5_매뉴얼/형식/` — 매뉴얼 형식 가이드 (이미지 4개)
 - `5_매뉴얼/실제_매뉴얼/` — 회사 실제 매뉴얼 (PDF 4개, 학습 자료)
 - `5_매뉴얼/raw_data/` — 변환할 원본 자료
 - `5_매뉴얼/output/` — 생성된 결과물 저장 위치
-- `.claude/agents/` — 학습자가 만들 에이전트 소개서 위치
+- `.claude/agents/` — 학습자가 만들 에이전트 정의 위치
 - `.claude/commands/` — 학습자가 만들 슬래시 커맨드 위치
 
 ## 워크숍 흐름

@@ -45,7 +45,7 @@ JARVIS는 회사 폴더를 들여다보고 진행 상황을 파악해서, 내가
 
 ### Step 1. 작업 폴더 확인
 
-`parksystems-workshop/4_PM에이전트/` 폴더로 이동하세요. (3번 파일 정리에서 만든 RFM 구조를 미리 정리해둔 버전이에요.)
+`parksystems-workshop/4_PM에이전트/` 폴더로 이동하세요. (3번 파일 정리에서 정리한 RFM 폴더가 여기 있어요. 같은 폴더에서 PM 에이전트를 만들 거예요.)
 
 ```
 cd ~/Desktop/parksystems-workshop/4_PM에이전트
@@ -55,23 +55,23 @@ claude
 
 Nimbalyst에서도 같은 폴더 열어두세요.
 
-폴더 구조:
+3번에서 정리한 폴더 구조:
 
 ```
 4_PM에이전트/
-  └── RFM/
-        ├── RFM(S)/                 ← 작업자 S (진행 중 시나리오)
-        │     ├── raw data/         ← 1단계 자료
-        │     ├── working/          ← 2단계 (또는 4단계) pdf
-        │     └── feedback/         ← 3단계 pdf
-        ├── RFM(B)/                 ← 작업자 B (완료 시나리오)
-        │     ├── raw data/
-        │     ├── working/
-        │     └── feedback/         (비어 있음 → LOM으로 이동)
-        └── LOM/                    ← 5단계 배포 완료
+  └── RFM/                              ← 3번에서 직접 만든 폴더
+        ├── RFM(S)/                     ← 작업자 S
+        │     ├── raw_data/             ← (S)_v1.stp, _input.stp (1단계)
+        │     ├── working/              ← (S)_draft_v2.pdf (2~4단계 draft)
+        │     └── feedback/             ← (S)_review.pdf (3단계 리뷰)
+        ├── RFM(B)/                     ← 작업자 B
+        │     ├── raw_data/             ← (B)_raw.stp, _input.stp (1단계)
+        │     ├── working/              ← (B)_working.pdf, _v3.pdf (2~4단계 draft)
+        │     └── feedback/             (비어 있음)
+        └── LOM/                        ← final_NX_S.pdf, final_Manual_B.pdf (5단계 배포)
 ```
 
-각 폴더 안에 몇 개 더미 파일이 들어 있어요. 이게 PM 에이전트가 들여다볼 작업장이에요.
+이게 PM 에이전트가 들여다볼 작업장이에요.
 
 ### Step 2. PM 에이전트 만들기 — `.claude/agents/PM.md`
 
@@ -200,11 +200,15 @@ PM 에이전트가 일하는 모습을 보세요.
 ```
 파크시스템스 TW 팀 매뉴얼 진행 상황
 
-- RFM(S): NX-Interferom v1 → 3단계 (feedback/ 에 review pdf 있음)
-- RFM(B): Manual update → 5단계 (LOM/ 으로 이동됨)
+- RFM(S): NX-Interferom → 3단계 (feedback/에 review pdf 있음 — Revision Loop 중)
+- RFM(B): Manual_update → 5단계 (LOM/에 final_Manual_B.pdf — 배포 완료)
 
 총 2건 / 진행 중 1건 · 완료 1건
 단계별 분포: 3단계 1건 / 5단계 1건
+
+판단 메모:
+- RFM(S): working에도 draft 있지만 feedback이 더 후반 단계라 3단계로 우선
+- RFM(B): working에 파일 있지만 LOM/final이 가장 후반 → 5단계 (1차 배포 완료, 추가 revision 가능)
 ```
 
 > 💡 **포인트**: 방금 만든 게 진짜 에이전트예요. 옆 부서 팀장이 또 물어봐도 `/progress` 한 줄로 끝.
