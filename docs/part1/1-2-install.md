@@ -72,17 +72,21 @@ claude --version
 
 **Step 2. 사전에 공유받은 zip 파일을 바탕화면에 압축 해제해 주세요.**
 
-압축을 풀면 `parksystems-workshop` 폴더가 생성되고, 안에 오늘 실습에 필요한 파일들이 미리 들어있어요.
+압축을 풀면 어딘가에 **`parksystems-workshop`** 폴더가 생겨요 (압축 도구·OS마다 한두 단계 깊이 차이 있을 수 있음). 안에 `3_파일정리`, `4_PM에이전트`, `5_매뉴얼`, `.claude` 등이 보이면 정답.
 
 **Step 3. 터미널에서 해당 폴더로 이동해 주세요.**
 
 `cd`는 "change directory(폴더 이동)"의 줄임말이에요.
 
-Windows PowerShell:
+> 💡 **가장 쉬운 방법**: 파일 탐색기/Finder에서 `parksystems-workshop\` 폴더 우클릭 → "터미널에서 열기" (Windows 11) / "새 터미널" (Mac). 그러면 `cd` 명령 안 써도 돼요.
+
+Windows PowerShell (Desktop에 풀린 경우 예시):
 ```
 cd C:\Users\USER\Desktop\parksystems-workshop
 ```
 > "USER" 부분은 본인의 Windows 사용자명으로 바꿔주세요. 사용자명을 모르겠다면 파일 탐색기에서 `C:\Users` 폴더를 열어 본인 폴더명을 확인할 수 있어요.
+>
+> 다른 위치에 풀었거나 한 단계 더 들어갔으면 본인 경로로 수정.
 
 Mac/Linux 터미널:
 ```

@@ -42,6 +42,8 @@ You: 이 raw data 가지고 NX-Hybrid WLI Chapter 1 형식으로 매뉴얼 써�
 cd ~/Desktop/parksystems-workshop/5_매뉴얼
 ```
 > Windows: `cd C:\Users\USER\Desktop\parksystems-workshop\5_매뉴얼`
+>
+> 💡 `parksystems-workshop\` 폴더에서 `5_매뉴얼` 로 한 단계 더 들어가는 거예요. 본인 경로가 다르면 본인 경로로 수정.
 
 폴더 구조:
 

@@ -63,6 +63,7 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 ```
 cd ~/Desktop/parksystems-workshop/5_매뉴얼
 ```
+> 5번에서 이미 이 폴더에 있었다면 cd 생략 OK. 새 터미널이라면 본인 경로로 이동.
 
 ### Step 2. 학술 근거 수집 슬래시 커맨드 만들기
 
