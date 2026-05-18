@@ -56,7 +56,7 @@ raw_files/
 
 파일이 작업자(S, B)별로도 섞여 있고, 단계(raw data/working/feedback)별로도 섞여 있어요.
 
-**📊 매뉴얼 작업 5단계** — _회사 진행 단계_
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📊 매뉴얼 작업 5단계 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 진행 단계</span></p>
 
 > - **1단계** : 자료 취합, 교육/장비 확인, 일정/Scope 설정
 > - **2단계** : 1st Draft 작업, 추가 필요 자료/협력 파악
@@ -64,7 +64,7 @@ raw_files/
 > - **4단계** : Final Review (종료 또는 일정/Scope 조정)
 > - **5단계** : Next Revision Plan & Data Backup & Release
 
-**📌 파일 이름 규칙** — _위 5단계가 파일명에 어떻게 표시되는지_
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 파일 이름 규칙 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 위 5단계가 파일명에 어떻게 표시되는지</span></p>
 
 > **👤 누구 파일인지 (작업자 표시)**
 > - **앞의 `(S)` `(B)`** — 작업자 S 또는 B
@@ -91,7 +91,7 @@ claude
 
 클로드 코드 대화창이 열리면, 옆 **Nimbalyst** 창(또는 fallback으로 파일 탐색기/Finder)을 잘 보면서 아래 명령을 그대로 복사해서 붙여넣어 주세요.
 
-**📌 명령에 쓸 용어 3가지** — _회사 매뉴얼 작업 폴더 구조_
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 명령에 쓸 용어 3가지 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 매뉴얼 작업 폴더 구조</span></p>
 
 > - **RFM** — 작업자별 폴더 이름 (`RFM(S)`, `RFM(B)` 식)
 > - **단계** — 매뉴얼 작업 흐름의 세 단계
@@ -114,7 +114,7 @@ RFM/ 폴더 안에 정리해줘.
 
 <br/>
 
-**🤖 이 명령이 시키는 일** — _클로드 코드가 알아서 처리_
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 이 명령이 시키는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 클로드 코드가 알아서 처리</span></p>
 
 > 1. `raw_files/` 폴더를 들여다봄
 > 2. 파일명 앞 `(S)` `(B)`로 누구 파일인지 구분
