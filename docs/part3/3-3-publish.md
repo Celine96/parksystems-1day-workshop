@@ -40,7 +40,7 @@
 
 ```
 [디자인 가이드 폴더]의 자료를 분석해서
-.claude/agents/Design-Applier.md 라는 에이전트 소개서를 만들어줘.
+.claude/agents/Design-Applier.md 라는 에이전트를 만들어줘.
 
 내용:
 - 회사 컬러 팔레트 (HEX 코드)
