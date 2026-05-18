@@ -52,6 +52,8 @@ cd ~/Desktop/parksystems-workshop/4_PM에이전트
 claude
 ```
 > Windows: `cd C:\Users\USER\Desktop\parksystems-workshop\4_PM에이전트`
+>
+> 💡 3 챕터에서 작업한 `parksystems-workshop\` 폴더에서 `4_PM에이전트` 로 한 단계 더 들어가는 거예요. 본인 경로가 다르면 본인 경로로 수정.
 
 Nimbalyst에서도 같은 폴더 열어두세요.
 
