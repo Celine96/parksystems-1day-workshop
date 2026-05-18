@@ -107,14 +107,21 @@ claude
 
 ```
 3_파일정리/raw_files/ 안의 파일들을
-작업자(S, B) 2명과 단계(raw_data/working/feedback) 기준으로
-RFM/ 폴더 안에 정리해줘.
+작업자(S, B) 2명과 단계 기준으로 RFM/ 폴더 안에 정리해줘.
 
-규칙:
-- 폴더 구조: RFM/RFM(작업자)/단계/ 의 위계 구조
-- 파일명 앞에 (X) 가 있으면 작업자 X 의 것
-- 파일명에 raw 가 있으면 raw_data, working 이 있으면 working, feedback 이 있으면 feedback
-- final 이 붙은 파일은 별도로 LOM/ 폴더로 이동 (단계 분기)
+폴더 구조:
+- RFM/RFM(작업자)/단계/ 의 위계 구조
+- 단계 폴더 3개: raw_data / working / feedback
+- final 붙은 파일은 별도 LOM/ 폴더 (5단계 배포 완료)
+
+분류 규칙:
+- 파일명 앞 (S) (B) 로 작업자 구분
+- 단계 분류 (매뉴얼 작업 5단계 기준):
+  - 1단계 원본 자료 → raw_data : 파일명에 'raw' 또는 .stp 확장자
+  - 2~4단계 Draft pdf → working : 파일명에 'working' 또는 'draft'
+  - 3단계 리뷰 받은 자료 → feedback : 파일명에 'feedback' 또는 'review'
+  - 5단계 배포 완료 → LOM/ : 파일명에 'final'
+- 위 키워드에 안 맞는 파일은 파일명·확장자 패턴으로 가장 가까운 단계 추론
 ```
 
 <br/>
