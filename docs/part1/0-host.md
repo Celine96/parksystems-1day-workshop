@@ -15,9 +15,9 @@
 
 <div style="margin-top: 20px; padding: 16px 20px; background: var(--vp-c-bg-soft); border-radius: 8px;">
 
-✉&nbsp; **이메일** &nbsp;·&nbsp; [team.d.labs@gmail.com](mailto:team.d.labs@gmail.com)
+<p style="margin: 0 0 8px;">✉ <strong>이메일</strong> · <a href="mailto:team.d.labs@gmail.com">team.d.labs@gmail.com</a></p>
 
-🔗&nbsp; **LinkedIn** &nbsp;·&nbsp; [linkedin.com/in/syceline](https://www.linkedin.com/in/syceline/)
+<p style="margin: 0;">🔗 <strong>LinkedIn</strong> · <a href="https://www.linkedin.com/in/syceline/">linkedin.com/in/syceline</a></p>
 
 </div>
 
