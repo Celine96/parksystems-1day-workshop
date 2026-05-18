@@ -212,6 +212,12 @@ claude_md = f"""# 파크시스템스 AX 바이브코딩 연수 — 작업 공간
 ## 워크북 라이브
 
 https://celine96.github.io/parksystems-1day-workshop/
+
+## Claude Code 작업 규칙
+
+- **`sleep N` 같은 대기 명령 사용 금지** (Claude Code 안전 정책이 차단함).
+- API rate limit 대응이 꼭 필요할 땐 5초까지 단발성 재시도만. 그 이상은 사용자에게 알리고 중단.
+- 파일 작업·폴더 분석은 sleep 없이 바로 실행.
 """
 (ROOT / "CLAUDE.md").write_text(claude_md, encoding='utf-8')
 print(f"[OK] CLAUDE.md 생성 (워크숍 흐름은 chapters.json 기반)")
