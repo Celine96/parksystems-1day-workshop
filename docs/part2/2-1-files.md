@@ -56,26 +56,20 @@ raw_files/
 
 파일이 작업자(S, B)별로도 섞여 있고, 단계(raw data/working/feedback)별로도 섞여 있어요.
 
-> 📊 **매뉴얼 작업 5단계** (회사 진행 단계)
->
-> - **1단계** : 자료 취합, 교육/장비 확인, 일정/Scope 설정
-> - **2단계** : 1st Draft 작업, 추가 필요 자료/협력 파악
-> - **3단계** : Draft 보완 및 Review/Feedback/Revision Loop
-> - **4단계** : Final Review (종료 또는 일정/Scope 조정)
-> - **5단계** : Next Revision Plan & Data Backup & Release
-
-<br/>
-
-> 📌 **파일 이름 규칙** (위 5단계가 파일명에 어떻게 표시되는지)
+> 📌 **파일 이름 규칙** (회사 매뉴얼 작업 파일 패턴)
 >
 > **👤 누구 파일인지 (작업자 표시)**
 > - **앞의 `(S)` `(B)`** — 작업자 S 또는 B
 >
-> **🔄 어느 단계인지 (단계 표시)**
-> - **`raw`** — 원본 자료 (1단계, 작업 시작 자료)
-> - **`working`** — 작업자가 만든 Draft pdf. 2단계(1st Draft 작업) → 3단계(Review·Feedback 받은 후 보완 작업) → 4단계(Final Review 직전, 파일명에서 `(작업자)` 표시 떨어짐)
-> - **`feedback`** — 동료에게 리뷰 받은 자료 (3단계, Review·Feedback·Revision Loop 진행 중)
-> - **`final`** — 작업 완료된 매뉴얼 (5단계, Data Backup·Release 완료)
+> **🔄 어느 단계인지 (회사 매뉴얼 작업 5단계 + 파일명 매칭)**
+>
+> | 단계 | 의미 | 파일명 표시 |
+> |---|---|---|
+> | **1단계** | 자료 취합, 교육/장비 확인, 일정/Scope 설정 | `raw` |
+> | **2단계** | 1st Draft 작업, 추가 필요 자료/협력 파악 | `working` (Draft pdf 처음 생김) |
+> | **3단계** | Draft 보완 및 Review/Feedback/Revision Loop | `feedback` (또는 `working`에 보완본) |
+> | **4단계** | Final Review (종료 또는 일정/Scope 조정) | `working` (파일명 앞 `(작업자)` 표시 떨어짐) |
+> | **5단계** | Next Revision Plan & Data Backup & Release | `final` (Release 완료) |
 
 손으로 정리하면? 2명 × 4단계 = 8개 폴더 만들고, 파일을 하나씩 옮겨야 해요. 오래 걸리는 일이죠.
 
