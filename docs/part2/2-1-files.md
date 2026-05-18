@@ -103,7 +103,7 @@ cd ~/Desktop/parksystems-workshop      # Mac/Linux
 claude
 ```
 > Windows: `cd "C:\Users\USER\Desktop\parksystems-workshop"`
-> (압축이 한 단계 더 들어갔으면 그만큼 더 cd. 예: `cd ~/Desktop/파크시스템스 임직원_워크북/parksystems-workshop`)
+> (Windows 자동 풀기는 같은 이름 폴더 한 단계 더 만들 수 있어요. 예: `cd ~/Desktop/parksystems-workshop/parksystems-workshop`)
 
 클로드 코드 대화창이 열리면, 옆 **Nimbalyst** 창(또는 fallback으로 파일 탐색기/Finder)을 잘 보면서 아래 명령을 그대로 복사해서 붙여넣어 주세요.
 

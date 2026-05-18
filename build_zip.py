@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-파크시스템스 임직원 워크북 zip 패키징
+파크시스템스 워크숍 학습자 zip 패키징 (parksystems-workshop.zip)
 """
 import os, re, shutil, zipfile, json
 from pathlib import Path
@@ -252,7 +252,9 @@ parksystems-workshop/
 ## 🚀 시작 방법
 
 ### 1. 폴더 압축 해제
-이 zip을 바탕화면에 압축 해제해주세요. `parksystems-workshop/` 폴더가 생겨요.
+이 zip을 **바탕화면**에 압축 해제해주세요. **`parksystems-workshop/`** 폴더가 생겨요.
+
+> 💡 Windows에서 우클릭 → "압축 풀기"하면 같은 이름 폴더가 한 번 더 들어갈 수 있어요 (`parksystems-workshop\parksystems-workshop\`). 그럴 땐 **안쪽 `parksystems-workshop/`** 폴더가 작업 폴더예요 (`3_파일정리`, `4_PM에이전트`, `5_매뉴얼`, `.claude` 등이 보이는 폴더).
 
 ### 2. 워크북 0교시 — 설치 안내 따라하기
 https://celine96.github.io/parksystems-1day-workshop/part1/1-1-intro 에서 시작.
