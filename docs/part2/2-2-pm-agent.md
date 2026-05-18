@@ -35,7 +35,7 @@ PM 에이전트:
 
 ### 이게 에이전트예요
 
-**에이전트 = 특정 역할을 잘 하는 AI에 역할을 부여한 거예요.** 오늘 우리가 만들 두 에이전트 중 첫 번째가 바로 이 **PM 에이전트**예요.
+**에이전트 = 특정 역할을 잘 하는 AI에 역할을 부여한 거예요.** 오늘 우리가 만들 두 에이전트 중 첫 번째가 바로 이 **PM 에이전트**예요. 우리는 이 PM 에이전트에 **JARVIS**라는 이름을 붙일 거예요 (영화 아이언맨의 AI 비서 자비스에서 따왔어요).
 
 <p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">✅ PM 에이전트가 잘 하는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 사람 말로 묻기만 하면 보고서로 답변</span></p>
 
@@ -81,23 +81,23 @@ Nimbalyst에서도 같은 폴더 열어두세요.
 
 ---
 
-### Step 2. PM 에이전트 만들기 — `.claude/agents/PM.md`
+### Step 2. PM 에이전트 만들기 — `.claude/agents/JARVIS.md`
 
 에이전트에게 **"너는 어떤 역할이고, 어떤 규칙으로 일해"** 를 알려줘야 해요. 이걸 적은 파일이 에이전트의 **소개서**가 돼요.
 
 클로드 코드에 이렇게 입력하세요:
 
 ```
-.claude/agents/PM.md 파일을 새로 만들어줘.
+.claude/agents/JARVIS.md 파일을 새로 만들어줘.
 
 내용은 이렇게:
 
 ---
-name: PM
+name: JARVIS
 description: TW 팀 매뉴얼 작업 진행 상황을 RFM 폴더를 들여다보고 5단계로 보고하는 PM 에이전트
 ---
 
-당신은 파크시스템스 TW 팀의 PM 에이전트예요.
+당신은 파크시스템스 TW 팀의 PM 에이전트 JARVIS 예요.
 
 ## 당신의 일
 
@@ -126,7 +126,13 @@ RFM/ 폴더를 들여다보고, 작업자별로 지금 어느 단계에 있는�
 - 모르면 추측하지 말고 "확인 불가"라고 답하기
 ```
 
-**Enter 누르세요.** Nimbalyst를 보면 `.claude/agents/PM.md` 파일이 새로 생기는 게 보일 거예요.
+**Enter 누르세요.** Nimbalyst를 보면 `.claude/agents/JARVIS.md` 파일이 새로 생기는 게 보일 거예요.
+
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⚠️ "권한이 막혔어요" 메시지가 떠도 당황 X <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 자동 셋업되어 있어요</span></p>
+
+> 클로드 코드가 자기 설정 폴더(`.claude/`)에 새 파일을 쓸 때 한 번 확인을 받아요. **zip 안 `.claude/settings.json`이 이미 자동 허용을 셋업해뒀어요** — 대부분 그냥 진행돼요.
+>
+> 혹시 "permission denied" 같은 메시지가 보이면 **Allow 또는 Yes 누르면 바로 진행돼요.** 안전장치라 정상 동작이에요.
 
 > 💡 **포인트**: 우리는 코드 한 줄 안 썼어요. 자연어로 "PM 에이전트는 이런 역할이야"를 적었을 뿐인데, 클로드 코드가 파일로 저장했고 이제 이 에이전트를 호출할 수 있어요.
 
@@ -167,7 +173,7 @@ PM 에이전트가 일하는 모습을 보세요.
 <p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 클로드 코드가 알아서 하는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 명령 한 줄로 일어나는 일</span></p>
 
 > 1. `.claude/commands/progress.md` 를 읽고 → 이게 무슨 명령인지 파악
-> 2. `.claude/agents/PM.md` 를 읽고 → PM 에이전트 소개서 불러오기
+> 2. `.claude/agents/JARVIS.md` 를 읽고 → PM 에이전트 소개서 불러오기
 > 3. `RFM/` 폴더를 하나씩 둘러봄 → 작업자별 단계 판정
 > 4. 정리된 보고서로 답변
 
@@ -224,7 +230,7 @@ RFM(S) 작업자의 현재 상태를 상세히 보고해줘. 어떤 파일이 �
 
 | 파일 | 역할 |
 |---|---|
-| `.claude/agents/PM.md` | **에이전트 (PM 에이전트 소개서)** |
+| `.claude/agents/JARVIS.md` | **에이전트 (PM 에이전트 소개서)** |
 | `.claude/commands/progress.md` | 에이전트 부르는 슬래시 커맨드 |
 | `RFM/` 폴더 구조 | 에이전트가 들여다보는 작업장 |
 | 보고 형식 약속 | 에이전트가 답할 때의 규칙 |
@@ -262,7 +268,7 @@ claude
 ```
 우리 팀은 [단계 1: ... / 단계 2: ... / ...] 식으로 작업을 진행해.
 이 폴더 안에서 [어떤 신호로 각 단계를 판정할지] 정해서
-.claude/agents/PM.md 에 PM 에이전트 소개서를 만들어줘.
+.claude/agents/JARVIS.md 에 PM 에이전트 소개서를 만들어줘.
 ```
 
 → 오늘 우리가 한 것과 똑같은 패턴이에요. 회사 폴더 구조·단계 규칙만 본인 회사에 맞게 바꿔주시면 됩니다.
@@ -278,14 +284,14 @@ claude
 | 막힌 부분 | 빠른 해결 |
 |---|---|
 | `/progress` 입력해도 에이전트가 안 움직임 | 슬래시 커맨드 파일(`.claude/commands/progress.md`)이 만들어졌는지 Nimbalyst에서 확인 |
-| 에이전트가 엉뚱한 단계로 판정함 | `.claude/agents/PM.md` 소개서의 규칙을 더 명확히 작성. 예: "feedback 폴더에 .pdf 가 있어야만 3단계, 다른 확장자는 무시" |
+| 에이전트가 엉뚱한 단계로 판정함 | `.claude/agents/JARVIS.md` 소개서의 규칙을 더 명확히 작성. 예: "feedback 폴더에 .pdf 가 있어야만 3단계, 다른 확장자는 무시" |
 | 보고서 형식이 마음에 안 듦 | `/progress` 한 후 추가 명령으로 "표 형식으로 다시 보여줘" 같이 자유롭게 |
 
 ---
 
 ## [체크포인트]
 
-- [ ] `.claude/agents/PM.md` 파일에 PM 에이전트 소개서를 작성함
+- [ ] `.claude/agents/JARVIS.md` 파일에 PM 에이전트 소개서를 작성함
 - [ ] `.claude/commands/progress.md` 슬래시 커맨드를 만듦
 - [ ] `/progress` 한 줄로 PM 에이전트가 RFM 폴더를 분석해 보고하는 걸 직접 봄
 - [ ] 응용 명령 1~2개를 시도해 에이전트를 더 깊이 부려봄

@@ -103,6 +103,12 @@
 
 > 💡 **포인트**: `/weekly-report`, `/check-spec`, `/translate-en` 같은 본인만의 커맨드 자유롭게 만들어보세요.
 
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⚠️ "권한이 막혔어요" 메시지가 떠도 당황 X <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 자동 셋업되어 있어요</span></p>
+
+> 클로드 코드가 자기 설정 폴더(`.claude/`)에 새 파일을 쓸 때 한 번 확인을 받아요. **워크숍 zip 안 `.claude/settings.json`이 이미 자동 허용을 셋업해뒀어요** — 대부분 그냥 진행돼요.
+>
+> 혹시 "permission denied" 같은 메시지가 보이면 **Allow 또는 Yes 누르면 바로 진행돼요.** 안전장치라 정상 동작이에요.
+
 ---
 
 > 다음 부록은 **10. PRD — AI에게 줄 지시서** 입니다.

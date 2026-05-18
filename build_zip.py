@@ -2,7 +2,7 @@
 """
 파크시스템스 임직원 워크북 zip 패키징
 """
-import os, re, shutil, zipfile
+import os, re, shutil, zipfile, json
 from pathlib import Path
 from pptx import Presentation
 
@@ -170,6 +170,24 @@ print(f"[OK] 4_PM에이전트/RFM 시나리오 폴더 생성")
 (ROOT / ".claude" / "agents" / ".gitkeep").write_text("", encoding='utf-8')
 (ROOT / ".claude" / "commands" / ".gitkeep").write_text("", encoding='utf-8')
 print(f"[OK] .claude/ 빈 폴더 생성")
+
+# .claude/settings.json — 권한 자동 허용 (학습자 흐름 매끄럽게)
+settings_payload = {
+    "permissions": {
+        "defaultMode": "auto",
+        "allow": [
+            "Write(./.claude/agents/**)",
+            "Write(./.claude/commands/**)",
+            "Edit(./.claude/agents/**)",
+            "Edit(./.claude/commands/**)"
+        ]
+    }
+}
+(ROOT / ".claude" / "settings.json").write_text(
+    json.dumps(settings_payload, indent=2, ensure_ascii=False),
+    encoding='utf-8'
+)
+print(f"[OK] .claude/settings.json 생성 (권한 자동 허용)")
 
 # ============================================
 # 6. CLAUDE.md (클로드 코드 자동 로드)
