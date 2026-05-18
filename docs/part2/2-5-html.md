@@ -8,7 +8,7 @@
 
 회사 매뉴얼이 .docx·.pdf 파일로만 있으면 받는 사람이 다운로드해서 봐야 해요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">✅ HTML 웹페이지로 만들면 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 받는 사람이 다운로드 없이 바로 보기</span></p>
+<SectionTitle icon="✅" title="HTML 웹페이지로 만들면" sub="받는 사람이 다운로드 없이 바로 보기" />
 
 > - URL 한 줄로 공유
 > - 모바일·태블릿·PC 모두 잘 보임

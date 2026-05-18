@@ -87,7 +87,7 @@
 
 오늘 워크숍에서 만든 `/progress`, `/find-evidence` 같은 커맨드들이 바로 **본인이 만든 슬래시 커맨드**예요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 본인 슬래시 커맨드 만들기 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 파일 한 개 = 커맨드 한 개</span></p>
+<SectionTitle icon="📌" title="본인 슬래시 커맨드 만들기" sub="파일 한 개 = 커맨드 한 개" />
 
 > - **위치** — `.claude/commands/[이름].md`
 > - **자동 등록** — 추가하면 자동으로 `/이름` 형식으로 호출 가능
@@ -95,7 +95,7 @@
 
 > 💡 **포인트**: `/weekly-report`, `/check-spec`, `/translate-en` 같은 본인만의 커맨드 자유롭게 만들어보세요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⚠️ "권한이 막혔어요" 메시지가 떠도 당황 X <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 자동 셋업되어 있어요</span></p>
+<SectionTitle icon="⚠️" title="&quot;권한이 막혔어요&quot; 메시지가 떠도 당황 X" sub="자동 셋업되어 있어요" />
 
 > 클로드 코드가 자기 설정 폴더(`.claude/`)에 새 파일을 쓸 때 한 번 확인을 받아요. **워크숍 zip 안 `.claude/settings.json`이 이미 자동 허용을 셋업해뒀어요** — 대부분 그냥 진행돼요.
 >

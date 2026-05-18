@@ -29,7 +29,7 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 
 같은 AI 모델인데 회사마다·사람마다 결과 품질이 다른 이유 — **하네스가 다음 두 가지 함정을 얼마나 잘 막아주는지**에 달려있어요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⚠️ 함정 1. 컨텍스트 불안 (Context Drift) <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 대화가 길어지면 앞을 까먹음</span></p>
+<SectionTitle icon="⚠️" title="함정 1. 컨텍스트 불안 (Context Drift)" sub="대화가 길어지면 앞을 까먹음" />
 
 > 대화가 길어질수록 AI가 앞의 작업·규칙·약속을 점점 잊어버려요. 결국 "대충 마무리"하려는 경향이 나타나죠.
 >
@@ -40,7 +40,7 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 > - 슬래시 커맨드로 작업을 작은 단위로 쪼개기 (한 번에 너무 길지 않게)
 > - `/compact` 같은 명령으로 대화 압축
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⚠️ 함정 2. 자기 평가 편향 (Self-Evaluation Bias) <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 본인 결과는 항상 좋다고 답함</span></p>
+<SectionTitle icon="⚠️" title="함정 2. 자기 평가 편향 (Self-Evaluation Bias)" sub="본인 결과는 항상 좋다고 답함" />
 
 > AI가 자기가 만든 결과를 객관적으로 비판하지 못해요. 본인이 만들면 대체로 "잘 됐다"고 평가하는 경향.
 >
@@ -148,25 +148,25 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 
 오늘 우리가 만든 하네스는 단순했어요. 회사 전체에 본격 도입할 땐 다음 4가지를 신경 쓰면 좋아요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 1. 도구 관리 (Tools) <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 에이전트가 쓸 수 있는 도구 범위</span></p>
+<SectionTitle icon="📌" title="1. 도구 관리 (Tools)" sub="에이전트가 쓸 수 있는 도구 범위" />
 
 > 에이전트가 쓸 수 있는 도구(파일 접근·API 호출·외부 시스템 연결)를 미리 정해두기.
 >
 > 예: PM 에이전트는 `RFM/` 폴더만 읽기 / 에디터 에이전트는 `5_매뉴얼/` 폴더에서 읽고 쓰기 / Semantic Scholar API 호출 가능
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 2. 액션 루프 (Action Loop) <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 계획 → 실행 → 확인 사이클</span></p>
+<SectionTitle icon="📌" title="2. 액션 루프 (Action Loop)" sub="계획 → 실행 → 확인 사이클" />
 
 > 에이전트가 한 번에 끝내지 못하는 일은 "계획 → 실행 → 확인 → 다음 행동" 사이클로.
 >
 > 예: 에디터 에이전트 = "raw data 읽기 → 형식 분석 → 변환 → 결과 확인 → 보완" 반복
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 3. 상태 관리 및 평가 (State Management) <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 어디까지 했는지·결과 품질 추적</span></p>
+<SectionTitle icon="📌" title="3. 상태 관리 및 평가 (State Management)" sub="어디까지 했는지·결과 품질 추적" />
 
 > 에이전트가 어디까지 했는지, 결과 품질이 어떤지 추적.
 >
 > 예: PM 에이전트가 5단계 판정할 때 "이 폴더에 raw data 있음 → 1단계 → 다음 단계로 가려면 working/에 pdf 있어야 함" 식의 명확한 기준
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 4. 메모리 관리 (Memory) <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 매번 새로 시작하지 않도록 저장</span></p>
+<SectionTitle icon="📌" title="4. 메모리 관리 (Memory)" sub="매번 새로 시작하지 않도록 저장" />
 
 > 에이전트가 매번 새로 시작하지 않도록, 사용자 선호·반복 결과·만족한 결과물을 저장하기.
 >
@@ -176,7 +176,7 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 
 에이전트를 만들고 운영할 때 자주 빠지는 함정이에요. 본업에 적용 시 꼭 점검하세요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🚫 1. 불확실한 fallback 금지 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 모르면 추측하지 말고 '확인 불가'</span></p>
+<SectionTitle icon="🚫" title="1. 불확실한 fallback 금지" sub="모르면 추측하지 말고 '확인 불가'" />
 
 > 에이전트가 모를 때 **추측해서 답하지 않게** 해야 해요. 잘못된 답이 자신감 있게 나오면 사람이 검증을 안 함 → 오류가 묻혀요.
 >
@@ -185,7 +185,7 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 >
 > → 에이전트 정의에 "**모를 때는 추측 X, '확인 불가'로 답할 것**" 명시.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🚫 2. 검증 없는 종료 막기 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 끝났다고 하기 전에 자체 점검</span></p>
+<SectionTitle icon="🚫" title="2. 검증 없는 종료 막기" sub="끝났다고 하기 전에 자체 점검" />
 
 > 에이전트가 일을 끝냈다고 알릴 때, **결과가 진짜 맞는지 확인하는 단계**를 두기.
 >
@@ -194,7 +194,7 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 >
 > → 슬래시 커맨드에 "**완료 전 자체 검증 단계 포함**" 명시.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🚫 3. 기능 경계 명확히 하기 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 어디까지 에이전트, 어디부터 사람</span></p>
+<SectionTitle icon="🚫" title="3. 기능 경계 명확히 하기" sub="어디까지 에이전트, 어디부터 사람" />
 
 > 이 에이전트가 **어디까지 할 수 있고, 어디부터는 사람이 결정해야 하는지** 미리 정해두기.
 >

@@ -14,7 +14,7 @@
 
 평소 흐름:
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 손으로 하면 4단계 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 손으로 하면 오래 걸리는 일</span></p>
+<SectionTitle icon="📌" title="손으로 하면 4단계" sub="손으로 하면 오래 걸리는 일" />
 
 > 1. Google Scholar 또는 학술 사이트 검색
 > 2. 논문 클릭 → 초록 읽기
@@ -46,7 +46,7 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 오늘 우리는 **Semantic Scholar** 라는 학술 자료 검색 서비스의 API를 사용해요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🔎 Semantic Scholar <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 오늘 사용할 무료 학술 API</span></p>
+<SectionTitle icon="🔎" title="Semantic Scholar" sub="오늘 사용할 무료 학술 API" />
 
 > - **Semantic Scholar** — Allen Institute for AI가 운영하는 무료 학술 검색 서비스
 > - **약 2억 편 이상의 논문 데이터** 보유 (Google Scholar와 유사한 커버리지)
@@ -107,14 +107,14 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 
 클로드가 일하는 모습을 보세요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 클로드 코드가 알아서 하는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 커맨드 → API 호출 → 결과 정리</span></p>
+<SectionTitle icon="🤖" title="클로드 코드가 알아서 하는 일" sub="커맨드 → API 호출 → 결과 정리" />
 
 > 1. 우리가 만든 `.claude/commands/find-evidence.md` 를 읽음
 > 2. Semantic Scholar API 호출 (실제로 인터넷으로 검색)
 > 3. 결과 5개를 정해준 형식으로 정리
 > 4. BibTeX 참고문헌까지 함께 출력
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 클로드 코드는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 학술 자료 + 매뉴얼 인용 코멘트</span></p>
+<SectionTitle icon="💬" title="클로드 코드는 이렇게 답해요" sub="학술 자료 + 매뉴얼 인용 코멘트" />
 
 ```
 1. Hybrid Metrology Combining AFM and White Light Interferometry

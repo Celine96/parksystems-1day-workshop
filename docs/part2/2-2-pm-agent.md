@@ -124,7 +124,7 @@ description: TW 팀 매뉴얼 작업 진행 상황을 RFM 폴더를 들여다보
 
 **Enter 누르세요.** Nimbalyst를 보면 `.claude/agents/PM.md` 파일이 새로 생기는 게 보일 거예요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⚠️ "권한이 막혔어요" 메시지가 떠도 당황 X <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 자동 셋업되어 있어요</span></p>
+<SectionTitle icon="⚠️" title="&quot;권한이 막혔어요&quot; 메시지가 떠도 당황 X" sub="자동 셋업되어 있어요" />
 
 > 클로드 코드가 자기 설정 폴더(`.claude/`)에 새 파일을 쓸 때 한 번 확인을 받아요. **zip 안 `.claude/settings.json`이 이미 자동 허용을 셋업해뒀어요** — 대부분 그냥 진행돼요.
 >
@@ -188,14 +188,14 @@ JARVIS (PM 에이전트)를 호출해서, 4_PM에이전트/RFM/ 폴더의 현재
 
 PM 에이전트가 일하는 모습을 보세요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 클로드 코드가 알아서 하는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 명령 한 줄로 일어나는 일</span></p>
+<SectionTitle icon="🤖" title="클로드 코드가 알아서 하는 일" sub="명령 한 줄로 일어나는 일" />
 
 > 1. `.claude/commands/progress.md` 를 읽고 → 이게 무슨 명령인지 파악
 > 2. `.claude/agents/PM.md` 를 읽고 → PM 에이전트 정의 불러오기
 > 3. `RFM/` 폴더를 하나씩 둘러봄 → 작업자별 단계 판정
 > 4. 정리된 보고서로 답변
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 PM 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— PM이 제공하는 정보 형식</span></p>
+<SectionTitle icon="💬" title="PM 에이전트는 이렇게 답해요" sub="PM이 제공하는 정보 형식" />
 
 ```
 파크시스템스 TW 팀 매뉴얼 진행 상황
@@ -217,13 +217,13 @@ PM 에이전트가 일하는 모습을 보세요.
 
 에이전트가 일단 일을 하기 시작하면, 추가 명령으로 더 깊이 시킬 수 있어요. 아래를 하나씩 시도해보세요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 응용 1. 작업자별 상세 보고 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 한 작업자만 깊이 들여다보기</span></p>
+<SectionTitle icon="📌" title="응용 1. 작업자별 상세 보고" sub="한 작업자만 깊이 들여다보기" />
 
 ```
 RFM(S) 작업자의 현재 상태를 상세히 보고해줘. 어떤 파일이 어느 단계에 있는지, 다음에 뭘 해야 하는지까지.
 ```
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 응용 2. 빈번 사용 폴더 찾기 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 가장 바쁜 팀이 어디인지</span></p>
+<SectionTitle icon="📌" title="응용 2. 빈번 사용 폴더 찾기" sub="가장 바쁜 팀이 어디인지" />
 
 ```
 지난 주에 가장 많이 변경된 작업자 폴더를 찾아서 알려줘. 그 팀이 가장 바쁜 팀이야.

@@ -10,7 +10,7 @@
 
 회사에서 새 제품 매뉴얼을 쓸 때마다 매번 똑같은 형식·톤을 맞춰야 해요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 매번 맞춰야 하는 형식 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 매뉴얼 한 권에 들어가는 정형 요소</span></p>
+<SectionTitle icon="📌" title="매번 맞춰야 하는 형식" sub="매뉴얼 한 권에 들어가는 정형 요소" />
 
 > - **Chapter 1 General Information** — 제품 개요는 어떤 톤으로
 > - **Preface** — 매뉴얼 사용 안내는 어떤 구조로
@@ -122,7 +122,7 @@ NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 
 Nimbalyst를 보면 `5_매뉴얼/output/Chapter1_Intro.md` 파일이 새로 생기는 게 보일 거예요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 에디터 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 스타일로 변환된 결과</span></p>
+<SectionTitle icon="💬" title="에디터 에이전트는 이렇게 답해요" sub="회사 스타일로 변환된 결과" />
 
 ```markdown
 # Chapter 1
@@ -139,7 +139,7 @@ White Light Interferometry (WLI) on a single platform...
 Figure 1.1 NX-Interferom
 ```
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">✅ 확인 포인트 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 결과물이 회사 톤과 맞는지</span></p>
+<SectionTitle icon="✅" title="확인 포인트" sub="결과물이 회사 톤과 맞는지" />
 
 > - [ ] 영문 매뉴얼 톤이 형식 PNG와 비슷한가요?
 > - [ ] raw data의 핵심 정보(AFM·AFP·WLI 통합, SEMI 표준 등)가 빠지지 않았나요?

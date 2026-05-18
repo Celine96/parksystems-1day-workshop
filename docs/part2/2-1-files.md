@@ -56,7 +56,7 @@ raw_files/
 
 파일이 작업자(S, B)별로도 섞여 있고, 단계(raw data/working/feedback)별로도 섞여 있어요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📊 매뉴얼 작업 5단계 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 진행 단계</span></p>
+<SectionTitle icon="📊" title="매뉴얼 작업 5단계" sub="회사 진행 단계" />
 
 > - **1단계** : 자료 취합, 교육/장비 확인, 일정/Scope 설정
 > - **2단계** : 1st Draft 작업, 추가 필요 자료/협력 파악
@@ -64,7 +64,7 @@ raw_files/
 > - **4단계** : Final Review (종료 또는 일정/Scope 조정)
 > - **5단계** : Next Revision Plan & Data Backup & Release
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 raw_files/ 파일 이름 패턴 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 파일명 안에 단계가 어떻게 표시되는지</span></p>
+<SectionTitle icon="📌" title="raw_files/ 파일 이름 패턴" sub="파일명 안에 단계가 어떻게 표시되는지" />
 
 > **👤 누구 파일인지 (파일명)**
 > - **`(S)` 또는 `(B)`** — 작업자 S 또는 B
@@ -94,7 +94,7 @@ claude
 
 클로드 코드 대화창이 열리면, 옆 **Nimbalyst** 창(또는 fallback으로 파일 탐색기/Finder)을 잘 보면서 아래 명령을 그대로 복사해서 붙여넣어 주세요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 명령에 쓸 용어 3가지 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 매뉴얼 작업 폴더 구조</span></p>
+<SectionTitle icon="📌" title="명령에 쓸 용어 3가지" sub="회사 매뉴얼 작업 폴더 구조" />
 
 > - **RFM** — 작업자별 폴더 이름 (`RFM(S)`, `RFM(B)` 식)
 > - **단계** — 매뉴얼 작업 흐름의 세 단계
@@ -124,7 +124,7 @@ claude
 
 <br/>
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 이 명령이 시키는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 클로드 코드가 알아서 처리</span></p>
+<SectionTitle icon="🤖" title="이 명령이 시키는 일" sub="클로드 코드가 알아서 처리" />
 
 > 1. `raw_files/` 폴더를 들여다봄
 > 2. 파일명 앞 `(S)` `(B)`로 누구 파일인지 구분
@@ -146,7 +146,7 @@ claude
 
 > ⏱️ 30초~1분이면 끝나요. 손으로 했으면 30분이 걸렸을 일이에요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 32px 0 8px;">💬 클로드 코드는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 실행 전 계획 → 실행 후 보고</span></p>
+<SectionTitle icon="💬" title="클로드 코드는 이렇게 답해요" sub="실행 전 계획 → 실행 후 보고" spacious />
 
 > **① 먼저 분류 계획부터 보여줘요** — 실행 전 "내가 이렇게 할 거예요" 확인용
 

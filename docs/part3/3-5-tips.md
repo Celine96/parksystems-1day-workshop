@@ -13,7 +13,7 @@ PRD나 에이전트 정의를 만들었다면, 매번 클로드한테 "이 PRD �
 **CLAUDE.md 없이**: "이 매뉴얼은 격식 톤이야" 같은 약속을 매번 반복 입력
 **CLAUDE.md 있으면**: 클로드가 폴더에 들어오는 순간 자동 인식, 바로 작업 시작
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 CLAUDE.md에 적으면 좋은 것 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 프로젝트 전반에 항상 적용될 규칙</span></p>
+<SectionTitle icon="📌" title="CLAUDE.md에 적으면 좋은 것" sub="프로젝트 전반에 항상 적용될 규칙" />
 
 > - **프로젝트 개요와 목적** — 이 폴더가 무슨 작업의 공간인지
 > - **PRD·에이전트 정보** — 어떤 PRD·에이전트가 있고 언제 호출할지
@@ -21,7 +21,7 @@ PRD나 에이전트 정의를 만들었다면, 매번 클로드한테 "이 PRD �
 > - **톤·매너** — 격식·문장 길이·표현 스타일
 > - **금지 사항** — 예: "고객사명 직접 명시 X", "가격 정보 포함 X"
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 .md 파일 3종 정리 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 헷갈리지 않게 위치별 구분</span></p>
+<SectionTitle icon="📌" title=".md 파일 3종 정리" sub="헷갈리지 않게 위치별 구분" />
 
 > | 파일 | 위치 | 역할 |
 > |---|---|---|
@@ -49,28 +49,28 @@ PRD나 에이전트 정의를 만들었다면, 매번 클로드한테 "이 PRD �
 
 ### 매뉴얼·기술 글쓰기 직군 (4가지)
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">① 매뉴얼 톤이 어색할 때 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 1차 리뷰·외주 번역본 점검</span></p>
+<SectionTitle icon="①" title="매뉴얼 톤이 어색할 때" sub="1차 리뷰·외주 번역본 점검" />
 
 ```
 10년차 테크니컬 라이터로서 이 매뉴얼 초안의 톤과 문장 흐름을 평가해.
 어색한 부분을 찾고, 개선안을 우선순위와 근거를 붙여서 제안해.
 ```
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">② 뭘 먼저 손볼지 모를 때 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 마감 임박·우선순위 재정렬</span></p>
+<SectionTitle icon="②" title="뭘 먼저 손볼지 모를 때" sub="마감 임박·우선순위 재정렬" />
 
 ```
 TW 팀장으로서 매뉴얼 작업 초기 기획안과 비교해 목표·필수 섹션이
 반영되었는지 확인해. 지금 당장 손봐야 할 항목 3가지를 임팩트 순으로 뽑아.
 ```
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">③ 자료가 정리 안 됐을 때 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 인수인계 전·작업장 정리</span></p>
+<SectionTitle icon="③" title="자료가 정리 안 됐을 때" sub="인수인계 전·작업장 정리" />
 
 ```
 시니어 PM으로서 RFM 폴더를 리뷰해. 중복·누락·구조 문제를
 진단하고 정리 계획을 잡아.
 ```
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">④ 배포 전 불안할 때 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 고객사 배포·외부 공유 최종 리뷰</span></p>
+<SectionTitle icon="④" title="배포 전 불안할 때" sub="고객사 배포·외부 공유 최종 리뷰" />
 
 ```
 매뉴얼 리뷰어로서 이 매뉴얼을 최종 점검해. 엣지 케이스, 누락된
@@ -79,21 +79,21 @@ TW 팀장으로서 매뉴얼 작업 초기 기획안과 비교해 목표·필수
 
 ### 제품·코드 개발 직군 (3가지)
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⑤ 코드가 지저분해졌을 때 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 성능·중복·접근성 진단 + 리팩토링 계획</span></p>
+<SectionTitle icon="⑤" title="코드가 지저분해졌을 때" sub="성능·중복·접근성 진단 + 리팩토링 계획" />
 
 ```
 시니어 엔지니어로서 코드베이스를 리뷰해. 성능 병목, 중복, 접근성 이슈를
 진단하고 리팩토링 계획을 잡아.
 ```
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⑥ 출시 전 불안할 때 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 제품 QA 최종 점검</span></p>
+<SectionTitle icon="⑥" title="출시 전 불안할 때" sub="제품 QA 최종 점검" />
 
 ```
 QA 리드로서 이 제품을 테스트해. 엣지 케이스, 에러 처리 누락,
 UI 깨짐을 심각도 순으로 정리해.
 ```
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">⑦ 뭘 먼저 고쳐야 할지 모를 때 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 고객 피드백·이탈률 기반 우선순위</span></p>
+<SectionTitle icon="⑦" title="뭘 먼저 고쳐야 할지 모를 때" sub="고객 피드백·이탈률 기반 우선순위" />
 
 ```
 이 제품의 PM으로서 아래 고객 피드백과 이탈률 데이터를 분석해.
