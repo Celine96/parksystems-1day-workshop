@@ -148,6 +148,58 @@ claude
 
 > ⏱️ 30초~1분이면 끝나요. 손으로 했으면 30분이 걸렸을 일이에요.
 
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 32px 0 8px;">💬 클로드 코드는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 실행 전 계획 → 실행 후 보고</span></p>
+
+> **① 먼저 분류 계획부터 보여줘요** — 실행 전 "내가 이렇게 할 거예요" 확인용
+
+```
+● 확인 끝. 분류 계획:
+
+  - RFM(B)/raw data/: (B) Manual_update_input.stp, (B) Manual_update_raw.stp
+  - RFM(B)/working/: (B) Manual_update_v3.pdf, (B) Manual_update_working.pdf
+  - RFM(S)/raw data/: (S) NX-Interferom_input.stp, (S) NX-Interferom_v1.stp (.stp 확장자 우선)
+  - RFM(S)/working/: (S) NX-Interferom_draft_v2.pdf
+  - RFM(S)/feedback/: (S) NX-Interferom_review.pdf
+  - 4_PM에이전트/LOM/ (신규): final_Manual_B.pdf, final_NX_S.pdf
+```
+
+> **② 실행하고 결과를 표로 보고해요** — 실행 후 "이렇게 끝났어요"
+
+```
+● 정리 완료. 10개 파일 모두 이동했고 raw_files/는 비었음.
+
+  ┌─────────────────────────┬──────────────────────────────────────────────────────┐
+  │          위치           │                         파일                         │
+  ├─────────────────────────┼──────────────────────────────────────────────────────┤
+  │ RFM(B)/raw data/        │ (B) Manual_update_input.stp,                         │
+  │                         │ (B) Manual_update_raw.stp                            │
+  ├─────────────────────────┼──────────────────────────────────────────────────────┤
+  │ RFM(B)/working/         │ (B) Manual_update_v3.pdf,                            │
+  │                         │ (B) Manual_update_working.pdf                        │
+  ├─────────────────────────┼──────────────────────────────────────────────────────┤
+  │ RFM(B)/feedback/        │ (없음)                                               │
+  ├─────────────────────────┼──────────────────────────────────────────────────────┤
+  │ RFM(S)/raw data/        │ (S) NX-Interferom_input.stp,                         │
+  │                         │ (S) NX-Interferom_v1.stp                             │
+  ├─────────────────────────┼──────────────────────────────────────────────────────┤
+  │ RFM(S)/working/         │ (S) NX-Interferom_draft_v2.pdf                       │
+  ├─────────────────────────┼──────────────────────────────────────────────────────┤
+  │ RFM(S)/feedback/        │ (S) NX-Interferom_review.pdf                         │
+  ├─────────────────────────┼──────────────────────────────────────────────────────┤
+  │ 4_PM에이전트/LOM/ (신규)│ final_Manual_B.pdf, final_NX_S.pdf                   │
+  └─────────────────────────┴──────────────────────────────────────────────────────┘
+
+  판단 메모:
+  - 기존 폴더가 raw data(공백)라 신규 생성 대신 그대로 사용.
+  - (S) NX-Interferom_v1.stp는 _v1 버전 표기지만 .stp 확장자라 raw 자료로 분류 (.stp = 원본 CAD).
+  - 기존 RFM(S)/feedback, working에 이미 있던 _v1_review.pdf/_v1_draft.pdf는 사전 존재 파일이라 미손댐.
+  - 기존 RFM/LOM/Manual_update_v3_RELEASED.pdf는 그대로 두고, 4_PM에이전트/LOM/을 별도로 신규 생성.
+```
+
+> 💡 **포인트**: 클로드는 그냥 명령 따르는 게 아니라 (1) **계획을 먼저** 보여주고 (2) **판단한 근거까지 메모**로 남겨요. 결과가 의도와 다르면 바로 잡을 수 있고, ".stp 확장자라 raw로 분류" 같은 추론 과정이 투명하게 드러나요.
+>
+> 💬 학습자 화면의 실제 출력은 더미 파일 상태에 따라 살짝 달라질 수 있어요. 큰 흐름(계획 → 실행 → 보고 + 메모)만 같으면 정상이에요.
+
 ---
 
 ### [실습] 결과 확인
