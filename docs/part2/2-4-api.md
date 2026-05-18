@@ -44,15 +44,15 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 > **API = 다른 서비스와 약속된 창구**
 > "내가 키워드를 던지면, 너는 그 키워드와 관련된 자료를 정해진 형식으로 돌려줘" 라는 약속이에요.
 
-오늘 우리는 **Semantic Scholar** 라는 학술 자료 검색 서비스의 API를 사용해요.
+오늘 우리는 **arXiv** 라는 학술 프리프린트 저장소의 API를 사용해요.
 
-<SectionTitle icon="🔎" title="Semantic Scholar" sub="오늘 사용할 무료 학술 API" />
+<SectionTitle icon="🔎" title="arXiv" sub="오늘 사용할 무료 학술 API" />
 
-> - **Semantic Scholar** — Allen Institute for AI가 운영하는 무료 학술 검색 서비스
-> - **약 2억 편 이상의 논문 데이터** 보유 (Google Scholar와 유사한 커버리지)
-> - **API 무료 / 가입 불필요 / 키 발급 불필요**
+> - **arXiv** — Cornell University Library가 운영하는 학술 프리프린트 저장소
+> - **약 240만 편 이상의 학술 프리프린트** 보유 (1991년부터 운영, 물리·수학·CS·통계·정량생물학 등 학술 핵심 분야 커버)
+> - **API 무료 / 가입 불필요 / 키 발급 불필요 / 너그러운 rate limit** (초당 1회 권장)
 
-> 💡 **포인트**: Google Scholar는 공식 API가 없어요. (있는 건 유료 third-party만 — 월 $75~) Semantic Scholar는 학술계가 표준처럼 쓰는 무료 대체재예요. 결과 품질도 좋아요.
+> 💡 **포인트**: Google Scholar는 공식 API가 없어요. (있는 건 유료 third-party만 — 월 $75~) arXiv는 1991년부터 운영되는 학술 프리프린트 저장소이고 무료 API를 공식 제공해요. 결과 품질 좋고 rate limit도 너그러워서 워크숍·본업 모두 안정적으로 쓸 수 있어요.
 
 ## [실습] 학술 근거 수집 에이전트 만들기
 
@@ -77,22 +77,29 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 내용은 이렇게:
 
 ---
-description: 키워드를 받아서 Semantic Scholar API로 학술 자료 5개를 찾고 한 줄씩 요약하기
+description: 키워드를 받아서 arXiv API로 학술 프리프린트 5개를 찾고 한 줄씩 요약하기
 ---
 
-사용자가 키워드를 주면, Semantic Scholar API를 호출해서 관련 학술 자료를 5개 찾아줘.
+사용자가 키워드를 주면, arXiv API를 호출해서 관련 학술 프리프린트를 5개 찾아줘.
 
-API 엔드포인트: https://api.semanticscholar.org/graph/v1/paper/search
-파라미터: query=[키워드], limit=5, fields=title,authors,year,abstract,url
+API 엔드포인트: http://export.arxiv.org/api/query
+파라미터: search_query=all:[키워드], max_results=5, sortBy=relevance
+
+응답: Atom XML 형식. 각 <entry> 안:
+- <title>: 제목
+- <author><name>: 저자 (여러 명, 첫 저자만 사용)
+- <published>: 발행일 (YYYY-MM-DD... — 연도만 추출)
+- <summary>: 초록
+- <id>: arXiv URL
 
 **중요 — API 호출 규칙**:
 - curl 또는 WebFetch로 **바로 호출** (sleep 명령 사용 금지 — Claude Code 안전 정책 차단)
-- 429(rate limit) 응답 시에만 5초 후 1회 재시도
+- 한 번에 성공해야 함. 실패 시 사용자에게 알리고 중단
 
 각 결과를 다음 형식으로 정리해줘:
 
-1. [제목] ([첫 저자], [연도])
-   - URL: [논문 url]
+1. [제목] ([첫 저자] et al., [연도])
+   - URL: [arXiv URL]
    - 초록 핵심을 한 줄로 요약
    - 매뉴얼 본문에 어떻게 인용 가능한지 1줄 코멘트
 
@@ -120,7 +127,7 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 <SectionTitle icon="🤖" title="클로드 코드가 알아서 하는 일" sub="커맨드 → API 호출 → 결과 정리" />
 
 > 1. 우리가 만든 `.claude/commands/find-evidence.md` 를 읽음
-> 2. Semantic Scholar API 호출 (실제로 인터넷으로 검색)
+> 2. arXiv API 호출 (실제로 인터넷으로 검색)
 > 3. 결과 5개를 정해준 형식으로 정리
 > 4. BibTeX 참고문헌까지 함께 출력
 
@@ -129,7 +136,7 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 ```
 1. Hybrid Metrology Combining AFM and White Light Interferometry
    for Sub-nm Surface Characterization (Smith et al., 2023)
-   - URL: https://www.semanticscholar.org/paper/abc123def...
+   - URL: https://arxiv.org/abs/2306.12345
    - WLI의 대면적 측정과 AFM의 sub-nm 정밀도를 결합한 시스템 사례
    - 매뉴얼 인용: Park's NX-Interferom의 기술적 배경 강화 가능
 
@@ -165,12 +172,12 @@ Nimbalyst에서 `Chapter1_Intro.md` 파일이 업데이트되는 걸 확인하�
 
 ```
 [본인 키워드]에 대한 학술 자료 / 산업 표준 / 경쟁사 발표 자료를
-Semantic Scholar API로 찾아서 정리해줘.
+arXiv API로 찾아서 정리해줘.
 ```
 
 → 어떤 분야든 키워드만 바꾸면 됩니다. 변호사 = 판례·법률 자료 / 마케팅 = 시장조사 / 캠페인 = 트렌드 자료.
 
-> 💡 **포인트**: Semantic Scholar는 학술 자료에 특화되어 있어요. 비학술 자료(뉴스·블로그·트렌드)는 별도 검색이 필요해요.
+> 💡 **포인트**: arXiv는 학술 프리프린트(물리·수학·CS·통계·정량생물학 등)에 특화되어 있어요. 비학술 자료(뉴스·블로그·트렌드)는 별도 검색이 필요해요.
 
 ---
 

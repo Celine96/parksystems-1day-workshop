@@ -20,7 +20,7 @@
         { "num": 3, "text": "3. 프로젝트 #1 : 파일 정리", "link": "/part2/2-1-files", "icon": "📂", "details": "흩어진 폴더를 한 줄 명령으로 정리 (메인)", "folder": "3_파일정리", "flow": "`3_파일정리/raw_files/` 안의 파일들을 분류" },
         { "num": 4, "text": "4. 프로젝트 #2 : PM 에이전트", "link": "/part2/2-2-pm-agent", "icon": "📋", "details": "문서를 읽고 진행 상황을 보고하는 에이전트 만들기 (메인)", "folder": "4_PM에이전트", "flow": "`4_PM에이전트/RFM/` 폴더 진행 상황 분석 에이전트 만들기" },
         { "num": 5, "text": "5. 프로젝트 #3 : 사내 문체 매뉴얼 자동 생성", "link": "/part2/2-3-manual", "icon": "📝", "details": "회사 매뉴얼 형식을 학습시켜 같은 톤으로 생성 (메인)", "folder": "5_매뉴얼", "flow": "`5_매뉴얼/` 자료로 매뉴얼 작가 에이전트 만들기" },
-        { "num": 6, "text": "6. 프로젝트 #4.1 : 외부 근거 자동 수집", "link": "/part2/2-4-api", "icon": "🔍", "details": "학술 API로 매뉴얼 근거를 자동 수집 (메인)", "flow": "Semantic Scholar API로 학술 근거 수집" },
+        { "num": 6, "text": "6. 프로젝트 #4.1 : 외부 근거 자동 수집", "link": "/part2/2-4-api", "icon": "🔍", "details": "학술 API로 매뉴얼 근거를 자동 수집 (메인)", "flow": "arXiv API로 학술 근거 수집" },
         { "num": 7, "text": "7. 프로젝트 #4.2 : HTML 변환", "link": "/part2/2-5-html", "icon": "🌐", "details": "매뉴얼을 누구나 볼 수 있는 웹페이지로 (메인)", "flow": "결과를 HTML 페이지로" }
       ]
     },

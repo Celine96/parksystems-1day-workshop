@@ -75,48 +75,42 @@ output/Chapter1_Intro.md 를 디자인된 HTML 페이지로 만들어달라고 �
 
 > 💡 **포인트**: Vercel CLI(`vercel deploy` 명령)로 클로드 코드에서 직접 배포 가능. 슬래시 커맨드와 결합하면 워크북 톤과 자연스럽게 이어져요.
 
-## [참고] Semantic Scholar API 더 많이 쓰려면 — 무료 키 발급
+## [참고] arXiv API 활용 팁 — 키 불필요, 즉시 사용
 
-본 수업 6번에서 키 없이도 Semantic Scholar API를 썼어요. 무명 사용은 분당 1000 요청까지 가능하지만, 본업에서 자주 쓰시려면 **무료 키 발급**하는 게 좋아요.
+본 수업 6번에서 쓴 **arXiv API는 키 발급이 필요 없어요**. 누구나 즉시 호출 가능하고, rate limit도 너그러워서(초당 1회 권장) 본업에서도 그대로 쓸 수 있어요.
 
-### Step 1. 키 발급
+### 검색 품질 끌어올리는 팁
 
-**1.** https://www.semanticscholar.org/product/api 접속.
+기본 호출은 `search_query=all:[키워드]` 형식인데, 필드를 한정하면 더 정밀한 결과를 얻을 수 있어요.
 
-**2.** "Request an API Key" 클릭 → 양식 작성 (이메일·사용 목적 한 줄).
+| 필드 prefix | 의미 | 예시 |
+|---|---|---|
+| `all:` | 전체 검색 (기본) | `all:AFM+metrology` |
+| `ti:` | 제목만 | `ti:White+Light+Interferometry` |
+| `abs:` | 초록만 | `abs:sub-nm+surface` |
+| `au:` | 저자명 | `au:Smith` |
+| `cat:` | 카테고리 | `cat:physics.ins-det` (Instrumentation) |
 
-**3.** 며칠 안에 이메일로 키 발급.
+### 정렬 옵션
 
-> 💡 **포인트**: 학술·연구 목적이면 보통 승인. 상업적 사용도 양식에 명시.
+- `sortBy=relevance` — 관련도 순 (기본, 워크숍에서 사용)
+- `sortBy=submittedDate&sortOrder=descending` — 최신 발행순 (최근 동향 파악)
+- `sortBy=lastUpdatedDate&sortOrder=descending` — 최근 업데이트순
 
-### Step 2. 키를 클로드에게 알려주기
+### 슬래시 커맨드 응용
 
-발급받은 키는 안전하게 보관해야 해요. CLAUDE.md에 직접 적지 말고 환경 변수로:
-
-**Windows PowerShell:**
-```
-[Environment]::SetEnvironmentVariable("SEMANTIC_SCHOLAR_API_KEY", "발급받은_키", "User")
-```
-
-**Mac/Linux:**
-```
-echo 'export SEMANTIC_SCHOLAR_API_KEY="발급받은_키"' >> ~/.zshrc
-source ~/.zshrc
-```
-
-### Step 3. 슬래시 커맨드에 키 사용 안내 추가
-
-`.claude/commands/find-evidence.md` 를 클로드에게 수정해달라고:
+`.claude/commands/find-evidence.md` 를 분야별로 복제해서 카테고리를 미리 박아두면 편해요. 예:
 
 📝 **프롬프트 입력**
 
 ```
-.claude/commands/find-evidence.md 를 수정해서,
-환경 변수 SEMANTIC_SCHOLAR_API_KEY 가 있으면
-HTTP 헤더 "x-api-key: [그 값]" 을 포함해서 호출하게 해줘.
+.claude/commands/find-evidence-instrument.md 를 새로 만들어줘.
+기존 find-evidence.md와 같은데, search_query에
+"cat:physics.ins-det AND all:[키워드]" 형식으로 측정·계측 분야로
+한정해서 검색하게 해줘.
 ```
 
-→ 이제 같은 `/find-evidence` 명령이 키와 함께 호출돼 더 안정적이고 더 많은 요청 처리 가능.
+→ `/find-evidence-instrument` 한 번이면 측정·계측 분야 프리프린트만 골라 정리.
 
 ## [사례] 파크시스템스 TW 팀의 매뉴얼 배포 흐름
 
@@ -151,5 +145,5 @@ HTTP 헤더 "x-api-key: [그 값]" 을 포함해서 호출하게 해줘.
 
 - [ ] 본인 회사 시스템(SharePoint·Confluence·인트라넷) 중 어디에 배포할지 결정함
 - [ ] (디자이너) 회사 디자인 가이드 학습시켜 디자인 적용 HTML 만들어봄
-- [ ] (선택) Semantic Scholar 무료 키 발급해서 환경 변수로 등록
+- [ ] (선택) arXiv API의 필드 한정·정렬 옵션을 본인 분야에 맞게 활용 (예: `cat:` prefix로 카테고리 한정)
 - [ ] 파크시스템스 TW 팀 7단계 흐름을 본인 회사에 맞게 응용할 계획이 섰음
