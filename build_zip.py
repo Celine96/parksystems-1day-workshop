@@ -101,24 +101,14 @@ files_dir.mkdir(parents=True, exist_ok=True)
 dummy_files = [
     "(S) NX-Interferom_v1.stp",
     "(S) NX-Interferom_review.pdf",
-    "(N) AFM_module_draft.pdf",
-    "(N) AFM_raw_data.stp",
-    "(K) calibration_raw.stp",
-    "(K) calibration_working.pdf",
-    "(M) spec_sheet_raw.stp",
-    "working_(M)_spec.pdf",
-    "(B) feedback_v2.pdf",
-    "(B) manual_raw.stp",
-    "final_NX_K.pdf",
-    "final_calibration_B.pdf",
-    "(S) NX_feedback_review.pdf",
-    "(N) AFM_module_feedback.pdf",
-    "(K) WLI_raw_input.stp",
-    "(K) WLI_working_v2.pdf",
-    "(M) probe_feedback.pdf",
-    "(B) manual_working.pdf",
-    "final_AFM_S.pdf",
-    "(S) supplement_data.stp",
+    "(S) NX-Interferom_input.stp",
+    "(S) NX-Interferom_draft_v2.pdf",
+    "(B) Manual_update_raw.stp",
+    "(B) Manual_update_working.pdf",
+    "(B) Manual_update_v3.pdf",
+    "(B) Manual_update_input.stp",
+    "final_NX_S.pdf",
+    "final_Manual_B.pdf",
 ]
 for fname in dummy_files:
     (files_dir / fname).write_text(
@@ -135,30 +125,12 @@ rfm_dir = ROOT / "4_PM에이전트" / "RFM"
 # 각 작업자별 + 단계별 파일 (시나리오)
 scenarios = {
     'S': {
-        '_proj': 'NX-Interferom v1',  # 3단계
+        '_proj': 'NX-Interferom v1',
         'raw data': [],
         'working': ['(S) NX-Interferom_v1_draft.pdf'],
-        'feedback': ['(S) NX-Interferom_v1_review.pdf'],  # ← 3단계
+        'feedback': ['(S) NX-Interferom_v1_review.pdf'],
     },
-    'N': {
-        '_proj': 'AFM module',  # 2단계
-        'raw data': ['AFM_module_input.stp'],
-        'working': ['(N) AFM_module_draft.pdf'],  # ← 2단계
-        'feedback': [],
-    },
-    'K': {
-        '_proj': 'Calibration spec',  # 4단계 (working pdf에서 (K) 표시 떨어짐)
-        'raw data': ['calibration_input.stp'],
-        'working': ['Calibration_spec_v3.pdf'],  # 앞에 (K) 없음 = 4단계
-        'feedback': [],
-    },
-    'M': {  # 진행 자료 없음
-        '_proj': '(작업 없음)',
-        'raw data': [],
-        'working': [],
-        'feedback': [],
-    },
-    'B': {  # 5단계 - 비어있음, LOM으로 이동
+    'B': {
         '_proj': 'Manual update',
         'raw data': [],
         'working': [],

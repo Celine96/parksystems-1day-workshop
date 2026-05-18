@@ -28,9 +28,6 @@ You: 지금 매뉴얼 작업 어디까지 됐어?
 
 PM 에이전트:
 - RFM(S): NX-Interferom v1 → 3단계 (Feedback 진행 중)
-- RFM(N): AFM module → 2단계 (1st Draft 작업 중)
-- RFM(K): Calibration → 4단계 (Final Review 대기)
-- RFM(M): 작업 없음
 - RFM(B): Manual update → 5단계 (배포 완료, LOM 이동)
 ```
 
@@ -68,14 +65,14 @@ Nimbalyst에서도 같은 폴더 열어두세요.
 ```
 4_PM에이전트/
   └── RFM/
-        ├── RFM(S)/
-        │     ├── raw data/        ← 1단계 자료
-        │     ├── working/         ← 2단계 (또는 4단계) pdf
-        │     └── feedback/        ← 3단계 pdf
-        ├── RFM(N)/   (같은 구조)
-        ├── RFM(K)/
-        ├── RFM(M)/
-        ├── RFM(B)/
+        ├── RFM(S)/                 ← 작업자 S (진행 중 시나리오)
+        │     ├── raw data/         ← 1단계 자료
+        │     ├── working/          ← 2단계 (또는 4단계) pdf
+        │     └── feedback/         ← 3단계 pdf
+        ├── RFM(B)/                 ← 작업자 B (완료 시나리오)
+        │     ├── raw data/
+        │     ├── working/
+        │     └── feedback/         (비어 있음 → LOM으로 이동)
         └── LOM/                    ← 5단계 배포 완료
 ```
 
@@ -177,13 +174,10 @@ PM 에이전트가 일하는 모습을 보세요. 클로드 코드가:
 파크시스템스 TW 팀 매뉴얼 진행 상황
 
 - RFM(S): NX-Interferom v1 → 3단계 (feedback/ 에 review pdf 있음)
-- RFM(N): AFM module draft → 2단계 (working/ 에 draft pdf)
-- RFM(K): Calibration spec → 4단계 (working/ 의 pdf에서 (K) 표시 떨어짐)
-- RFM(M): 진행 자료 없음
 - RFM(B): Manual update → 5단계 (LOM/ 으로 이동됨)
 
-총 4건 진행 중 / 1건 휴면
-단계별 분포: 2단계 1건 / 3단계 1건 / 4단계 1건 / 5단계 1건
+총 2건 / 진행 중 1건 · 완료 1건
+단계별 분포: 3단계 1건 / 5단계 1건
 ```
 
 > 🎉 **방금 만든 게 진짜 에이전트**예요. 옆 부서 팀장이 또 물어봐도 `/progress` 한 줄로 끝.

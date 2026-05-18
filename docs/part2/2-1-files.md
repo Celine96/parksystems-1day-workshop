@@ -41,18 +41,17 @@
 ```
 raw_files/
   ├── (S) NX-Interferom_v1.stp
-  ├── (N) AFM_module_draft.pdf
   ├── (S) NX-Interferom_review.pdf
-  ├── (K) calibration_raw.stp
-  ├── working_(M)_spec.pdf
-  ├── (B) feedback_v2.pdf
-  ├── final_NX_K.pdf
-  └── ... (20개 정도)
+  ├── (B) Manual_update_raw.stp
+  ├── (B) Manual_update_working.pdf
+  ├── final_NX_S.pdf
+  ├── final_Manual_B.pdf
+  └── ... (10개 정도)
 ```
 
-**이게 평소 작업하는 회사 폴더의 흔한 모습이에요.** 파일이 작업자(S/N/K/M/B)별로도 섞여 있고, 단계(raw data/working/feedback)별로도 섞여 있어요.
+**이게 평소 작업하는 회사 폴더의 흔한 모습이에요.** 파일이 작업자(S, B)별로도 섞여 있고, 단계(raw data/working/feedback)별로도 섞여 있어요.
 
-손으로 정리하면? 5명 × 4단계 = 20개 폴더 만들고, 20개 파일을 하나씩 옮겨야 해요. 오래 걸리는 일이죠.
+손으로 정리하면? 2명 × 4단계 = 8개 폴더 만들고, 파일을 하나씩 옮겨야 해요. 오래 걸리는 일이죠.
 
 ---
 
@@ -70,7 +69,7 @@ claude
 
 ```
 3_파일정리/raw_files/ 안의 파일들을
-작업자(S/N/K/M/B) 5명과 단계(raw_data/working/feedback) 기준으로
+작업자(S, B) 2명과 단계(raw_data/working/feedback) 기준으로
 RFM/ 폴더 안에 정리해줘.
 
 규칙:
@@ -101,16 +100,16 @@ parksystems-workshop/
               │     ├── raw_data/
               │     ├── working/
               │     └── feedback/
-              ├── RFM(N)/
-              ├── RFM(K)/
-              ├── RFM(M)/
               ├── RFM(B)/
+              │     ├── raw_data/
+              │     ├── working/
+              │     └── feedback/
               └── LOM/        (final 파일들 모임)
 ```
 
 **결과 체크리스트:**
 
-- [ ] 5명 × 3단계 = 15개 하위 폴더가 자동으로 만들어졌나요?
+- [ ] 2명 × 3단계 = 6개 하위 폴더가 자동으로 만들어졌나요?
 - [ ] 파일이 올바른 폴더로 이동했나요?
 - [ ] `LOM/` 폴더에 final 파일들이 모였나요?
 
@@ -126,7 +125,7 @@ parksystems-workshop/
 
 1. `raw_files/` 폴더를 들여다봄 → 파일 목록 파악
 2. 파일명 패턴을 읽고 작업자·단계를 추론
-3. 15개 폴더를 만듦
+3. 7개 폴더를 만듦 (RFM 2명 × 3단계 + LOM)
 4. 파일을 하나씩 올바른 위치로 이동
 5. final 파일은 따로 LOM/ 으로 분리
 
@@ -138,7 +137,7 @@ parksystems-workshop/
 
 - [ ] 파일 탐색기/Finder를 터미널 옆에 두고 파일 변화를 시각적으로 확인함
 - [ ] 클로드 코드에게 자연어 한 단락으로 폴더 정리를 시켜봄
-- [ ] 15개 하위 폴더 + 파일 분류가 자동으로 끝나는 걸 직접 봄
+- [ ] 7개 폴더 + 파일 분류가 자동으로 끝나는 걸 직접 봄
 - [ ] "코드 없이도 AI가 내 컴퓨터에서 일한다"는 감각을 얻음
 
 ---
