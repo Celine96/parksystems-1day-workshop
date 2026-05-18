@@ -86,11 +86,16 @@ raw_files/
 
 이제 터미널 창으로 가서 클로드 코드를 실행하세요.
 
+> ⚠️ **압축 해제 후 폴더 구조 — 한 단계 더 들어가야 해요**
+> zip을 풀면 `파크시스템스 임직원_워크북\` 폴더가 자동 생성되고, **그 안에 `parksystems-workshop\` 폴더가 한 단계 더 들어가 있어요.** 아래 `cd` 명령은 그 안 폴더까지 정확히 들어가는 거예요. **다른 위치에서 `claude` 실행하면 파일 경로가 깨지니** 꼭 `parksystems-workshop\` 폴더 안에서 실행하세요.
+
 ```
-cd ~/Desktop/parksystems-workshop
+cd ~/Desktop/파크시스템스\ 임직원_워크북/parksystems-workshop
 claude
 ```
-> Windows라면 `cd C:\Users\USER\Desktop\parksystems-workshop` 으로 시작하세요.
+> Windows: `cd "C:\Users\USER\Desktop\파크시스템스 임직원_워크북\parksystems-workshop"`
+>
+> 💡 다른 위치(예: Downloads)에 풀었으면 본인 경로로 수정. **핵심은 `parksystems-workshop\` 폴더 안에서 `claude` 실행**.
 
 클로드 코드 대화창이 열리면, 옆 **Nimbalyst** 창(또는 fallback으로 파일 탐색기/Finder)을 잘 보면서 아래 명령을 그대로 복사해서 붙여넣어 주세요.
 
@@ -122,6 +127,11 @@ claude
   - 3단계 리뷰 받은 자료 → feedback : 파일명에 'feedback'·'review'
   - 5단계 배포 완료 → RFM/LOM/ : 파일명에 'final'
 - 위 키워드에 안 맞는 파일은 파일명·확장자 패턴으로 가장 가까운 단계 추론 (확장자만으로도 판단 가능)
+
+출력 형식 (반드시 이 순서로):
+1. 먼저 "● 확인 끝. 분류 계획:" 으로 시작해서 각 폴더에 들어갈 파일을 나열
+2. 실행 후 "● 정리 완료. N개 파일 모두 이동했고 raw_files/는 비었음." + 폴더별 파일 표
+3. 마지막 "판단 메모:" — 비표준 파일(.stp 확장자 우선 적용, 버전 표시 처리 등)을 어떻게 분류했는지 근거
 ```
 
 <br/>
