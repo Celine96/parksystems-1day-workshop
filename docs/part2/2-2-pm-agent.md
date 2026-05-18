@@ -164,14 +164,14 @@ PM 에이전트를 호출해서, RFM/ 폴더의 현재 진행 상황을 5단계 
 
 PM 에이전트가 일하는 모습을 보세요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 클로드 코드가 알아서 하는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 커맨드 → 에이전트 → 폴더 → 보고서</span></p>
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 클로드 코드가 알아서 하는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 명령 한 줄로 일어나는 일</span></p>
 
 > 1. `.claude/commands/progress.md` 를 읽고 → 이게 무슨 명령인지 파악
 > 2. `.claude/agents/PM.md` 를 읽고 → PM 에이전트 소개서 불러오기
 > 3. `RFM/` 폴더를 하나씩 둘러봄 → 작업자별 단계 판정
 > 4. 정리된 보고서로 답변
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 PM 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 작업자별 한 줄 + 단계별 요약</span></p>
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 PM 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— PM이 제공하는 정보 형식</span></p>
 
 ```
 파크시스템스 TW 팀 매뉴얼 진행 상황

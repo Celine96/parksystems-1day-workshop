@@ -14,7 +14,7 @@
 
 평소 흐름:
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 손으로 하면 4단계 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 키워드 하나당 보통 30분 이상</span></p>
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 손으로 하면 4단계 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 손으로 하면 오래 걸리는 일</span></p>
 
 > 1. Google Scholar 또는 학술 사이트 검색
 > 2. 논문 클릭 → 초록 읽기

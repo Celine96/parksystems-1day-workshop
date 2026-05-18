@@ -128,7 +128,7 @@ NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 
 Nimbalyst를 보면 `output/Chapter1_Intro.md` 파일이 새로 생기는 게 보일 거예요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 매뉴얼 작가 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— Chapter 1 Introduction 변환 결과</span></p>
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 매뉴얼 작가 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 스타일로 변환된 결과</span></p>
 
 ```markdown
 # Chapter 1
