@@ -64,16 +64,21 @@ raw_files/
 > - **4단계** : Final Review (종료 또는 일정/Scope 조정)
 > - **5단계** : Next Revision Plan & Data Backup & Release
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 파일 이름 규칙 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 위 5단계가 파일명에 어떻게 표시되는지</span></p>
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 raw_files/ 안 파일 이름 패턴 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 파일명 안에 단계가 어떻게 표시되는지</span></p>
 
-> **👤 누구 파일인지 (작업자 표시)**
-> - **앞의 `(S)` `(B)`** — 작업자 S 또는 B
+> **👤 누구 파일인지 (파일명 앞 표시)**
+> - **`(S)` 또는 `(B)`** — 작업자 S 또는 B
+>   예: `(S) NX-Interferom_v1.stp`
 >
-> **🔄 어느 단계인지 (단계 표시)**
-> - **`raw`** — 원본 자료 (1단계, 작업 시작 자료)
-> - **`working`** — 작업자가 만든 Draft pdf. 2단계(1st Draft 작업) → 3단계(Review·Feedback 받은 후 보완 작업) → 4단계(Final Review 직전, 파일명에서 `(작업자)` 표시 떨어짐)
-> - **`feedback`** — 동료에게 리뷰 받은 자료 (3단계, Review·Feedback·Revision Loop 진행 중)
-> - **`final`** — 작업 완료된 매뉴얼 (5단계, Data Backup·Release 완료)
+> **🔄 어느 단계인지 (파일명 안 단어)**
+> - **`raw` / `.stp`** — 1단계 원본 자료
+>   예: `(B) Manual_update_raw.stp`
+> - **`working`** — 2~4단계 Draft pdf (1st Draft → Review·Feedback 보완 → Final Review 직전)
+>   예: `(B) Manual_update_working.pdf`
+> - **`feedback` / `review`** — 3단계 리뷰 받은 자료
+>   예: `(S) NX-Interferom_review.pdf`
+> - **`final`** — 5단계 배포 완료 매뉴얼
+>   예: `final_Manual_B.pdf`
 
 손으로 정리하면? 2명 × 4단계 = 8개 폴더 만들고, 파일을 하나씩 옮겨야 해요. 오래 걸리는 일이죠.
 
