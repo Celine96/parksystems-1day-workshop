@@ -111,7 +111,7 @@ claude
 RFM/ 폴더 안에 정리해줘.
 
 규칙:
-- 폴더 구조: RFM/RFM(작업자)/단계/
+- 폴더 구조: RFM/RFM(작업자)/단계/ 의 위계 구조
 - 파일명 앞에 (X) 가 있으면 작업자 X 의 것
 - 파일명에 raw 가 있으면 raw_data, working 이 있으면 working, feedback 이 있으면 feedback
 - final 이 붙은 파일은 별도로 LOM/ 폴더로 이동 (단계 분기)
