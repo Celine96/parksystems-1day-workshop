@@ -18,6 +18,7 @@ export default defineConfig({
         text: '워크북 소개',
         items: [
           { text: '시작하기', link: '/' },
+          { text: '강사 소개', link: '/part1/0-host' },
         ]
       },
       {
