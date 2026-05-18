@@ -1,14 +1,12 @@
-# 0. 강사 소개
+# 이수연 (Ella)
 
-<div style="display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap; margin: 32px 0 48px;">
+<div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin: 32px 0 48px;">
 
-![이수연 (Ella)](/images/ella-profile.jpg){style="width: 240px; border-radius: 16px; margin-top: 90px;"}
+![이수연 (Ella)](/images/ella-profile.jpg){style="width: 240px; border-radius: 16px;"}
 
 <div style="flex: 1; min-width: 280px;">
 
-## 이수연 (Ella)
-
-<p style="font-size: 1.05em; color: var(--vp-c-text-2); margin: 4px 0 8px;">AI Technical PM · AX</p>
+<p style="font-size: 1.05em; color: var(--vp-c-text-2); margin: 0 0 8px;">AI Technical PM · AX</p>
 <p style="color: var(--vp-c-text-2); margin: 0 0 16px;">서안개발(주) 부동산 컨설팅팀 (신사업팀) 대리</p>
 
 오늘 4시간 워크숍 동안 함께할 강사예요. RAG·LLM 챗봇부터 콘텐츠·KPI 자동화 파이프라인까지, 부동산 도메인 안에서 AX(AI Transformation)를 직접 운영하고 있어요.
@@ -66,4 +64,4 @@
 - 연세대학교 공학대학원 (인공지능공학부 석사)
 - 고려대학교 응용통계학 학사
 
-> 워크숍 진행 중 막히는 부분이나 본업 실무적용 아이디어가 떠오르시면 프로젝트 한 세션이 끝나고 Q&A 시간에 언제든 손 들고 물어봐주세요. 워크숍 후 1:1 응용 지원도 가능합니다. 연락주세요!! 🙋
+> 진행 중 막히는 부분이나 본업 실무적용 아이디어가 떠오르시면 프로젝트 한 세션이 끝나고 Q&A 시간에 언제든 물어봐주세요. 수업 이후 원하시면 1:1 지도도 진행하고 있습니다. 끝나고 언제든 연락주세요!! 🙋
