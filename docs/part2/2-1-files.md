@@ -73,8 +73,8 @@ raw_files/
 > **🔄 어느 단계인지 (파일명)**
 > - **`raw` / `.stp`** — 1단계 원본 자료
 >   예: `(B) Manual_update_raw.stp`
-> - **`working`** — 2~4단계 Draft pdf (1st Draft → Review·Feedback 보완 → Final Review 직전)
->   예: `(B) Manual_update_working.pdf`
+> - **`working` / `draft`** — 2~4단계 Draft pdf (1st Draft → Review·Feedback 보완 → Final Review 직전)
+>   예: `(B) Manual_update_working.pdf`, `(S) NX-Interferom_draft_v2.pdf`
 > - **`feedback` / `review`** — 3단계 리뷰 받은 자료
 >   예: `(S) NX-Interferom_review.pdf`
 > - **`final`** — 5단계 배포 완료 매뉴얼
