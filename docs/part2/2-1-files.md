@@ -64,13 +64,13 @@ raw_files/
 > - **4단계** : Final Review (종료 또는 일정/Scope 조정)
 > - **5단계** : Next Revision Plan & Data Backup & Release
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 raw_files/ 안 파일 이름 패턴 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 파일명 안에 단계가 어떻게 표시되는지</span></p>
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 raw_files/ 파일 이름 패턴 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 파일명 안에 단계가 어떻게 표시되는지</span></p>
 
-> **👤 누구 파일인지 (파일명 앞 표시)**
+> **👤 누구 파일인지 (파일명)**
 > - **`(S)` 또는 `(B)`** — 작업자 S 또는 B
 >   예: `(S) NX-Interferom_v1.stp`
 >
-> **🔄 어느 단계인지 (파일명 안 단어)**
+> **🔄 어느 단계인지 (파일명)**
 > - **`raw` / `.stp`** — 1단계 원본 자료
 >   예: `(B) Manual_update_raw.stp`
 > - **`working`** — 2~4단계 Draft pdf (1st Draft → Review·Feedback 보완 → Final Review 직전)
