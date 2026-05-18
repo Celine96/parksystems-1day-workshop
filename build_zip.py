@@ -165,8 +165,28 @@ print(f"[OK] .claude/settings.json 생성 (권한 자동 허용)")
 
 # ============================================
 # 6. CLAUDE.md (클로드 코드 자동 로드)
+#     - 폴더 구조·워크숍 흐름 텍스트는 chapters.json에서 동적 생성
+#       (drift 방지: 챕터 추가/변경 시 chapters.json만 수정)
 # ============================================
-claude_md = """# 파크시스템스 AX 바이브코딩 연수 — 작업 공간
+with open(BASE / "docs" / ".vitepress" / "data" / "chapters.json", encoding='utf-8') as f:
+    chapters_data = json.load(f)
+
+# 메인 수업 챕터 (워크숍 흐름의 source)
+main_items = [
+    item
+    for g in chapters_data['groups'] if g['label'].startswith('메인')
+    for item in g['items']
+]
+
+# 워크숍 흐름 (메인 챕터의 num·text·flow를 한 줄씩 — chapters.json drift 방지)
+flow_lines = []
+for i, item in enumerate(main_items, start=1):
+    title_short = item['text'].split('. ', 1)[-1]  # "3. 프로젝트 #1 : 파일 정리" → "프로젝트 #1 : 파일 정리"
+    flow_text = item.get('flow', item.get('details', ''))
+    flow_lines.append(f"{i}. **{item['num']} {title_short}** — {flow_text}")
+flow_block = "\n".join(flow_lines)
+
+claude_md = f"""# 파크시스템스 AX 바이브코딩 연수 — 작업 공간
 
 이 폴더는 워크숍 실습용이에요. 클로드 코드를 이 폴더에서 실행하면 모든 자료에 접근할 수 있어요.
 
@@ -184,18 +204,14 @@ claude_md = """# 파크시스템스 AX 바이브코딩 연수 — 작업 공간
 
 ## 워크숍 흐름
 
-1. **3 파일 정리** — `3_파일정리/raw_files/` 안의 파일들을 분류
-2. **4 PM 에이전트** — `4_PM에이전트/RFM/` 폴더 진행 상황 분석 에이전트 만들기
-3. **5 매뉴얼 자동 생성** — `5_매뉴얼/` 자료로 매뉴얼 작가 에이전트 만들기
-4. **6 외부 근거 자동 수집** — Semantic Scholar API로 학술 근거 수집
-5. **7 HTML 변환** — 결과를 HTML 페이지로
+{flow_block}
 
 ## 워크북 라이브
 
 https://celine96.github.io/parksystems-1day-workshop/
 """
 (ROOT / "CLAUDE.md").write_text(claude_md, encoding='utf-8')
-print(f"[OK] CLAUDE.md 생성")
+print(f"[OK] CLAUDE.md 생성 (워크숍 흐름은 chapters.json 기반)")
 
 # ============================================
 # 7. README.md (zip 처음 열 때)

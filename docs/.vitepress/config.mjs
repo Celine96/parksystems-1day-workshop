@@ -1,4 +1,12 @@
 import { defineConfig } from 'vitepress'
+import chapters from './data/chapters.json' with { type: 'json' }
+
+// chapters.json의 groups → VitePress sidebar 구조로 변환
+// (drift 방지: 챕터 추가/변경 시 chapters.json만 수정)
+const sidebar = chapters.groups.map(g => ({
+  text: g.label,
+  items: g.items.map(({ text, link }) => ({ text, link }))
+}))
 
 export default defineConfig({
   lang: 'ko-KR',
@@ -13,47 +21,7 @@ export default defineConfig({
       { text: '추가 실습', link: '/part3/3-3-publish' },
       { text: '부록', link: '/part3/3-1-commands' },
     ],
-    sidebar: [
-      {
-        text: '워크북 소개',
-        items: [
-          { text: '시작하기', link: '/' },
-          { text: '강사 소개', link: '/part1/0-host' },
-        ]
-      },
-      {
-        text: '시작',
-        items: [
-          { text: '1. 클로드 vs 클로드 코드', link: '/part1/1-1-intro' },
-          { text: '2. 설치 및 첫 실행', link: '/part1/1-2-install' },
-        ]
-      },
-      {
-        text: '메인 — 본 수업',
-        items: [
-          { text: '3. 프로젝트 #1 : 파일 정리', link: '/part2/2-1-files' },
-          { text: '4. 프로젝트 #2 : PM 에이전트', link: '/part2/2-2-pm-agent' },
-          { text: '5. 프로젝트 #3 : 사내 문체 매뉴얼 자동 생성', link: '/part2/2-3-manual' },
-          { text: '6. 프로젝트 #4.1 : 외부 근거 자동 수집', link: '/part2/2-4-api' },
-          { text: '7. 프로젝트 #4.2 : HTML 변환', link: '/part2/2-5-html' },
-        ]
-      },
-      {
-        text: '추가 실습 (워크숍 후)',
-        items: [
-          { text: '8. 배포 깊이 들어가기', link: '/part3/3-3-publish' },
-        ]
-      },
-      {
-        text: '부록 (본업 적용 참고)',
-        items: [
-          { text: '9. 자주쓰는 커맨드', link: '/part3/3-1-commands' },
-          { text: '10. PRD — AI에게 줄 지시서', link: '/part3/3-4-prd' },
-          { text: '11. 에이전트 & 하네스 엔지니어링 딥다이브', link: '/part3/3-2-agents-harness' },
-          { text: '12. 본업 적용 팁 — CLAUDE.md & 즉시 쓰는 프롬프트', link: '/part3/3-5-tips' },
-        ]
-      }
-    ],
+    sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Celine96/parksystems-1day-workshop' }
     ],
