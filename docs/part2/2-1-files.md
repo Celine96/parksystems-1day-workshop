@@ -107,21 +107,21 @@ claude
 
 ```
 3_파일정리/raw_files/ 안의 파일들을
-작업자(S, B) 2명과 단계 기준으로 RFM/ 폴더 안에 정리해줘.
+작업자(S, B) 2명과 단계 기준으로 4_PM에이전트/RFM/ 폴더 안에 정리해줘.
 
 폴더 구조:
-- RFM/RFM(작업자)/단계/ 의 위계 구조
+- 4_PM에이전트/RFM/RFM(작업자)/단계/ 의 위계 구조
 - 단계 폴더 3개: raw_data / working / feedback
-- final 붙은 파일은 별도 LOM/ 폴더 (5단계 배포 완료)
+- final 붙은 파일은 별도 4_PM에이전트/LOM/ 폴더 (5단계 배포 완료)
 
 분류 규칙:
 - 파일명 앞 (S) (B) 로 작업자 구분
 - 단계 분류 (매뉴얼 작업 5단계 기준):
-  - 1단계 원본 자료 → raw_data : 파일명에 'raw' 또는 .stp 확장자
-  - 2~4단계 Draft pdf → working : 파일명에 'working' 또는 'draft'
-  - 3단계 리뷰 받은 자료 → feedback : 파일명에 'feedback' 또는 'review'
+  - 1단계 원본 자료 → raw_data : 파일명에 'raw'·'input', 또는 .stp 확장자
+  - 2~4단계 Draft pdf → working : 파일명에 'working'·'draft', 또는 _v1/_v2/_v3 같은 버전 표시가 붙은 .pdf
+  - 3단계 리뷰 받은 자료 → feedback : 파일명에 'feedback'·'review'
   - 5단계 배포 완료 → LOM/ : 파일명에 'final'
-- 위 키워드에 안 맞는 파일은 파일명·확장자 패턴으로 가장 가까운 단계 추론
+- 위 키워드에 안 맞는 파일은 파일명·확장자 패턴으로 가장 가까운 단계 추론 (확장자만으로도 판단 가능)
 ```
 
 <br/>
@@ -131,13 +131,18 @@ claude
 > 1. `raw_files/` 폴더를 들여다봄
 > 2. 파일명 앞 `(S)` `(B)`로 누구 파일인지 구분
 > 3. 파일명에 `raw` · `working` · `feedback` 단어로 어느 단계인지 구분
-> 4. **3층 폴더 구조**를 만들고 파일을 옮김:
+> 4. **3층 폴더 구조**를 만들고 파일을 옮김 (다음 챕터에서 쓸 `4_PM에이전트/` 안에):
 >    ```
->    RFM/                    ← ① 전체 작업장
->      └── RFM(S)/           ← ② 작업자별 폴더 (S, B)
->            └── working/    ← ③ 단계별 폴더 (raw_data·working·feedback)
+>    4_PM에이전트/
+>      └── RFM/                  ← ① 전체 작업장
+>            └── RFM(S)/         ← ② 작업자별 폴더 (S, B)
+>                  └── working/  ← ③ 단계별 폴더 (raw_data·working·feedback)
 >    ```
-> 5. `final` 붙은 파일은 위 구조 대신 **별도 `LOM/` 폴더**로 따로 모음
+> 5. `final` 붙은 파일은 위 구조 대신 **별도 `4_PM에이전트/LOM/` 폴더**로 따로 모음
+>
+> 💡 정리 결과를 `4_PM에이전트/` 안에 만드는 이유는, 다음 챕터(4. PM 에이전트)에서 같은 RFM 폴더를 그대로 분석에 사용하기 때문이에요.
+
+**Enter 누르기 전에 — Nimbalyst에서 `4_PM에이전트/` 폴더 위치를 한 번 펼쳐두세요.** 정리 결과(RFM, LOM)가 그 안에 만들어지니, 미리 보고 있어야 변화를 놓치지 않아요.
 
 **Enter 누르고 옆 창문을 보세요.** 폴더가 하나씩 만들어지고, 파일이 옮겨지는 모습이 눈앞에서 펼쳐져요.
 
@@ -153,18 +158,19 @@ claude
 
 ```
 parksystems-workshop/
-  └── 3_파일정리/
-        ├── raw_files/        (원본은 그대로 두거나 비워짐)
-        └── RFM/
-              ├── RFM(S)/
-              │     ├── raw_data/
-              │     ├── working/
-              │     └── feedback/
-              ├── RFM(B)/
-              │     ├── raw_data/
-              │     ├── working/
-              │     └── feedback/
-              └── LOM/        (final 파일들 모임)
+  ├── 3_파일정리/
+  │     └── raw_files/        (원본은 그대로 두거나 비워짐)
+  └── 4_PM에이전트/
+        ├── RFM/
+        │     ├── RFM(S)/
+        │     │     ├── raw_data/
+        │     │     ├── working/
+        │     │     └── feedback/
+        │     └── RFM(B)/
+        │           ├── raw_data/
+        │           ├── working/
+        │           └── feedback/
+        └── LOM/              (final 파일들 모임)
 ```
 
 **결과 체크리스트:**
