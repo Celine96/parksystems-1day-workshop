@@ -80,11 +80,12 @@ description: 키워드를 받아서 Semantic Scholar API로 학술 자료 5개�
 사용자가 키워드를 주면, Semantic Scholar API를 호출해서 관련 학술 자료를 5개 찾아줘.
 
 API 엔드포인트: https://api.semanticscholar.org/graph/v1/paper/search
-파라미터: query=[키워드], limit=5, fields=title,authors,year,abstract
+파라미터: query=[키워드], limit=5, fields=title,authors,year,abstract,url
 
 각 결과를 다음 형식으로 정리해줘:
 
 1. [제목] ([첫 저자], [연도])
+   - URL: [논문 url]
    - 초록 핵심을 한 줄로 요약
    - 매뉴얼 본문에 어떻게 인용 가능한지 1줄 코멘트
 
@@ -119,6 +120,7 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 ```
 1. Hybrid Metrology Combining AFM and White Light Interferometry
    for Sub-nm Surface Characterization (Smith et al., 2023)
+   - URL: https://www.semanticscholar.org/paper/abc123def...
    - WLI의 대면적 측정과 AFM의 sub-nm 정밀도를 결합한 시스템 사례
    - 매뉴얼 인용: Park's NX-Interferom의 기술적 배경 강화 가능
 
