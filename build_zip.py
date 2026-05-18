@@ -24,42 +24,53 @@ src_pptx = SHARED / "2. 박정연 PM agent 실습" / "2026-05-18 [TW] Weekly Rep
 dst_pptx = ROOT / "4_PM에이전트" / "Weekly_Report_Sample.pptx"
 dst_pptx.parent.mkdir(parents=True, exist_ok=True)
 
-# 가명 매핑
-replacements = [
-    # 실명 → RFM 작업자
-    ('박정연', '작업자 S'),
-    ('나연주', '작업자 N'),
-    ('박정수', '작업자 K'),
-    ('정민권', '작업자 M'),
-    ('백관열', '작업자 B'),
-    # 고객사명 → 일반화
-    ('TSMC', '고객사 A'),
-    ('SK Hynix', '고객사 B'),
-    ('SK 하이닉스', '고객사 B'),
-    ('SK\n하이닉스', '고객사 B'),
-    ('LGD', '고객사 C'),
-    ('Hua Hong', '고객사 D'),
-    ('NOVA Project', 'NEW Project'),
-    # 사업부 → 일반화
-    ('IBU', '사업부 1'),
-    ('RBU', '사업부 2'),
-    ('OBU', '사업부 3'),
-]
+# 가명 매핑 — anonymization_map.json에서 로드 (실명 추가/변경 시 그 파일만 수정)
+with open(BASE / "anonymization_map.json", encoding='utf-8') as f:
+    anon_map = json.load(f)
+replacements = []
+for category in ['names', 'customers', 'divisions']:
+    replacements.extend(anon_map[category].items())
 
-prs = Presentation(str(src_pptx))
-for slide in prs.slides:
-    for shape in slide.shapes:
-        if not shape.has_text_frame:
-            continue
-        for para in shape.text_frame.paragraphs:
-            for run in para.runs:
-                if run.text:
-                    new_text = run.text
-                    for old, new in replacements:
-                        new_text = new_text.replace(old, new)
-                    run.text = new_text
-prs.save(str(dst_pptx))
-print(f"[OK] PPT 가공: {dst_pptx.name}")
+try:
+    prs = Presentation(str(src_pptx))
+    for slide in prs.slides:
+        for shape in slide.shapes:
+            if not shape.has_text_frame:
+                continue
+            for para in shape.text_frame.paragraphs:
+                for run in para.runs:
+                    if run.text:
+                        new_text = run.text
+                        for old, new in replacements:
+                            new_text = new_text.replace(old, new)
+                        run.text = new_text
+    prs.save(str(dst_pptx))
+    print(f"[OK] PPT 가공: {dst_pptx.name} (가명 {len(replacements)}건 적용)")
+
+    # 가명화 누락 검증 — 결과 PPT에서 원본 실명이 남았는지 재확인
+    leak_check = Presentation(str(dst_pptx))
+    leaks = []
+    for slide in leak_check.slides:
+        for shape in slide.shapes:
+            if not shape.has_text_frame:
+                continue
+            text = shape.text_frame.text
+            for original in list(anon_map['names'].keys()) + list(anon_map['customers'].keys()):
+                if '\n' in original:
+                    continue  # 줄바꿈 포함 패턴은 PPT run 단위로 잘릴 수 있어 false positive
+                if original in text:
+                    leaks.append((slide.slide_id, original))
+    if leaks:
+        print(f"[WARN] 가명화 누락 의심 {len(leaks)}건: {leaks[:3]}{'...' if len(leaks) > 3 else ''}")
+    else:
+        print(f"[OK] 가명화 누락 검증 통과")
+except FileNotFoundError as e:
+    print(f"[FAIL] PPT 원본 파일 없음: {src_pptx}")
+    print(f"  {e}")
+    raise SystemExit(1)
+except Exception as e:
+    print(f"[FAIL] PPT 가공 실패: {type(e).__name__}: {e}")
+    raise SystemExit(1)
 
 # ============================================
 # 2. 5_매뉴얼 폴더 (나나님 공유 자료 복사)
