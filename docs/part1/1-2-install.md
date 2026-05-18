@@ -18,8 +18,6 @@
   <iframe src="https://www.youtube.com/embed/7Spk6medZY8" title="Windows에 Claude Code 설치, 이렇게 쉬울 줄이야…" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
 </div>
 
----
-
 ## 클로드 코드 설치하기
 
 **Step 1. 터미널을 열어주세요.**
@@ -52,8 +50,6 @@ brew install --cask claude-code
 > Homebrew라는 패키지 관리자를 이미 쓰는 분만 선택. 모르시면 위 `curl` 명령어를 쓰세요.
 
 **Step 3. 설치가 완료되면 터미널을 닫았다가 다시 열어주세요.** (이 단계가 중요해요!)
-
----
 
 ## 첫 실행 & 로그인
 
@@ -119,8 +115,6 @@ You:
 ```
 
 이제 여러분 컴퓨터 안에 클로드 코드가 출근했어요. 👋
-
----
 
 ## 시각화 도구 Nimbalyst 다운로드 (3 파일 정리 준비)
 
