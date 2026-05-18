@@ -7,6 +7,10 @@ description: 키워드를 받아서 Semantic Scholar API로 학술 자료 5개�
 API 엔드포인트: https://api.semanticscholar.org/graph/v1/paper/search
 파라미터: query=[키워드], limit=5, fields=title,authors,year,abstract,url
 
+**중요 — API 호출 규칙**:
+- curl 또는 WebFetch로 **바로 호출** (sleep 명령 사용 금지 — Claude Code 안전 정책 차단)
+- 429(rate limit) 응답 시에만 5초 후 1회 재시도
+
 각 결과를 다음 형식으로 정리해줘:
 
 1. [제목] ([첫 저자], [연도])
