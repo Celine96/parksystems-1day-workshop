@@ -143,11 +143,15 @@ for worker, data in scenarios.items():
     for stage in ['raw data', 'working', 'feedback']:
         stage_dir = rfm_dir / f"RFM({worker})" / stage
         stage_dir.mkdir(parents=True, exist_ok=True)
-        for fname in data[stage]:
-            (stage_dir / fname).write_text(
-                f"# RFM({worker}) / {stage} / {fname}\n\n프로젝트: {proj}\n(더미 파일)\n",
-                encoding='utf-8'
-            )
+        if data[stage]:
+            for fname in data[stage]:
+                (stage_dir / fname).write_text(
+                    f"# RFM({worker}) / {stage} / {fname}\n\n프로젝트: {proj}\n(더미 파일)\n",
+                    encoding='utf-8'
+                )
+        else:
+            # 빈 폴더에도 .keep 파일 (zip에 폴더 포함되도록)
+            (stage_dir / ".keep").write_text("", encoding='utf-8')
 
 # LOM/ (5단계 완료)
 lom_dir = rfm_dir / "LOM"
