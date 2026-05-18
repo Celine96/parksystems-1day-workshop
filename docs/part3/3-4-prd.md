@@ -109,27 +109,24 @@
 
 쉽게 정리하면:
 
-> **에이전트 소개서 = 에이전트의 이력서**
-> **PRD = 에이전트에게 주는 프로젝트 브리프**
+> 💡 **포인트**: 에이전트 소개서 = 에이전트의 이력서 / PRD = 에이전트에게 주는 프로젝트 브리프.
 
 ---
 
 ## [Tip] 좋은 PRD 작성 3가지 팁
 
-### 1. 예시를 많이 넣기
-
-"좋은 결과는 이런 모습" + "나쁜 결과는 이런 모습" 둘 다.
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 1. 예시를 많이 넣기 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 좋은 결과 + 나쁜 결과 둘 다</span></p>
 
 > ✅ "Park Systems의 사용자는 측정 정밀도 향상을 통해 분석 효율을 높일 수 있다." (능동태·짧음)
 > ❌ "사용자에 의해 측정 정밀도가 향상됨으로써 분석 효율이 향상될 수 있을 것으로 여겨진다." (수동태·장황)
 
-### 2. 검증 가능한 기준으로
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 2. 검증 가능한 기준으로 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 추상적 표현은 OK인지 판단 불가</span></p>
 
-"좋은 매뉴얼" → 너무 추상. "Spec 표 5개 모두 포함" → 검증 가능.
+> "좋은 매뉴얼" → 너무 추상. "Spec 표 5개 모두 포함" → 검증 가능.
 
-### 3. 짧을수록 좋음
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 3. 짧을수록 좋음 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 길어지면 에이전트가 핵심을 놓침</span></p>
 
-8가지 섹션 모두 채우되, 각 섹션은 한두 문장으로. 길어지면 에이전트가 핵심을 놓침.
+> 8가지 섹션 모두 채우되, 각 섹션은 한두 문장으로. 길어지면 에이전트가 핵심을 놓침.
 
 ---
 

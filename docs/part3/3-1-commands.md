@@ -95,11 +95,13 @@
 
 오늘 워크숍에서 만든 `/progress`, `/find-evidence` 같은 커맨드들이 바로 **본인이 만든 슬래시 커맨드**예요.
 
-- 위치: `.claude/commands/[이름].md`
-- 추가하면 자동으로 `/이름` 형식으로 호출 가능
-- 본업에 자주 쓰는 패턴이 있으면 슬래시 커맨드로 만들어두기
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 본인 슬래시 커맨드 만들기 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 파일 한 개 = 커맨드 한 개</span></p>
 
-예: `/weekly-report`, `/check-spec`, `/translate-en` 같은 본인만의 커맨드 자유롭게.
+> - **위치** — `.claude/commands/[이름].md`
+> - **자동 등록** — 추가하면 자동으로 `/이름` 형식으로 호출 가능
+> - **활용** — 본업에 자주 쓰는 패턴이 있으면 슬래시 커맨드로 만들어두기
+
+> 💡 **포인트**: `/weekly-report`, `/check-spec`, `/translate-en` 같은 본인만의 커맨드 자유롭게 만들어보세요.
 
 ---
 

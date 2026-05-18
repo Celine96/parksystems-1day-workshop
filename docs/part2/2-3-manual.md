@@ -10,10 +10,12 @@
 
 회사에서 새 제품 매뉴얼을 쓸 때마다 매번 똑같은 형식·톤을 맞춰야 해요.
 
-- **Chapter 1 General Information** → 제품 개요는 어떤 톤으로
-- **Preface** → 매뉴얼 사용 안내는 어떤 구조로
-- **Spec 표** → 어떤 항목을 어떤 단위로
-- 페이지 하단 문서 번호, 발행일 형식 등...
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 매번 맞춰야 하는 형식 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 매뉴얼 한 권에 들어가는 정형 요소</span></p>
+
+> - **Chapter 1 General Information** — 제품 개요는 어떤 톤으로
+> - **Preface** — 매뉴얼 사용 안내는 어떤 구조로
+> - **Spec 표** — 어떤 항목을 어떤 단위로
+> - 페이지 하단 문서 번호, 발행일 형식 등...
 
 **한 사람이 쓰면 일관되지만 여러 명이 쓰면 톤이 흩어져요.** 새 사람이 들어오면 "이전 매뉴얼 보면서 톤 맞춰주세요" 안내가 필요하고요.
 
@@ -30,7 +32,7 @@ You: 이 raw data 가지고 NX-Hybrid WLI Chapter 1 형식으로 매뉴얼 써�
 
 처음부터 백지에서 쓰는 게 아니라, **회사 형식을 알고 있는 작가**가 raw data를 받아서 같은 톤으로 옮겨주는 거예요.
 
-> 🎯 **오늘 톤 알림**: 풀 매뉴얼 한 권을 자동 생성하지 않아요. **"이런 방향이 가능하다"** 를 Introduction 한 페이지 변환으로 체험하는 게 목표예요.
+> 💡 **포인트**: 풀 매뉴얼 한 권을 자동 생성하지 않아요. **"이런 방향이 가능하다"** 를 Introduction 한 페이지 변환으로 체험하는 게 목표예요.
 
 ---
 
@@ -99,7 +101,7 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 
 Nimbalyst에서 `.claude/agents/Manual-Writer.md` 파일이 생성되는 걸 보세요.
 
-> 💡 **방금 무슨 일이?** 클로드가 우리 회사 매뉴얼 4개를 한 번 보고 형식·톤을 추출해서, 매뉴얼 작가 에이전트가 두고두고 참고할 수 있게 소개서로 저장했어요. **사람이 신입에게 "이 매뉴얼들 참고해서 톤 익혀주세요" 라고 1주일 걸려 가르치던 일**이 30초에 끝났어요.
+> 💡 **포인트**: 클로드가 우리 회사 매뉴얼 4개를 한 번 보고 형식·톤을 추출해서, 매뉴얼 작가 에이전트가 두고두고 참고할 수 있게 소개서로 저장했어요. **사람이 신입에게 "이 매뉴얼들 참고해서 톤 익혀주세요" 라고 1주일 걸려 가르치던 일**이 30초에 끝났어요.
 
 생성된 `.claude/agents/Manual-Writer.md` 소개서를 Nimbalyst에서 한번 열어보세요. 에이전트가 어떻게 우리 회사 톤을 정리했는지 보실 수 있어요.
 
@@ -126,7 +128,7 @@ NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 
 Nimbalyst를 보면 `output/Chapter1_Intro.md` 파일이 새로 생기는 게 보일 거예요.
 
-생성된 결과를 열어서 확인해보세요. **기대 결과 예시**:
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 매뉴얼 작가 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— Chapter 1 Introduction 변환 결과</span></p>
 
 ```markdown
 # Chapter 1
@@ -143,11 +145,11 @@ White Light Interferometry (WLI) on a single platform...
 Figure 1.1 NX-Interferom
 ```
 
-**확인 포인트:**
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">✅ 확인 포인트 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 결과물이 회사 톤과 맞는지</span></p>
 
-- [ ] 영문 매뉴얼 톤이 형식 PNG와 비슷한가요?
-- [ ] raw data의 핵심 정보(AFM·AFP·WLI 통합, SEMI 표준 등)가 빠지지 않았나요?
-- [ ] 문장 흐름이 자연스럽나요?
+> - [ ] 영문 매뉴얼 톤이 형식 PNG와 비슷한가요?
+> - [ ] raw data의 핵심 정보(AFM·AFP·WLI 통합, SEMI 표준 등)가 빠지지 않았나요?
+> - [ ] 문장 흐름이 자연스럽나요?
 
 ---
 
@@ -164,7 +166,7 @@ NX-Interferom 매뉴얼의 Preface 페이지를 만들어줘.
 
 > ⏱️ 30초~1분. 사람이 Preface 한 페이지 만들 시간을 생각하면...
 >
-> 💡 PPT Overview 슬라이드 만들기 같은 다른 응용은 본 수업 후 본인 페이스로 시도해보세요 (같은 패턴, 형식 PNG만 다른 거 지정).
+> 💡 **포인트**: PPT Overview 슬라이드 만들기 같은 다른 응용은 본 수업 후 본인 페이스로 시도해보세요 (같은 패턴, 형식 PNG만 다른 거 지정).
 
 ---
 
@@ -179,7 +181,7 @@ NX-Interferom 매뉴얼의 Preface 페이지를 만들어줘.
 
 두 에이전트 모두 같은 `.claude/agents/` 폴더에 살아요. 한 번 만들어두면 **이 폴더(parksystems-workshop)에서는 언제든 호출 가능**해요.
 
-> 💡 다음 사람이 이 폴더를 받아도 에이전트들이 그대로 살아있어요. 즉 **에이전트를 한 번 만드는 노력 = 팀 전체가 두고두고 쓰는 자산**이에요.
+> 💡 **포인트**: 다음 사람이 이 폴더를 받아도 에이전트들이 그대로 살아있어요. 즉 **에이전트를 한 번 만드는 노력 = 팀 전체가 두고두고 쓰는 자산**이에요.
 
 ---
 

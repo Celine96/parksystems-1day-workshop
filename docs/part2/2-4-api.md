@@ -14,10 +14,12 @@
 
 평소 흐름:
 
-1. Google Scholar 또는 학술 사이트 검색
-2. 논문 클릭 → 초록 읽기
-3. 인용할 만한 것 5개 정도 골라서 정리
-4. 메모장에 옮기기
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">📌 손으로 하면 4단계 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 키워드 하나당 보통 30분 이상</span></p>
+
+> 1. Google Scholar 또는 학술 사이트 검색
+> 2. 논문 클릭 → 초록 읽기
+> 3. 인용할 만한 것 5개 정도 골라서 정리
+> 4. 메모장에 옮기기
 
 **꽤 긴 작업.** 키워드 1~2개 따라 더 길어지죠.
 
@@ -46,12 +48,13 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 오늘 우리는 **Semantic Scholar** 라는 학술 자료 검색 서비스의 API를 사용해요.
 
-- **Semantic Scholar** = Allen Institute for AI가 운영하는 무료 학술 검색 서비스
-- **약 2억 편 이상의 논문 데이터** 보유 (Google Scholar와 유사한 커버리지)
-- **API 무료 / 가입 불필요 / 키 발급 불필요**
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🔎 Semantic Scholar <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 오늘 사용할 무료 학술 API</span></p>
 
-> 💡 **왜 Google Scholar 안 쓰나요?**
-> Google Scholar는 공식 API가 없어요. (있는 건 유료 third-party만 — 월 $75~) Semantic Scholar는 학술계가 표준처럼 쓰는 무료 대체재예요. 결과 품질도 좋아요.
+> - **Semantic Scholar** — Allen Institute for AI가 운영하는 무료 학술 검색 서비스
+> - **약 2억 편 이상의 논문 데이터** 보유 (Google Scholar와 유사한 커버리지)
+> - **API 무료 / 가입 불필요 / 키 발급 불필요**
+
+> 💡 **포인트**: Google Scholar는 공식 API가 없어요. (있는 건 유료 third-party만 — 월 $75~) Semantic Scholar는 학술계가 표준처럼 쓰는 무료 대체재예요. 결과 품질도 좋아요.
 
 ---
 
@@ -110,14 +113,16 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 키워드: White Light Interferometry AFM integration metrology
 ```
 
-클로드가 일하는 모습을 보세요:
+클로드가 일하는 모습을 보세요.
 
-1. 우리가 만든 `.claude/commands/find-evidence.md` 를 읽음
-2. Semantic Scholar API 호출 (실제로 인터넷으로 검색)
-3. 결과 5개를 정해준 형식으로 정리
-4. BibTeX 참고문헌까지 함께 출력
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">🤖 클로드 코드가 알아서 하는 일 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 커맨드 → API 호출 → 결과 정리</span></p>
 
-**기대 결과 예시**:
+> 1. 우리가 만든 `.claude/commands/find-evidence.md` 를 읽음
+> 2. Semantic Scholar API 호출 (실제로 인터넷으로 검색)
+> 3. 결과 5개를 정해준 형식으로 정리
+> 4. BibTeX 참고문헌까지 함께 출력
+
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 클로드 코드는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 학술 자료 + 매뉴얼 인용 코멘트</span></p>
 
 ```
 1. Hybrid Metrology Combining AFM and White Light Interferometry
@@ -128,7 +133,7 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 2. ...
 ```
 
-> 🎉 **오래 걸리는 일이 30초.** 그것도 인용 형식까지 정리됨.
+> 💡 **포인트**: 오래 걸리는 일이 30초. 그것도 인용 형식까지 정리됨.
 
 ---
 
@@ -162,7 +167,7 @@ Semantic Scholar API로 찾아서 정리해줘.
 
 → 어떤 분야든 키워드만 바꾸면 됩니다. 변호사 = 판례·법률 자료 / 마케팅 = 시장조사 / 캠페인 = 트렌드 자료.
 
-> 💬 단 **Semantic Scholar는 학술 자료에 특화**되어 있어요. 비학술 자료(뉴스·블로그·트렌드)는 별도 검색이 필요해요.
+> 💡 **포인트**: Semantic Scholar는 학술 자료에 특화되어 있어요. 비학술 자료(뉴스·블로그·트렌드)는 별도 검색이 필요해요.
 
 ---
 

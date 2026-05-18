@@ -24,7 +24,7 @@
 
 **Step 2.** "Insert" → "HTML Macro" 또는 "Source Editor"에 HTML 붙여넣기.
 
-> 💡 회사 관리자 설정에 따라 HTML 매크로가 비활성일 수 있음. IT 팀에 문의.
+> 💡 **포인트**: 회사 관리자 설정에 따라 HTML 매크로가 비활성일 수 있음. IT 팀에 문의.
 
 ### C-3. 사내 인트라넷 / Wiki
 
@@ -73,7 +73,7 @@ output/Chapter1_Intro.md 를 디자인된 HTML 페이지로 만들어달라고 �
 
 **Step 3.** Deploy 클릭 → URL 자동 생성.
 
-> 💡 Vercel CLI(`vercel deploy` 명령)로 클로드 코드에서 직접 배포 가능. 슬래시 커맨드와 결합하면 워크북 톤과 자연스럽게 이어져요.
+> 💡 **포인트**: Vercel CLI(`vercel deploy` 명령)로 클로드 코드에서 직접 배포 가능. 슬래시 커맨드와 결합하면 워크북 톤과 자연스럽게 이어져요.
 
 ---
 
@@ -89,7 +89,7 @@ output/Chapter1_Intro.md 를 디자인된 HTML 페이지로 만들어달라고 �
 
 **3.** 며칠 안에 이메일로 키 발급.
 
-> 💡 학술·연구 목적이면 보통 승인. 상업적 사용도 양식에 명시.
+> 💡 **포인트**: 학술·연구 목적이면 보통 승인. 상업적 사용도 양식에 명시.
 
 ### Step 2. 키를 클로드에게 알려주기
 
@@ -145,7 +145,7 @@ HTTP 헤더 "x-api-key: [그 값]" 을 포함해서 호출하게 해줘.
 | `/release-mail [매뉴얼.pdf]` | 메일 본문 양식에 날짜·문서명·Summary·Contributors 자동 채워 작성 |
 | `/full-release [매뉴얼.pdf]` | 위 3개를 한 번에 실행 (전체 배포 준비) |
 
-> 💡 본 수업 4번·6번·7번에서 만든 패턴(`.claude/agents/`, `.claude/commands/`)을 그대로 응용하면 됩니다. 회사 SharePoint 자동 업로드는 IT팀과 별도 협의 필요.
+> 💡 **포인트**: 본 수업 4번·6번·7번에서 만든 패턴(`.claude/agents/`, `.claude/commands/`)을 그대로 응용하면 됩니다. 회사 SharePoint 자동 업로드는 IT팀과 별도 협의 필요.
 
 ---
 
