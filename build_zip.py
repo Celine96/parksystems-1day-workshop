@@ -136,14 +136,16 @@ print(f"[OK] 3_파일정리/raw_files 더미 20개 생성")
 print(f"[OK] 4_PM에이전트/ (RFM 폴더는 3 챕터 학습자 결과로 채움)")
 
 # ============================================
-# 5. .claude/ 빈 폴더
+# 5. .claude/ 폴더 (에이전트·슬래시 커맨드 미리 셋업)
+#     - templates/.claude/ 안 .md 파일들을 zip 안에 복사
+#     - 학습자가 워크북 따라 만들 시간을 아껴서, 막혔을 때 fallback 역할
+#     - 호스트가 멘트로 "이미 들어 있어도 실습 흐름 따라가세요" 안내
 # ============================================
-(ROOT / ".claude" / "agents").mkdir(parents=True, exist_ok=True)
-(ROOT / ".claude" / "commands").mkdir(parents=True, exist_ok=True)
-# 빈 폴더 유지용
-(ROOT / ".claude" / "agents" / ".gitkeep").write_text("", encoding='utf-8')
-(ROOT / ".claude" / "commands" / ".gitkeep").write_text("", encoding='utf-8')
-print(f"[OK] .claude/ 빈 폴더 생성")
+shutil.copytree(BASE / "templates" / ".claude", ROOT / ".claude")
+preset_files = sorted(p.relative_to(ROOT) for p in (ROOT / ".claude").rglob("*.md"))
+print(f"[OK] .claude/ 미리 셋업 ({len(preset_files)}개 파일):")
+for p in preset_files:
+    print(f"     - {p}")
 
 # .claude/settings.json — 권한 자동 허용 (학습자 흐름 매끄럽게)
 settings_payload = {
