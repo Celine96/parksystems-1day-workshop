@@ -281,11 +281,11 @@ with zipfile.ZipFile(ZIP_OUT, 'w', zipfile.ZIP_DEFLATED) as zf:
 # 결과
 size_mb = ZIP_OUT.stat().st_size / 1024 / 1024
 print(f"")
-print(f"=" * 50)
-print(f"✅ zip 생성 완료")
+print("-" * 50)
+print(f"[OK] zip 생성 완료")
 print(f"파일: {ZIP_OUT}")
 print(f"크기: {size_mb:.2f} MB")
-print(f"=" * 50)
+print("-" * 50)
 
 # 파일 목록 출력
 print("\n=== zip 내부 파일 (요약) ===")
