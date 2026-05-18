@@ -195,12 +195,17 @@ claude
 ```
 ● 확인 끝. 분류 계획:
 
-  - RFM(B)/raw data/: (B) Manual_update_input.stp, (B) Manual_update_raw.stp
-  - RFM(B)/working/: (B) Manual_update_v3.pdf, (B) Manual_update_working.pdf
-  - RFM(S)/raw data/: (S) NX-Interferom_input.stp, (S) NX-Interferom_v1.stp (.stp 확장자 우선)
-  - RFM(S)/working/: (S) NX-Interferom_draft_v2.pdf
-  - RFM(S)/feedback/: (S) NX-Interferom_review.pdf
-  - 4_PM에이전트/RFM/LOM/ (신규): final_Manual_B.pdf, final_NX_S.pdf
+  4_PM에이전트/RFM/RFM(S)/
+  - raw_data/ → (S) NX-Interferom_input.stp, (S) NX-Interferom_v1.stp
+  - working/ → (S) NX-Interferom_draft_v2.pdf
+  - feedback/ → (S) NX-Interferom_review.pdf
+
+  4_PM에이전트/RFM/RFM(B)/
+  - raw_data/ → (B) Manual_update_input.stp, (B) Manual_update_raw.stp
+  - working/ → (B) Manual_update_working.pdf, (B) Manual_update_v3.pdf
+  - feedback/ → (없음)
+
+  4_PM에이전트/RFM/LOM/ → final_Manual_B.pdf, final_NX_S.pdf
 ```
 
 > **② 실행하고 결과를 표로 보고해요** — 실행 후 "이렇게 끝났어요"
@@ -208,32 +213,29 @@ claude
 ```
 ● 정리 완료. 10개 파일 모두 이동했고 raw_files/는 비었음.
 
-  ┌─────────────────────────┬──────────────────────────────────────────────────────┐
-  │          위치           │                         파일                         │
-  ├─────────────────────────┼──────────────────────────────────────────────────────┤
-  │ RFM(B)/raw data/        │ (B) Manual_update_input.stp,                         │
-  │                         │ (B) Manual_update_raw.stp                            │
-  ├─────────────────────────┼──────────────────────────────────────────────────────┤
-  │ RFM(B)/working/         │ (B) Manual_update_v3.pdf,                            │
-  │                         │ (B) Manual_update_working.pdf                        │
-  ├─────────────────────────┼──────────────────────────────────────────────────────┤
-  │ RFM(B)/feedback/        │ (없음)                                               │
-  ├─────────────────────────┼──────────────────────────────────────────────────────┤
-  │ RFM(S)/raw data/        │ (S) NX-Interferom_input.stp,                         │
-  │                         │ (S) NX-Interferom_v1.stp                             │
-  ├─────────────────────────┼──────────────────────────────────────────────────────┤
-  │ RFM(S)/working/         │ (S) NX-Interferom_draft_v2.pdf                       │
-  ├─────────────────────────┼──────────────────────────────────────────────────────┤
-  │ RFM(S)/feedback/        │ (S) NX-Interferom_review.pdf                         │
-  ├─────────────────────────┼──────────────────────────────────────────────────────┤
-  │ 4_PM에이전트/RFM/LOM/ (신규)│ final_Manual_B.pdf, final_NX_S.pdf                   │
-  └─────────────────────────┴──────────────────────────────────────────────────────┘
+  ┌──────────────────────┬─────────────────────────────────────────────────────────┐
+  │         폴더         │                          파일                           │
+  ├──────────────────────┼─────────────────────────────────────────────────────────┤
+  │ RFM/RFM(S)/raw_data/ │ (S) NX-Interferom_input.stp, (S) NX-Interferom_v1.stp   │
+  ├──────────────────────┼─────────────────────────────────────────────────────────┤
+  │ RFM/RFM(S)/working/  │ (S) NX-Interferom_draft_v2.pdf                          │
+  ├──────────────────────┼─────────────────────────────────────────────────────────┤
+  │ RFM/RFM(S)/feedback/ │ (S) NX-Interferom_review.pdf                            │
+  ├──────────────────────┼─────────────────────────────────────────────────────────┤
+  │ RFM/RFM(B)/raw_data/ │ (B) Manual_update_input.stp, (B) Manual_update_raw.stp  │
+  ├──────────────────────┼─────────────────────────────────────────────────────────┤
+  │ RFM/RFM(B)/working/  │ (B) Manual_update_working.pdf, (B) Manual_update_v3.pdf │
+  ├──────────────────────┼─────────────────────────────────────────────────────────┤
+  │ RFM/RFM(B)/feedback/ │ (비어 있음)                                             │
+  ├──────────────────────┼─────────────────────────────────────────────────────────┤
+  │ RFM/LOM/             │ final_Manual_B.pdf, final_NX_S.pdf                      │
+  └──────────────────────┴─────────────────────────────────────────────────────────┘
 
   판단 메모:
-  - 기존 폴더가 raw data(공백)라 신규 생성 대신 그대로 사용.
-  - (S) NX-Interferom_v1.stp는 _v1 버전 표기지만 .stp 확장자라 raw 자료로 분류 (.stp = 원본 CAD).
-  - 기존 RFM(S)/feedback, working에 이미 있던 _v1_review.pdf/_v1_draft.pdf는 사전 존재 파일이라 미손댐.
-  - 기존 4_PM에이전트/RFM/LOM/Manual_update_v3_RELEASED.pdf는 그대로 두고, 정리한 final 파일들도 같은 4_PM에이전트/RFM/LOM/에 합쳐서 추가.
+  - (S) NX-Interferom_v1.stp — 파일명에 v1 버전 표시가 있지만 .stp 확장자 우선 적용해서 raw_data로 보냄. 버전 표시 규칙은 ".pdf일 때 working"으로 한정되어 있고, .stp는 무조건 원본 CAD/입력 자료라고 판단.
+  - (B) Manual_update_v3.pdf — 'working'·'draft' 키워드는 없지만 _v3 버전 표시 + .pdf 조합이라 규칙대로 working으로 분류.
+  - (B) Manual_update_raw.stp — 'raw' 키워드와 .stp 확장자 모두 매치, raw_data로 분류.
+  - RFM(B)/feedback은 해당 파일이 없어 빈 폴더로 생성해 둠 (작업자별 단계 구조 일관성 유지).
 ```
 
 > 💡 **포인트**: 클로드는 그냥 명령 따르는 게 아니라 (1) **계획을 먼저** 보여주고 (2) **판단한 근거까지 메모**로 남겨요. 결과가 의도와 다르면 바로 잡을 수 있고, ".stp 확장자라 raw로 분류" 같은 추론 과정이 투명하게 드러나요.
