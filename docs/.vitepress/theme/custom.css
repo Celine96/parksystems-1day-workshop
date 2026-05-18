@@ -15,11 +15,10 @@ table:not([style]):not(:has(th:nth-child(3))) td:nth-child(2) {
   width: 75%;
 }
 
-/* 3컬럼 이상 마크다운 표: 첫 번째 컬럼 넉넉하게, 나머지 균등 */
+/* 3컬럼 이상 마크다운 표: 첫 번째 컬럼 넉넉하게, 나머지 균등 (nowrap 제거로 긴 텍스트 줄바꿈 허용) */
 table:not([style]):has(th:nth-child(3)) th:nth-child(1),
 table:not([style]):has(th:nth-child(3)) td:nth-child(1) {
   width: 28%;
-  white-space: nowrap;
 }
 
 table:not([style]):has(th:nth-child(3)) th:nth-child(2),
@@ -27,6 +26,20 @@ table:not([style]):has(th:nth-child(3)) td:nth-child(2),
 table:not([style]):has(th:nth-child(3)) th:nth-child(3),
 table:not([style]):has(th:nth-child(3)) td:nth-child(3) {
   width: 36%;
+}
+
+/* H2 위아래 여백 일관성 */
+.vp-doc h2 {
+  margin-top: 48px;
+  padding-top: 16px;
+}
+
+/* H2 바로 다음 콘텐츠 여유 */
+.vp-doc h2 + p,
+.vp-doc h2 + ul,
+.vp-doc h2 + table,
+.vp-doc h2 + blockquote {
+  margin-top: 16px;
 }
 
 /* 모바일 반응형: 표 가로 스크롤 */
