@@ -1,6 +1,6 @@
 # 0. 강사 소개
 
-<div style="display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap; margin: 32px 0 48px;">
+<div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin: 32px 0 48px;">
 
 ![이수연 (Ella)](/images/ella-profile.jpg){style="width: 240px; border-radius: 16px;"}
 
