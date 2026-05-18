@@ -1,10 +1,10 @@
 # 5. 프로젝트 #3 : 사내 문체 매뉴얼 자동 생성
 
-> 오늘 만들 두 번째 에이전트, **매뉴얼 작가 에이전트**의 시간이에요.
+> 오늘 만들 두 번째 에이전트, **에디터 에이전트**의 시간이에요. (이름은 **Editor** — JARVIS와 짝을 맞춰 영문 이름으로 부를 거예요.)
 
 ---
 
-## [도입] 매뉴얼 작가 에이전트가 뭐예요?
+## [도입] 에디터 에이전트가 뭐예요?
 
 ### 회사 매뉴얼 = 형식이 정해져 있어요
 
@@ -19,14 +19,14 @@
 
 **한 사람이 쓰면 일관되지만 여러 명이 쓰면 톤이 흩어져요.** 새 사람이 들어오면 "이전 매뉴얼 보면서 톤 맞춰주세요" 안내가 필요하고요.
 
-### 매뉴얼 작가 에이전트가 있다면
+### 에디터 에이전트가 있다면
 
 회사 매뉴얼 몇 개를 학습시켜두면:
 
 ```
 You: 이 raw data 가지고 NX-Hybrid WLI Chapter 1 형식으로 매뉴얼 써줘
 
-매뉴얼 작가 에이전트:
+에디터 에이전트:
 [회사 톤·구조 그대로 매뉴얼 초안 생성]
 ```
 
@@ -36,7 +36,7 @@ You: 이 raw data 가지고 NX-Hybrid WLI Chapter 1 형식으로 매뉴얼 써�
 
 ---
 
-## [실습] 매뉴얼 작가 에이전트 만들기
+## [실습] 에디터 에이전트 만들기
 
 ### Step 1. 작업 폴더 확인
 
@@ -63,7 +63,7 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
         └── NX-Interferom.txt
 ```
 
-### Step 2. 매뉴얼 작가 에이전트 만들기
+### Step 2. 에디터 에이전트 만들기
 
 클로드에게 매뉴얼 형식 자료를 보고 에이전트 소개서를 만들어달라고 합니다.
 
@@ -87,7 +87,7 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 - Installation/Maintenance/Operation 섹션 구성
 - 실제 회사가 쓰는 문체·단어 선택
 
-이 둘을 종합해서 .claude/agents/Manual-Writer.md 파일에 매뉴얼 작가 에이전트 소개서로 저장해줘.
+이 둘을 종합해서 .claude/agents/Editor.md 파일에 에디터 에이전트 소개서로 저장해줘.
 
 소개서 안에 포함되어야 할 것:
 1. 매뉴얼 톤 (격식·문장 길이·표현 스타일)
@@ -97,11 +97,11 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 5. 페이지 하단 문서 번호·발행일 형식
 ```
 
-Nimbalyst에서 `.claude/agents/Manual-Writer.md` 파일이 생성되는 걸 보세요.
+Nimbalyst에서 `.claude/agents/Editor.md` 파일이 생성되는 걸 보세요.
 
-> 💡 **포인트**: 클로드가 우리 회사 매뉴얼 4개를 한 번 보고 형식·톤을 추출해서, 매뉴얼 작가 에이전트가 두고두고 참고할 수 있게 소개서로 저장했어요. **사람이 신입에게 "이 매뉴얼들 참고해서 톤 익혀주세요" 라고 1주일 걸려 가르치던 일**이 30초에 끝났어요.
+> 💡 **포인트**: 클로드가 우리 회사 매뉴얼 4개를 한 번 보고 형식·톤을 추출해서, 에디터 에이전트가 두고두고 참고할 수 있게 소개서로 저장했어요. **사람이 신입에게 "이 매뉴얼들 참고해서 톤 익혀주세요" 라고 1주일 걸려 가르치던 일**이 30초에 끝났어요.
 
-생성된 `.claude/agents/Manual-Writer.md` 소개서를 Nimbalyst에서 한번 열어보세요. 에이전트가 어떻게 우리 회사 톤을 정리했는지 보실 수 있어요.
+생성된 `.claude/agents/Editor.md` 소개서를 Nimbalyst에서 한번 열어보세요. 에이전트가 어떻게 우리 회사 톤을 정리했는지 보실 수 있어요.
 
 ### Step 3. raw data → Introduction 변환
 
@@ -110,7 +110,7 @@ Nimbalyst에서 `.claude/agents/Manual-Writer.md` 파일이 생성되는 걸 보
 대화창에 입력:
 
 ```
-Manual-Writer 에이전트를 호출해서,
+Editor 에이전트를 호출해서,
 5_매뉴얼/raw_data/NX-Interferom.txt 의 내용을
 NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 형식으로 변환해줘.
@@ -124,7 +124,7 @@ NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 
 Nimbalyst를 보면 `output/Chapter1_Intro.md` 파일이 새로 생기는 게 보일 거예요.
 
-<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 매뉴얼 작가 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 스타일로 변환된 결과</span></p>
+<p style="font-size: 1.2em; font-weight: 700; color: var(--vp-c-brand-1); margin: 24px 0 8px;">💬 에디터 에이전트는 이렇게 답해요 <span style="color: var(--vp-c-text-2); font-weight: 400; font-size: 0.85em;">— 회사 스타일로 변환된 결과</span></p>
 
 ```markdown
 # Chapter 1
@@ -170,8 +170,8 @@ NX-Interferom 매뉴얼의 Preface 페이지를 만들어줘.
 
 | 에이전트 | 소개서 파일 | 잘 하는 일 |
 |---|---|---|
-| **PM 에이전트** | `.claude/agents/PM.md` | 회사 폴더 들여다보고 진행 상황 보고 |
-| **매뉴얼 작가 에이전트** | `.claude/agents/Manual-Writer.md` | 회사 매뉴얼 형식을 학습해서 같은 톤으로 새 매뉴얼 생성 |
+| **PM 에이전트 JARVIS** | `.claude/agents/JARVIS.md` | 회사 폴더 들여다보고 진행 상황 보고 |
+| **에디터 에이전트** | `.claude/agents/Editor.md` | 회사 매뉴얼 형식을 학습해서 같은 톤으로 새 매뉴얼 생성 |
 
 두 에이전트 모두 같은 `.claude/agents/` 폴더에 살아요. 한 번 만들어두면 **이 폴더(parksystems-workshop)에서는 언제든 호출 가능**해요.
 
@@ -188,12 +188,12 @@ NX-Interferom 매뉴얼의 Preface 페이지를 만들어줘.
 **Step 2.** 클로드 코드에서:
 ```
 [폴더]의 매뉴얼들을 분석해서, 우리 회사 매뉴얼 형식 에이전트를
-.claude/agents/Manual-Writer.md 에 만들어줘.
+.claude/agents/Editor.md 에 만들어줘.
 ```
 
 **Step 3.** raw data 주고 변환:
 ```
-Manual-Writer 에이전트를 호출해서, [raw data 파일]을
+Editor 에이전트를 호출해서, [raw data 파일]을
 우리 회사 매뉴얼 형식으로 변환해줘.
 ```
 
@@ -203,10 +203,10 @@ Manual-Writer 에이전트를 호출해서, [raw data 파일]을
 
 ## [체크포인트]
 
-- [ ] `.claude/agents/Manual-Writer.md` 매뉴얼 작가 에이전트 소개서가 만들어짐
+- [ ] `.claude/agents/Editor.md` 에디터 에이전트 소개서가 만들어짐
 - [ ] NX-Interferom raw data가 Chapter 1 Introduction 형식으로 변환됨
 - [ ] Preface 또는 Overview PPT 응용 1개 이상 시도
-- [ ] **PM 에이전트**와 **매뉴얼 작가 에이전트** 두 명이 같은 `.claude/agents/` 폴더에 살고 있다는 점을 확인함
+- [ ] **PM 에이전트**와 **에디터 에이전트** 두 명이 같은 `.claude/agents/` 폴더에 살고 있다는 점을 확인함
 - [ ] 본인 회사 매뉴얼에 적용하는 패턴을 이해함
 
 ---
