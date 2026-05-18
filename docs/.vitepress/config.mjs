@@ -50,6 +50,7 @@ export default defineConfig({
           { text: '9. 자주쓰는 커맨드', link: '/part3/3-1-commands' },
           { text: '10. PRD — AI에게 줄 지시서', link: '/part3/3-4-prd' },
           { text: '11. 에이전트 & 하네스 엔지니어링 딥다이브', link: '/part3/3-2-agents-harness' },
+          { text: '12. 본업 적용 팁 — CLAUDE.md & 즉시 쓰는 프롬프트', link: '/part3/3-5-tips' },
         ]
       }
     ],
