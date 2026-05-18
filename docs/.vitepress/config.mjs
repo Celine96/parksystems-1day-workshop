@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'ko-KR',
-  title: "파크시스템스 AX 바이브코딩 연수",
+  title: "파크시스템스 AX 바이브코딩",
   description: 'with 클로드 코드 — 비개발자를 위한 업무 자동화 1day 워크숍',
   base: '/parksystems-1day-workshop/',
   themeConfig: {
