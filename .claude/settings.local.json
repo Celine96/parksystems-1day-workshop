@@ -1,30 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/Users/User/Desktop/06_개인/{{LEARNER}}/docs/**)",
-      "Read(//c/Users/User/Desktop/06_개인/{{LEARNER}}/output/**)",
-      "Read(//c/Users/User/Desktop/06_개인/{{LEARNER}}/templates/**)",
-      "Read(//c/Users/User/Desktop/06_개인/{{LEARNER}}/.github/**)",
-      "Read(//c/Users/User/Desktop/06_개인/{{LEARNER}}/**)",
-      "Bash(robocopy . \"../{{LEARNER}}/\" /E /XD node_modules .git docs\\\\.vitepress\\\\cache docs\\\\.vitepress\\\\dist output /XF \"{{LEARNER}}.zip\" \"{{LEARNER}}_클로드코드_워크숍_워크북.md\" \"package-lock.json\" /NFL /NDL /NP)",
-      "Bash(echo \"ExitCode=$?\")",
-      "Bash(tar --exclude='node_modules' --exclude='.git' --exclude='docs/.vitepress/cache' --exclude='docs/.vitepress/dist' --exclude='output' --exclude='{{LEARNER}}.zip' --exclude='package-lock.json' --exclude='{{LEARNER}}_클로드코드_워크숍_워크북.md' -cf - .)",
-      "Bash(tar -xf - -C \"C:/Users/User/Desktop/06_개인/{{LEARNER}}/\")",
       "Bash(npm install *)",
+      "Bash(npm run *)",
       "Bash(npx vitepress *)",
       "Bash(gh --version)",
       "Bash(gh auth *)",
       "Bash(gh repo *)",
       "Bash(gh api *)",
       "Bash(gh run *)",
-      "Bash(curl -sI \"https://celine96.github.io/{{REPO}}/\")",
-      "Read(//c/tmp/**)",
-      "Bash(unzip -q \"C:\\\\Users\\\\User\\\\Desktop\\\\06_개인\\\\{{LEARNER}}\\\\{{LEARNER}}.zip\")",
-      "Bash(xargs grep *)",
-      "Bash(grep \"USER\\\\\\\\\\\\\\\\Desktop\" \"C:\\\\Users\\\\User\\\\Desktop\\\\06_개인\\\\{{LEARNER}}\\\\docs\\\\.vitepress\\\\dist\\\\part1\\\\1-2-install.html\")",
-      "Bash(python -c ' *)",
-      "Bash(curl -s \"https://celine96.github.io/{{REPO}}/part1/1-2-install.html\")",
-      "Bash(grep -oE \"Users.{1,15}Desktop\")"
+      "Bash(curl -sI \"https://celine96.github.io/parksystems-1day-workshop/\")",
+      "Bash(curl -s \"https://celine96.github.io/parksystems-1day-workshop/*\")",
+      "Bash(python build_zip.py)",
+      "Bash(python refactor.py)"
     ]
   }
 }

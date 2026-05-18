@@ -2,25 +2,25 @@
 
 ---
 
-### [영상 가이드]
+## [영상 가이드]
 
 설치 과정이 막막하다면 아래 영상을 보면서 따라하셔도 좋아요. 글로 된 안내는 영상 아래 이어집니다.
 
 **📺 코딩 몰라도 됩니다 — 클로드 코드 설치부터 기본 세팅까지 (EP.01)**
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 20px 0;">
-  <iframe src="https://www.youtube.com/embed/ZY9RNQghsf0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/ZY9RNQghsf0" title="코딩 몰라도 됩니다 — 클로드 코드 설치부터 기본 세팅까지" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
 </div>
 
 **📺 Windows에 Claude Code 설치, 이렇게 쉬울 줄이야…** (Windows 사용자 추천)
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 20px 0;">
-  <iframe src="https://www.youtube.com/embed/7Spk6medZY8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/7Spk6medZY8" title="Windows에 Claude Code 설치, 이렇게 쉬울 줄이야…" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ---
 
-### 클로드 코드 설치하기
+## 클로드 코드 설치하기
 
 **Step 1. 터미널을 열어주세요.**
 
@@ -55,7 +55,7 @@ brew install --cask claude-code
 
 ---
 
-### 첫 실행 & 로그인
+## 첫 실행 & 로그인
 
 **Step 1. `claude --version`을 입력해서 설치가 정상적으로 되었는지 확인해볼게요.**
 
@@ -122,7 +122,7 @@ You:
 
 ---
 
-### 시각화 도구 Nimbalyst 다운로드 (3 파일 정리 준비)
+## 시각화 도구 Nimbalyst 다운로드 (3 파일 정리 준비)
 
 3 파일 정리부터 클로드 코드가 파일을 바꾸는 모습을 **눈으로 보면서** 진행할 거예요. 그래서 **Nimbalyst**라는 무료 도구를 미리 받아둘게요.
 
@@ -138,7 +138,7 @@ You:
 
 ---
 
-### [체크포인트]
+## [체크포인트]
 
 - [ ] `claude --version`으로 설치 확인 완료
 - [ ] "Claude account with subscription"으로 로그인 완료

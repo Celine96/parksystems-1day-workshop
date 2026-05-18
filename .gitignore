@@ -7,3 +7,8 @@ zip_temp/
 *.png
 !docs/public/images/*.png
 !images/*.png
+
+# 회사 자료 우발 push 차단 (PII 안전망)
+*.pptx
+*.pdf
+!docs/public/**/*.pdf
