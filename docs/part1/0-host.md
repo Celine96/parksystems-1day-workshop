@@ -1,3 +1,8 @@
+---
+sidebar: false
+aside: false
+---
+
 # 0. 강사 소개
 
 <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin: 32px 0 48px;">
