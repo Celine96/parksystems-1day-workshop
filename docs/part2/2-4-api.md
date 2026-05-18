@@ -37,8 +37,6 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 **30초.** 인용 가능한 자료들이 정리된 형태로 손에 들어와요.
 
----
-
 ## [개념] 어떻게 가능한 일인가요? — API 한 줄로
 
 **API** 라는 단어를 한 번은 들어보셨을 거예요. 어렵게 들리지만 풀어쓰면:
@@ -55,8 +53,6 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 > - **API 무료 / 가입 불필요 / 키 발급 불필요**
 
 > 💡 **포인트**: Google Scholar는 공식 API가 없어요. (있는 건 유료 third-party만 — 월 $75~) Semantic Scholar는 학술계가 표준처럼 쓰는 무료 대체재예요. 결과 품질도 좋아요.
-
----
 
 ## [실습] 학술 근거 수집 에이전트 만들기
 
@@ -131,8 +127,6 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 
 > 💡 **포인트**: 오래 걸리는 일이 30초. 그것도 인용 형식까지 정리됨.
 
----
-
 ## [실습] 매뉴얼에 근거 통합
 
 ### Step 4. 매뉴얼에 근거 끼워넣기
@@ -149,8 +143,6 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 ```
 
 Nimbalyst에서 `Chapter1_Intro.md` 파일이 업데이트되는 걸 확인하세요. **본문에 학술 인용이 자연스럽게 녹아든 매뉴얼**이 손에 들어와요.
-
----
 
 ## [마무리] 본인 업무 응용 가이드
 
