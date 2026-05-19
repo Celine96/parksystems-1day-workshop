@@ -106,7 +106,7 @@ API 엔드포인트: http://export.arxiv.org/api/query
 마지막에 BibTeX 형식의 참고문헌 목록도 함께 정리해줘.
 ```
 
-Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보세요.
+`.claude/commands/find-evidence.md` 파일이 생성되었습니다.
 
 ### Step 3. 학술 근거 수집 — 첫 호출
 
@@ -162,7 +162,7 @@ Nimbalyst에서 `.claude/commands/find-evidence.md` 파일이 생기는 걸 보�
 파일 끝에 References 섹션을 추가해서 인용한 자료 정리.
 ```
 
-Nimbalyst에서 `Chapter1_Intro.md` 파일이 업데이트되는 걸 확인하세요. **본문에 학술 인용이 자연스럽게 녹아든 매뉴얼**이 손에 들어와요.
+`Chapter1_Intro.md` 파일이 업데이트되었습니다. **본문에 학술 인용이 자연스럽게 녹아든 매뉴얼**이 손에 들어와요.
 
 ## [마무리] 본인 업무 응용 가이드
 

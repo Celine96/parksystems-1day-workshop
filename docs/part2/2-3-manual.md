@@ -99,7 +99,7 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 5. 페이지 하단 문서 번호·발행일 형식
 ```
 
-Nimbalyst에서 `.claude/agents/Editor.md` 파일이 생성되는 걸 보세요.
+`.claude/agents/Editor.md` 파일이 생성되었습니다.
 
 <SectionTitle icon="💬" title="에디터 에이전트는 이렇게 답해요" sub="추출한 회사 형식 9개 섹션 보고" spacious />
 
@@ -127,7 +127,7 @@ Nimbalyst에서 `.claude/agents/Editor.md` 파일이 생성되는 걸 보세요.
 
 > 💡 **포인트**: 클로드가 우리 회사 매뉴얼 4개를 한 번 보고 형식·톤을 추출해서, 에디터 에이전트가 두고두고 참고할 수 있게 만들어두었어요. **사람이 신입에게 "이 매뉴얼들 참고해서 톤 익혀주세요" 라고 1주일 걸려 가르치던 일**이 30초에 끝났어요.
 
-생성된 `.claude/agents/Editor.md` 파일을 Nimbalyst에서 한번 열어보세요. 에이전트가 어떻게 우리 회사 톤을 정리했는지 보실 수 있어요.
+생성된 `.claude/agents/Editor.md` 파일을 한번 열어보세요. 에이전트가 어떻게 우리 회사 톤을 정리했는지 보실 수 있어요.
 
 ### Step 3. raw data → Introduction 변환
 
@@ -150,7 +150,7 @@ NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 - 결과는 5_매뉴얼/output/Chapter1_Intro.md 로 저장
 ```
 
-Nimbalyst를 보면 `5_매뉴얼/output/Chapter1_Intro.md` 파일이 새로 생기는 게 보일 거예요.
+`5_매뉴얼/output/Chapter1_Intro.md` 파일이 생성되었습니다.
 
 <SectionTitle icon="💬" title="에디터 에이전트는 이렇게 답해요" sub="회사 스타일로 변환된 결과" />
 
@@ -175,7 +175,7 @@ Figure 1.1 NX-Interferom
 > - [ ] raw data의 핵심 정보(AFM·AFP·WLI 통합, SEMI 표준 등)가 빠지지 않았나요?
 > - [ ] 문장 흐름이 자연스럽나요?
 
-**결과 파일 열어보기**: Nimbalyst에서 `5_매뉴얼/output/Chapter1_Intro.md`를 더블클릭하거나, 클로드 코드에 이렇게 물어보세요:
+**결과 파일 열어보기**: 파일 탐색기에서 `5_매뉴얼/output/Chapter1_Intro.md`를 더블클릭하거나, 클로드 코드에 이렇게 물어보세요:
 
 📝 **프롬프트 입력**
 
