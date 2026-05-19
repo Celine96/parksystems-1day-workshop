@@ -56,7 +56,7 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 /publish-manual 5_매뉴얼/output/Chapter1_Intro.md
 ```
 
-생성된 `Chapter1_Intro.html` 파일을 Nimbalyst나 파일 탐색기에서 **더블클릭** 하세요. 기본 브라우저에서 깔끔한 웹페이지로 열려요.
+생성된 `Chapter1_Intro.html` 파일을 파일 탐색기에서 **더블클릭** 하세요. 기본 브라우저에서 깔끔한 웹페이지로 열려요.
 
 > 💡 **포인트**: 본인만 보거나, 메일에 첨부할 때 충분해요.
 
