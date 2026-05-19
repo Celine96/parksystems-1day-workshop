@@ -37,23 +37,21 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 **30초.** 인용 가능한 자료들이 정리된 형태로 손에 들어와요.
 
-## [개념] MCP — 클로드가 외부 도구를 직접 쓰는 방법
+## [개념] 어떻게 가능한 일인가요? — API 한 줄로
 
-**MCP** (Model Context Protocol) 라는 단어가 자주 보일 거예요. 어렵게 들리지만 풀어쓰면:
+**API** 라는 단어를 한 번은 들어보셨을 거예요. 어렵게 들리지만 풀어쓰면:
 
-> **MCP = 클로드가 외부 도구를 안전하게 쓰기 위한 표준 규약**
-> Anthropic이 만들었고, 학술 검색·Slack·GitHub·구글 드라이브 등 다양한 도구를 클로드가 직접 호출할 수 있게 해줘요.
+> **API = 다른 서비스와 약속된 창구**
+> "내가 키워드를 던지면, 너는 그 키워드와 관련된 자료를 정해진 형식으로 돌려줘" 라는 약속이에요.
 
-오늘 우리는 **arxiv-mcp-server**라는 MCP 서버를 써요.
+오늘 우리는 **arxiv-mcp-server**라는 도구를 써요. 클로드가 arXiv 학술 자료를 직접 검색·요약할 수 있게 해주는 무료 도구예요.
 
-<SectionTitle icon="🔎" title="arxiv-mcp-server" sub="클로드가 arXiv 논문을 검색·다운로드·읽기" />
+<SectionTitle icon="🔎" title="arxiv-mcp-server" sub="클로드가 arXiv 학술 검색을 직접 수행" />
 
-> - **개발자**: 오픈소스 (https://github.com/blazickjp/arxiv-mcp-server)
-> - **제공 도구**: `search_papers` (검색), `download_paper` (다운로드), `read_paper` (읽기), `list_papers` (목록)
-> - **데이터 출처**: arXiv (Cornell, 240만 편 학술 프리프린트, 1991년~)
-> - **인증·키 불필요 / 무료 / rate limit 3초 (너그러움)**
+> - **arXiv**: Cornell University 운영. 240만 편 학술 프리프린트, 1991년부터. 물리·CS·수학·통계 등 학술 핵심 분야
+> - **API 무료 / 가입 불필요 / 키 발급 불필요 / 너그러운 rate limit**
 
-> 💡 **포인트**: API를 `curl`로 직접 호출하는 방식보다 깔끔. 클로드가 도구를 "이런 게 있다"고 인식하고 알아서 호출. 결과 처리도 클로드가 알아서.
+> 💡 **참고 — MCP** (Model Context Protocol): 이런 도구를 클로드가 안전하게 쓰는 표준이에요. 학술 검색·Slack·GitHub·구글 드라이브 등 다양한 MCP가 있고, 본업 영역에 맞는 거 찾으면 같은 패턴으로 자동화 가능.
 
 ## [실습] arxiv-mcp-server 설치
 
