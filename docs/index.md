@@ -15,8 +15,8 @@ hero:
 
 features:
   - icon: "🖥️"
-    title: "1. 클로드 vs 클로드 코드"
-    details: "둘이 뭐가 다른지, 왜 클로드 코드인지 (시작)"
+    title: "1. Claude AI vs Claude Code vs Claude Co-work"
+    details: "Claude 제품군 3가지 비교, 왜 오늘 클로드 코드인지 (시작)"
     link: /part1/1-1-intro
   - icon: "⚡"
     title: "2. 설치 및 첫 실행"
