@@ -6,8 +6,8 @@
 
 <div style="flex: 1; min-width: 280px;">
 
-<p style="font-size: 1.05em; color: var(--vp-c-text-2); margin: 0 0 8px;">AI Technical PM · AX</p>
-<p style="color: var(--vp-c-text-2); margin: 0 0 16px;">서안개발(주) 부동산 컨설팅팀 (신사업팀) 대리</p>
+<p style="font-size: 1.05em; color: var(--vp-c-text-1); font-weight: 600; margin: 0 0 4px;">AI Technical PM · AX</p>
+<p style="color: var(--vp-c-text-2); font-size: 0.9em; margin: 0 0 16px;">서안개발(주) 부동산 컨설팅팀 (신사업팀) 대리</p>
 
 오늘 4시간 워크숍 동안 함께할 강사예요. RAG·LLM 챗봇부터 콘텐츠·KPI 자동화 파이프라인까지, 부동산 도메인 안에서 AX(AI Transformation)를 직접 운영하고 있어요.
 
@@ -55,7 +55,7 @@
 | 기관 | 일정 | 과정 |
 |---|---|---|
 | **코람코 자산운용** | 2026.06.01 / 02 / 04 (예정) | (예정) |
-| **파크시스템스** | 2026.05.22 (오늘!) | 전사 대상 AX 바이브 코딩 연수 with 클로드 코드 |
+| **파크시스템스** | 2026.05.22 (오늘!) | 전사 대상 AX 바이브코딩 연수 with 클로드 코드 |
 | **군산대학교 비교과과정** | 2024.07.01 / 02 / 03 | 「인공지능 신뢰성 기초 과정 (FL) 이론 과정」 |
 | **모두의연구소** | 2023.10 ~ 11 | 코칭스터디 13기 「Data Science 2023」 코딩 코치 |
 
