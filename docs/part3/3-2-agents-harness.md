@@ -94,7 +94,7 @@
 |---|---|---|
 | **4. PM 에이전트** | PM 에이전트 JARVIS | `.claude/agents/PM.md` (에이전트 정의) + `/progress` 슬래시 커맨드 + `RFM/` 폴더 구조 + 5단계 판정 규칙 |
 | **5. 에디터 에이전트** | Editor 에이전트 | `.claude/agents/Editor.md` + `형식/` 폴더 PNG 4개 + `실제_매뉴얼/` PDF 4개 + `output/` 결과 폴더 |
-| **6. 외부 근거 수집** | (에이전트 없음, 슬래시 커맨드만) | `/find-evidence` 슬래시 커맨드 + arXiv API 약속 |
+| **6. 학술 근거 수집** | (에이전트 없음, 슬래시 커맨드만) | `/find-evidence` 슬래시 커맨드 + arxiv-mcp-server MCP |
 | **7. HTML 변환** | (에이전트 없음, 슬래시 커맨드만) | `/publish-manual` 슬래시 커맨드 + 변환 스타일 규칙 |
 
 ### 보이는 패턴
