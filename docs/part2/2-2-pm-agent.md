@@ -128,12 +128,6 @@ description: 매뉴얼 작업 진행 상황을 RFM 폴더를 들여다보고 5�
 
 **Enter 누르세요.** `.claude/agents/PM.md` 파일이 생성되었습니다.
 
-<SectionTitle icon="⚠️" title="&quot;권한이 막혔어요&quot; 메시지가 떠도 당황 X" sub="자동 셋업되어 있어요" />
-
-> 클로드 코드가 자기 설정 폴더(`.claude/`)에 새 파일을 쓸 때 한 번 확인을 받아요. **zip 안 `.claude/settings.json`이 이미 자동 허용을 셋업해뒀어요** — 대부분 그냥 진행돼요.
->
-> 혹시 "permission denied" 같은 메시지가 보이면 **Allow 또는 Yes 누르면 바로 진행돼요.** 안전장치라 정상 동작이에요.
-
 > 💡 **포인트**: 우리는 코드 한 줄 안 썼어요. 자연어로 "PM 에이전트는 이런 역할이야"를 적었을 뿐인데, 클로드 코드가 파일로 저장했고 이제 이 에이전트를 호출할 수 있어요.
 
 ### Step 3. PM 에이전트 부르는 명령 만들기 — `.claude/commands/progress.md`
