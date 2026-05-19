@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: "파크시스템스 AX 바이브코딩 연수"
-  text: "with 클로드 코드"
-  tagline: 오늘 4시간이 끝나면, 여러분 회사의 실제 자료로 동작하는 AI 자동화 흐름을 손에 쥐고 가실 수 있어요.
+  name: "파크시스템스"
+  text: "AX 바이브코딩 연수"
+  tagline: with 클로드 코드 — 오늘 4시간이 끝나면, 여러분 회사의 실제 자료로 동작하는 AI 자동화 흐름을 손에 쥐고 가실 수 있어요.
   actions:
     - theme: brand
       text: 시작하기
