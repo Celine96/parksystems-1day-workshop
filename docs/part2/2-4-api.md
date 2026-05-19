@@ -37,24 +37,25 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 **30초.** 인용 가능한 자료들이 정리된 형태로 손에 들어와요.
 
-## [개념] 어떻게 가능한 일인가요? — API 한 줄로
+## [개념] MCP — 클로드가 외부 도구를 직접 쓰는 방법
 
-**API** 라는 단어를 한 번은 들어보셨을 거예요. 어렵게 들리지만 풀어쓰면:
+**MCP** (Model Context Protocol) 라는 단어가 자주 보일 거예요. 어렵게 들리지만 풀어쓰면:
 
-> **API = 다른 서비스와 약속된 창구**
-> "내가 키워드를 던지면, 너는 그 키워드와 관련된 자료를 정해진 형식으로 돌려줘" 라는 약속이에요.
+> **MCP = 클로드가 외부 도구를 안전하게 쓰기 위한 표준 규약**
+> Anthropic이 만들었고, 학술 검색·Slack·GitHub·구글 드라이브 등 다양한 도구를 클로드가 직접 호출할 수 있게 해줘요.
 
-오늘 우리는 **arXiv** 라는 학술 프리프린트 저장소의 API를 사용해요.
+오늘 우리는 **arxiv-mcp-server**라는 MCP 서버를 써요.
 
-<SectionTitle icon="🔎" title="arXiv" sub="오늘 사용할 무료 학술 API" />
+<SectionTitle icon="🔎" title="arxiv-mcp-server" sub="클로드가 arXiv 논문을 검색·다운로드·읽기" />
 
-> - **arXiv** — Cornell University Library가 운영하는 학술 프리프린트 저장소
-> - **약 240만 편 이상의 학술 프리프린트** 보유 (1991년부터 운영, 물리·수학·CS·통계·정량생물학 등 학술 핵심 분야 커버)
-> - **API 무료 / 가입 불필요 / 키 발급 불필요 / 너그러운 rate limit** (초당 1회 권장)
+> - **개발자**: 오픈소스 (https://github.com/blazickjp/arxiv-mcp-server)
+> - **제공 도구**: `search_papers` (검색), `download_paper` (다운로드), `read_paper` (읽기), `list_papers` (목록)
+> - **데이터 출처**: arXiv (Cornell, 240만 편 학술 프리프린트, 1991년~)
+> - **인증·키 불필요 / 무료 / rate limit 3초 (너그러움)**
 
-> 💡 **포인트**: Google Scholar는 공식 API가 없어요. (있는 건 유료 third-party만 — 월 $75~) arXiv는 1991년부터 운영되는 학술 프리프린트 저장소이고 무료 API를 공식 제공해요. 결과 품질 좋고 rate limit도 너그러워서 워크숍·본업 모두 안정적으로 쓸 수 있어요.
+> 💡 **포인트**: API를 `curl`로 직접 호출하는 방식보다 깔끔. 클로드가 도구를 "이런 게 있다"고 인식하고 알아서 호출. 결과 처리도 클로드가 알아서.
 
-## [실습] 학술 근거 수집 에이전트 만들기
+## [실습] arxiv-mcp-server 설치
 
 ### Step 1. 작업 폴더에서 시작
 
@@ -65,7 +66,58 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 ```
 > 5번에서 이미 이 폴더에 있었다면 cd 생략 OK. 새 터미널이라면 본인 경로로 이동.
 
-### Step 2. 학술 근거 수집 슬래시 커맨드 만들기
+### Step 2. uv 설치 (이미 있으면 건너뛰기)
+
+uv는 Python 도구를 빠르게 설치하는 매니저예요. arxiv-mcp-server 설치에 필요.
+
+**Mac/Linux 터미널**:
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**Windows PowerShell**:
+```
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+설치 후 터미널 한 번 닫았다 다시 열어주세요.
+
+설치 확인:
+```
+uv --version
+```
+> 버전이 출력되면 OK. "command not found" 나오면 터미널 재시작 또는 PATH 확인.
+
+### Step 3. arxiv-mcp-server 설치
+
+```
+uv tool install arxiv-mcp-server
+```
+
+> 30초 정도 걸려요. 설치 완료 메시지가 뜨면 OK.
+
+### Step 4. Claude Code MCP 등록 — 이미 셋업되어 있어요
+
+zip 안 `.claude/settings.json`에 arxiv-mcp-server가 **미리 등록**되어 있어요. 추가 설정 불필요.
+
+**클로드 코드 재시작**:
+- 클로드 코드 종료: `/exit`
+- 다시 실행: `claude`
+- MCP 서버가 로드되면서 학술 검색 도구를 클로드가 인식해요.
+
+확인:
+
+📝 **프롬프트 입력**
+
+```
+지금 사용 가능한 MCP 도구 목록 보여줘.
+```
+
+→ `search_papers`, `download_paper`, `read_paper` 등 arxiv 관련 도구가 보이면 셋업 완료.
+
+## [실습] 학술 근거 수집 슬래시 커맨드 만들기
+
+### Step 5. find-evidence.md 만들기
 
 대화창에 입력:
 
@@ -77,38 +129,35 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 내용은 이렇게:
 
 ---
-description: 키워드를 받아서 arXiv API로 학술 프리프린트 5개를 찾고 한 줄씩 요약하기
+description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄씩 요약하기
 ---
 
-사용자가 키워드를 주면, arXiv API를 호출해서 관련 학술 프리프린트를 5개 찾아줘.
+사용자가 키워드를 주면, arxiv MCP 서버의 `search_papers` 도구를 호출해서 관련 학술 프리프린트를 5개 찾아줘.
 
-API 엔드포인트: http://export.arxiv.org/api/query
-파라미터: search_query=all:[키워드], max_results=5, sortBy=relevance
-
-응답: Atom XML 형식. 각 <entry> 안:
-- <title>: 제목
-- <author><name>: 저자 (여러 명, 첫 저자만 사용)
-- <published>: 발행일 (YYYY-MM-DD... — 연도만 추출)
-- <summary>: 초록
-- <id>: arXiv URL
-
-**중요 — API 호출 규칙**:
-- curl 또는 WebFetch로 **바로 호출** (sleep 명령 사용 금지 — Claude Code 안전 정책 차단)
-- 한 번에 성공해야 함. 실패 시 사용자에게 알리고 중단
+도구: `search_papers` (arxiv-mcp-server)
+파라미터:
+- query: [사용자 키워드]
+- max_results: 5
 
 각 결과를 다음 형식으로 정리해줘:
 
 1. [제목] ([첫 저자] et al., [연도])
-   - URL: [arXiv URL]
+   - URL: [arXiv URL — paper id로 https://arxiv.org/abs/{id} 구성]
    - 초록 핵심을 한 줄로 요약
    - 매뉴얼 본문에 어떻게 인용 가능한지 1줄 코멘트
 
 마지막에 BibTeX 형식의 참고문헌 목록도 함께 정리해줘.
+
+**중요 — 호출 규칙**:
+- 도구를 **한 번에 바로 호출** (sleep 명령 사용 금지)
+- MCP 서버 미설치 시 사용자에게 "uv tool install arxiv-mcp-server 실행 후 클로드 코드 재시작 필요" 안내
 ```
 
 `.claude/commands/find-evidence.md` 파일이 생성되었습니다.
 
-### Step 3. 학술 근거 수집 — 첫 호출
+## [실습] 학술 근거 수집 — 첫 호출
+
+### Step 6. /find-evidence 호출
 
 이제 `/find-evidence` 커맨드를 쓸 수 있어요. 호출해봅시다.
 
@@ -124,10 +173,10 @@ API 엔드포인트: http://export.arxiv.org/api/query
 
 클로드가 일하는 모습을 보세요.
 
-<SectionTitle icon="🤖" title="클로드 코드가 알아서 하는 일" sub="커맨드 → API 호출 → 결과 정리" />
+<SectionTitle icon="🤖" title="클로드 코드가 알아서 하는 일" sub="커맨드 → MCP 도구 호출 → 결과 정리" />
 
 > 1. 우리가 만든 `.claude/commands/find-evidence.md` 를 읽음
-> 2. arXiv API 호출 (실제로 인터넷으로 검색)
+> 2. arxiv MCP 서버의 `search_papers` 도구 호출
 > 3. 결과 5개를 정해준 형식으로 정리
 > 4. BibTeX 참고문헌까지 함께 출력
 
@@ -147,7 +196,7 @@ API 엔드포인트: http://export.arxiv.org/api/query
 
 ## [실습] 매뉴얼에 근거 통합
 
-### Step 4. 매뉴얼에 근거 끼워넣기
+### Step 7. 매뉴얼에 근거 끼워넣기
 
 5번에서 만든 Chapter 1 Introduction에 학술 근거를 더해봅시다.
 
@@ -171,19 +220,19 @@ API 엔드포인트: http://export.arxiv.org/api/query
 📝 **프롬프트 입력**
 
 ```
-[본인 키워드]에 대한 학술 자료 / 산업 표준 / 경쟁사 발표 자료를
-arXiv API로 찾아서 정리해줘.
+[본인 키워드]에 대한 학술 자료를 arxiv에서 찾아서 정리해줘.
 ```
 
-→ 어떤 분야든 키워드만 바꾸면 됩니다. 변호사 = 판례·법률 자료 / 마케팅 = 시장조사 / 캠페인 = 트렌드 자료.
+→ 어떤 분야든 키워드만 바꾸면 됩니다. 변호사 = 판례·법률 자료(다른 MCP) / 마케팅 = 시장조사(다른 MCP) / 캠페인 = 트렌드(다른 MCP).
 
-> 💡 **포인트**: arXiv는 학술 프리프린트(물리·수학·CS·통계·정량생물학 등)에 특화되어 있어요. 비학술 자료(뉴스·블로그·트렌드)는 별도 검색이 필요해요.
+> 💡 **포인트**: MCP는 도메인별로 다양해요. Slack MCP·GitHub MCP·구글 드라이브 MCP 등. 본업 영역의 MCP를 찾아 같은 패턴으로 슬래시 커맨드를 만들면 즉시 자동화 가능.
 
 ---
 
 ## [체크포인트]
 
-- [ ] **API = 다른 서비스와의 약속된 창구** 라는 점을 이해함
+- [ ] **MCP = 클로드가 외부 도구를 안전하게 쓰는 표준** 이라는 점을 이해함
+- [ ] `uv tool install arxiv-mcp-server` 설치 + Claude Code 재시작 확인
 - [ ] `.claude/commands/find-evidence.md` 슬래시 커맨드를 만들었음
 - [ ] `/find-evidence` 한 번으로 학술 자료 5개 + BibTeX가 정리되는 걸 직접 봄
 - [ ] 매뉴얼 본문에 학술 인용이 자연스럽게 통합되는 걸 확인함
