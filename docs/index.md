@@ -36,7 +36,7 @@ features:
     link: /part2/2-3-manual
   - icon: "🔍"
     title: "6. 프로젝트 4 : 학술 근거 자동 수집 (MCP 활용)"
-    details: "학술 API로 매뉴얼 근거를 자동 수집 (메인)"
+    details: "MCP로 학술 근거를 자동 수집 (메인)"
     link: /part2/2-4-api
   - icon: "🌐"
     title: "7. 프로젝트 5 : HTML 변환 (+프롬프트 핑퐁으로 디자인 개선)"
