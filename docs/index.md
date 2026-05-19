@@ -39,7 +39,7 @@ features:
     details: "학술 API로 매뉴얼 근거를 자동 수집 (메인)"
     link: /part2/2-4-api
   - icon: "🌐"
-    title: "7. 프로젝트 #4.2 : HTML 변환"
+    title: "7. 프로젝트 #4.2 : HTML 변환 (+프롬프트 핑퐁으로 디자인 개선)"
     details: "매뉴얼을 누구나 볼 수 있는 웹페이지로 (메인)"
     link: /part2/2-5-html
   - icon: "📚"
