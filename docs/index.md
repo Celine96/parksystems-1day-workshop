@@ -31,7 +31,7 @@ features:
     details: "문서를 읽고 진행 상황을 보고하는 에이전트 만들기 (메인)"
     link: /part2/2-2-pm-agent
   - icon: "📝"
-    title: "5. 프로젝트 #3 : 사내 문체 매뉴얼 자동 생성"
+    title: "5. 프로젝트 #3 : 사내 문체 매뉴얼 자동 생성 에이전트"
     details: "회사 매뉴얼 형식을 학습시켜 같은 톤으로 생성 (메인)"
     link: /part2/2-3-manual
   - icon: "🔍"
