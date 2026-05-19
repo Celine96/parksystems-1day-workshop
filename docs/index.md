@@ -23,23 +23,23 @@ features:
     details: "설치 → 로그인 → 첫 화면 확인 (시작)"
     link: /part1/1-2-install
   - icon: "📂"
-    title: "3. 프로젝트 #1 : 파일 정리"
+    title: "3. 프로젝트 1 : 파일 정리"
     details: "흩어진 폴더를 한 줄 명령으로 정리 (메인)"
     link: /part2/2-1-files
   - icon: "📋"
-    title: "4. 프로젝트 #2 : PM 에이전트"
+    title: "4. 프로젝트 2 : PM 에이전트"
     details: "문서를 읽고 진행 상황을 보고하는 에이전트 만들기 (메인)"
     link: /part2/2-2-pm-agent
   - icon: "📝"
-    title: "5. 프로젝트 #3 : 사내 문체 매뉴얼 자동 생성 에이전트"
+    title: "5. 프로젝트 3 : 사내 문체 매뉴얼 자동 생성 에이전트"
     details: "회사 매뉴얼 형식을 학습시켜 같은 톤으로 생성 (메인)"
     link: /part2/2-3-manual
   - icon: "🔍"
-    title: "6. 프로젝트 #4.1 : 외부 근거 자동 수집 (MCP 활용)"
+    title: "6. 프로젝트 4 : 외부 근거 자동 수집 (MCP 활용)"
     details: "학술 API로 매뉴얼 근거를 자동 수집 (메인)"
     link: /part2/2-4-api
   - icon: "🌐"
-    title: "7. 프로젝트 #4.2 : HTML 변환 (+프롬프트 핑퐁으로 디자인 개선)"
+    title: "7. 프로젝트 5 : HTML 변환 (+프롬프트 핑퐁으로 디자인 개선)"
     details: "매뉴얼을 누구나 볼 수 있는 웹페이지로 (메인)"
     link: /part2/2-5-html
   - icon: "📚"

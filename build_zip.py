@@ -196,7 +196,7 @@ main_items = [
 # 워크숍 흐름 (메인 챕터의 num·text·flow를 한 줄씩 — chapters.json drift 방지)
 flow_lines = []
 for i, item in enumerate(main_items, start=1):
-    title_short = item['text'].split('. ', 1)[-1]  # "3. 프로젝트 #1 : 파일 정리" → "프로젝트 #1 : 파일 정리"
+    title_short = item['text'].split('. ', 1)[-1]  # "3. 프로젝트 1 : 파일 정리" → "프로젝트 1 : 파일 정리"
     flow_text = item.get('flow', item.get('details', ''))
     flow_lines.append(f"{i}. **{item['num']} {title_short}** — {flow_text}")
 flow_block = "\n".join(flow_lines)
