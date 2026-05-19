@@ -1,7 +1,7 @@
 
 # 1. Claude AI vs Claude Code vs Claude Co-work
 
-> 같은 회사(Anthropic)의 Claude 제품군에는 세 가지 다른 환경이 있어요. 각자 다른 일을 잘해요.
+> 같은 회사(Anthropic)의 Claude 제품군에는 세 가지 다른 환경이 있어요.
 
 ---
 
