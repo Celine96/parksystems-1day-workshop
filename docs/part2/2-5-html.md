@@ -67,19 +67,55 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 
 ## [옵션 B] 인터넷에 띄우기 — Cloudflare Pages
 
-회사가 아닌 인터넷에 띄워서 URL로 공유하는 방법. **가입 1회 + 파일 드래그**로 1~2분 안에 가능해요.
+회사가 아닌 인터넷에 띄워서 URL로 공유하는 방법. **가입 1회 + 폴더 드래그**로 1~2분 안에 가능해요.
 
 > ⚠️ **주의**: 회사 내부 매뉴얼·고객 정보가 들어간 자료는 **외부 호스팅 X**. 공개해도 되는 자료(일반 교육·공개 안전 가이드·포트폴리오 등)에만 사용하세요.
 
-**Step 1.** Cloudflare 계정 가입 — https://dash.cloudflare.com/sign-up (이메일 한 줄)
+### 준비
 
-**Step 2.** 대시보드 → **Workers & Pages** → **Pages** 탭 → **Create application** → **Upload assets** → **Create**
+- 배포할 폴더 안에 **`index.html`이 있어야 해요** (Cloudflare가 자동 진입점으로 사용).
+- Cloudflare 계정 가입·로그인 — https://dash.cloudflare.com/sign-up (이메일 한 줄)
 
-**Step 3.** 프로젝트 이름 입력 후 **`Chapter1_Intro.html` 파일을 화면에 드래그앤드롭** (또는 클릭해서 선택).
+> 💡 우리는 `Chapter1_Intro.html` 만 있죠. 클로드한테 한 줄로 부탁하세요:
+>
+> 📝 **프롬프트 입력**
+>
+> ```
+> 5_매뉴얼/output/Chapter1_Intro.html 을 index.html 이름으로 복사해줘.
+> ```
 
-> 💡 응용으로 여러 HTML 파일이 있으면 `5_매뉴얼/output/` 폴더 통째 드래그해도 OK.
+### Step 1. 좌측 사이드바: **Build → Compute**
 
-**Step 4.** **Deploy site** 클릭. 1~2분 후 `xxx.pages.dev` URL 자동 생성. 클립보드 복사해서 공유.
+"Workers & Pages" 화면이 열려요.
+
+### Step 2. 우측 상단: **Create application** 클릭
+
+### Step 3. 상단 탭에서 **Pages** 선택
+
+> ⚠️ 기본값이 **Workers**라 그냥 진행하면 `*.workers.dev` URL이 만들어지면서 404가 떠요. 반드시 **Pages 탭을 먼저 클릭**.
+
+### Step 4. **"Drag and drop your files"** 선택
+
+> ("Import an existing Git repository" 옵션도 있지만 무시)
+
+### Step 5. 프로젝트명 입력
+
+- **영문 소문자 + 하이픈** (예: `nx-interferom-manual`)
+- 이 이름이 그대로 URL이 돼요.
+
+### Step 6. **Create project** 클릭
+
+### Step 7. 폴더 드래그 업로드 → **Deploy site** 클릭
+
+- 10~30초 후 "Next steps" 화면이 뜨면 성공
+- 좌측 상단 프로젝트 이름 클릭 → 라이브 URL 확인
+- URL 형식: `https://{프로젝트명}.pages.dev/`
+
+### (참고) 파일 수정 후 재배포
+
+1. **Build → Compute** → 만든 프로젝트 클릭
+2. 우측 상단 **Create new deployment**
+3. 수정된 폴더 다시 드래그 → 배포
 
 > 💡 **포인트**: 무료 + 본인 도메인 연결 가능.
 
