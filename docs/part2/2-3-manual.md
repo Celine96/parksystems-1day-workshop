@@ -99,6 +99,8 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 5. 페이지 하단 문서 번호·발행일 형식
 ```
 
+> 💡 이 파일은 zip에 미리 들어 있어요. **새로 만들지 않고 다음 단계로 넘어가세요.**
+
 `.claude/agents/Editor.md` 파일이 생성되었습니다.
 
 <SectionTitle icon="💬" title="에디터 에이전트는 이렇게 답해요" sub="추출한 회사 형식 9개 섹션 보고" spacious />

@@ -151,6 +151,8 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 - MCP 서버 미설치 시 사용자에게 "uv tool install arxiv-mcp-server 실행 후 클로드 코드 재시작 필요" 안내
 ```
 
+> 💡 이 파일은 zip에 미리 들어 있어요. **새로 만들지 않고 다음 단계로 넘어가세요.**
+
 `.claude/commands/find-evidence.md` 파일이 생성되었습니다.
 
 ## [실습] 학술 근거 수집 — 첫 호출
