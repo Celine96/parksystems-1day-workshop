@@ -47,6 +47,20 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 /publish-manual 5_매뉴얼/output/Chapter1_Intro.md
 ```
 
+<SectionTitle icon="💬" title="클로드 코드는 이렇게 답해요" sub="HTML 변환 결과" />
+
+```
+● Markdown 내용을 회사 매뉴얼 스타일 HTML로 변환합니다.
+
+  파일 위치
+
+  5_매뉴얼/output/
+  ├── Chapter1_Intro.md
+  └── Chapter1_Intro.html   ← 새로 생성
+
+  브라우저에서 확인하고, 필요하면 Ctrl+P로 인쇄 미리보기까지 점검해보세요.
+```
+
 생성된 `Chapter1_Intro.html` 파일을 파일 탐색기에서 **더블클릭** 하세요. 기본 브라우저에서 깔끔한 웹페이지로 열려요.
 
 > 💡 **포인트**: 본인만 보거나, 메일에 첨부할 때 충분해요.
