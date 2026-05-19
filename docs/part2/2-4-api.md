@@ -66,54 +66,51 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 ```
 > 5번에서 이미 이 폴더에 있었다면 cd 생략 OK. 새 터미널이라면 본인 경로로 이동.
 
-### Step 2. uv 설치 (이미 있으면 건너뛰기)
+### Step 2. arxiv-mcp-server 설치 — 클로드한테 자연어로 부탁
 
-uv는 Python 도구를 빠르게 설치하는 매니저예요. arxiv-mcp-server 설치에 필요.
-
-**Mac/Linux 터미널**:
-```
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-**Windows PowerShell**:
-```
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
-
-설치 후 터미널 한 번 닫았다 다시 열어주세요.
-
-설치 확인:
-```
-uv --version
-```
-> 버전이 출력되면 OK. "command not found" 나오면 터미널 재시작 또는 PATH 확인.
-
-### Step 3. arxiv-mcp-server 설치
-
-```
-uv tool install arxiv-mcp-server
-```
-
-> 30초 정도 걸려요. 설치 완료 메시지가 뜨면 OK.
-
-### Step 4. Claude Code MCP 등록 — 이미 셋업되어 있어요
-
-zip 안 `.claude/settings.json`에 arxiv-mcp-server가 **미리 등록**되어 있어요. 추가 설정 불필요.
-
-**클로드 코드 재시작**:
-- 클로드 코드 종료: `/exit`
-- 다시 실행: `claude`
-- MCP 서버가 로드되면서 학술 검색 도구를 클로드가 인식해요.
-
-확인:
+명령어 외울 필요 없어요. 클로드한테 그냥 부탁하면 알아서 본인 OS 확인하고 설치해줘요.
 
 📝 **프롬프트 입력**
 
 ```
-지금 사용 가능한 MCP 도구 목록 보여줘.
+arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
+내 OS 자동 확인하고, 필요하면 uv(Python 도구 매니저)도 같이 설치해줘.
+설치 진행 상황을 단계별로 알려주고, 끝나면 다음에 뭘 해야 하는지 안내해줘.
 ```
 
-→ `search_papers`, `download_paper`, `read_paper` 등 arxiv 관련 도구가 보이면 셋업 완료.
+클로드가 알아서:
+- 본인 OS 확인 (Mac / Windows / Linux)
+- uv 설치 (없으면)
+- arxiv-mcp-server 설치
+- 결과 보고
+
+> 💡 **권한 에러가 뜨면** 클로드한테 "이 에러가 떴어. 어떻게 해결해?"라고 그대로 붙여넣어 물어보세요. 호스트가 도와드릴 수도 있어요.
+
+### Step 3. Claude Code 재시작
+
+설치된 MCP 도구를 클로드가 인식하려면 한 번 재시작이 필요해요.
+
+대화창에서:
+```
+/exit
+```
+
+터미널에서 다시:
+```
+claude
+```
+
+> 💡 zip 안 `.claude/settings.json`에 arxiv-mcp-server가 **미리 등록**되어 있어서 재시작만 하면 자동 로드됩니다.
+
+### Step 4. MCP 도구 인식 확인
+
+📝 **프롬프트 입력**
+
+```
+지금 사용 가능한 MCP 도구 목록 보여줘. arxiv 관련 도구(search_papers, download_paper 등)가 있는지 확인.
+```
+
+→ `search_papers`, `download_paper`, `read_paper` 등이 보이면 셋업 완료. 다음 단계로.
 
 ## [실습] 학술 근거 수집 슬래시 커맨드 만들기
 
