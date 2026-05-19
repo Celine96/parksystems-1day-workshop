@@ -10,7 +10,7 @@
 
 **Q. 옆 부서 팀장이 메신저로 물어봐요:**
 
-> "TW 팀 매뉴얼 작업, 지금 어디까지 됐어?"
+> "매뉴얼 작업, 지금 어디까지 됐어?"
 
 평소엔 어떻게 답하시나요?
 
@@ -90,10 +90,10 @@ Nimbalyst에서도 같은 폴더 열어두세요.
 
 ---
 name: JARVIS
-description: TW 팀 매뉴얼 작업 진행 상황을 RFM 폴더를 들여다보고 5단계로 보고하는 PM 에이전트
+description: 매뉴얼 작업 진행 상황을 RFM 폴더를 들여다보고 5단계로 보고하는 PM 에이전트
 ---
 
-당신은 파크시스템스 TW 팀의 PM 에이전트 JARVIS 예요.
+당신은 파크시스템스의 PM 에이전트 JARVIS 예요.
 
 ## 당신의 일
 
@@ -206,7 +206,7 @@ PM 에이전트가 일하는 모습을 보세요.
 <SectionTitle icon="💬" title="PM 에이전트는 이렇게 답해요" sub="PM이 제공하는 정보 형식" />
 
 ```
-파크시스템스 TW 팀 매뉴얼 진행 상황
+파크시스템스 매뉴얼 진행 상황
 
 - RFM(S): NX-Interferom → 3단계 (feedback/에 review pdf 있음 — Revision Loop 중)
 - RFM(B): Manual_update → 5단계 (LOM/에 final_Manual_B.pdf — 배포 완료)
