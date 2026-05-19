@@ -16,15 +16,18 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const repoRoot = path.resolve(__dirname, '..')
 const indexMdPath = path.join(repoRoot, 'docs', 'index.md')
 
-// 1) chapters.json에서 "num이 있는 챕터" 목록 (1~12번)
+// 1) chapters.json에서 "num이 있는 챕터" 목록 (메인 1~7번 + 부록 1~4번)
+// 부록은 group.label이 "부록"으로 시작하는 그룹으로 식별 (num이 메인과 중복될 수 있음)
 const numberedChapters = []
 for (const group of chapters.groups) {
+  const isAppendix = group.label.startsWith('부록')
   for (const item of group.items) {
     if (typeof item.num === 'number') {
       numberedChapters.push({
         num: item.num,
         title: item.text,
         link: item.link,
+        isAppendix,
       })
     }
   }
@@ -51,12 +54,11 @@ const indexLinks = new Set(linkMatches)
 
 // 3) 비교: chapters.json의 numbered 챕터 link가 모두 index.md features에 있는지
 const missing = numberedChapters.filter(c => !indexLinks.has(c.link))
-// 부록(9~12)은 index.md에서는 "부록 — 4개 보기" 한 카드로 묶이므로 누락 처리에서 제외.
-// 정책: index.md에는 1~8번 + 부록 묶음 카드만 노출. 부록 카드 link는 9번(/part3/3-1-commands).
-const APPENDIX_NUMS = new Set([9, 10, 11, 12])
-const realMissing = missing.filter(c => !APPENDIX_NUMS.has(c.num))
+// 부록은 index.md에서는 "부록 — 4개 보기" 한 카드로 묶이므로 누락 처리에서 제외.
+// 정책: index.md에는 메인(1~7번) + 부록 묶음 카드만 노출. 부록 카드 link는 /part3/3-1-commands.
+const realMissing = missing.filter(c => !c.isAppendix)
 
-// 부록 묶음 카드는 9번 link를 사용해야 함
+// 부록 묶음 카드는 /part3/3-1-commands link를 사용해야 함
 const appendixCard = chapters.appendix_features_card
 const appendixLinkPresent = appendixCard && indexLinks.has(appendixCard.link)
 
@@ -64,14 +66,15 @@ const appendixLinkPresent = appendixCard && indexLinks.has(appendixCard.link)
 const chapterLinks = new Set(numberedChapters.map(c => c.link))
 const extra = [...indexLinks].filter(link => !chapterLinks.has(link))
 
-// 5) 카운트 검증: index.md features 개수 = 메인+시작+추가실습 챕터 수 + 부록 묶음 카드 1
-const expectedCount = numberedChapters.filter(c => !APPENDIX_NUMS.has(c.num)).length + 1
+// 5) 카운트 검증: index.md features 개수 = 비-부록 챕터 수 + 부록 묶음 카드 1
+const expectedCount = numberedChapters.filter(c => !c.isAppendix).length + 1
 const actualCount = linkMatches.length
 
 let hasDrift = false
 
+const appendixCount = numberedChapters.filter(c => c.isAppendix).length
 console.log('--- chapters.json ↔ index.md drift 검증 ---')
-console.log(`chapters.json numbered 챕터: ${numberedChapters.length}개 (부록 ${APPENDIX_NUMS.size}개 포함)`)
+console.log(`chapters.json numbered 챕터: ${numberedChapters.length}개 (부록 ${appendixCount}개 포함)`)
 console.log(`index.md features 카드: ${actualCount}개 (기대: ${expectedCount} = 비-부록 챕터 + 부록 묶음 카드 1)`)
 
 if (realMissing.length > 0) {

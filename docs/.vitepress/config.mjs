@@ -18,7 +18,6 @@ export default defineConfig({
       { text: '홈', link: '/' },
       { text: '시작', link: '/part1/1-1-intro' },
       { text: '메인', link: '/part2/2-1-files' },
-      { text: '추가 실습', link: '/part3/3-3-publish' },
       { text: '부록', link: '/part3/3-1-commands' },
     ],
     sidebar,

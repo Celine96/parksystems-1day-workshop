@@ -42,10 +42,6 @@ features:
     title: "7. 프로젝트 #4.2 : HTML 변환"
     details: "매뉴얼을 누구나 볼 수 있는 웹페이지로 (메인)"
     link: /part2/2-5-html
-  - icon: "🚀"
-    title: "8. 배포 깊이 들어가기"
-    details: "SharePoint · 디자이너 응용 · 키 발급 · 파크시스템스 사례 (추가 실습)"
-    link: /part3/3-3-publish
   - icon: "📚"
     title: "부록 — 4개 보기"
     details: "자주쓰는 커맨드 · PRD · 에이전트·하네스 엔지니어링 딥다이브 · 본업 적용 팁"
