@@ -50,6 +50,7 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 > - **arXiv**: Cornell University 운영. 240만 편 학술 프리프린트, 1991년부터. 물리·CS·수학·통계 등 학술 핵심 분야
 > - **무료 / 가입 불필요 / 키 발급 불필요 / 너그러운 rate limit**
+> - **arxiv-mcp-server**: 오픈소스 — https://github.com/blazickjp/arxiv-mcp-server
 
 > 💡 **포인트**: 본업 영역에 맞는 MCP를 찾으면 같은 패턴으로 자동화 가능. Slack·GitHub·구글 드라이브 등 다양한 MCP가 있어요.
 
