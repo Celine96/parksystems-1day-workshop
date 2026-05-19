@@ -37,21 +37,21 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 **30초.** 인용 가능한 자료들이 정리된 형태로 손에 들어와요.
 
-## [개념] 어떻게 가능한 일인가요? — API 한 줄로
+## [개념] 어떻게 가능한 일인가요? — MCP 한 줄로
 
-**API** 라는 단어를 한 번은 들어보셨을 거예요. 어렵게 들리지만 풀어쓰면:
+**MCP** (Model Context Protocol) 라는 단어가 자주 보일 거예요. 어렵게 들리지만 풀어쓰면:
 
-> **API = 다른 서비스와 약속된 창구**
-> "내가 키워드를 던지면, 너는 그 키워드와 관련된 자료를 정해진 형식으로 돌려줘" 라는 약속이에요.
+> **MCP = 클로드가 외부 도구를 쓰는 표준 약속**
+> Anthropic이 만든 규약. 학술 검색·Slack·GitHub·구글 드라이브 등 다양한 도구를 클로드가 직접 쓸 수 있게 해줘요.
 
-오늘 우리는 **arxiv-mcp-server**라는 도구를 써요. 클로드가 arXiv 학술 자료를 직접 검색·요약할 수 있게 해주는 무료 도구예요.
+오늘 우리는 **arxiv-mcp-server**라는 MCP를 써요. 클로드가 arXiv 학술 자료를 직접 검색·요약할 수 있게 해주는 무료 도구예요.
 
 <SectionTitle icon="🔎" title="arxiv-mcp-server" sub="클로드가 arXiv 학술 검색을 직접 수행" />
 
 > - **arXiv**: Cornell University 운영. 240만 편 학술 프리프린트, 1991년부터. 물리·CS·수학·통계 등 학술 핵심 분야
-> - **API 무료 / 가입 불필요 / 키 발급 불필요 / 너그러운 rate limit**
+> - **무료 / 가입 불필요 / 키 발급 불필요 / 너그러운 rate limit**
 
-> 💡 **참고 — MCP** (Model Context Protocol): 이런 도구를 클로드가 안전하게 쓰는 표준이에요. 학술 검색·Slack·GitHub·구글 드라이브 등 다양한 MCP가 있고, 본업 영역에 맞는 거 찾으면 같은 패턴으로 자동화 가능.
+> 💡 **포인트**: 본업 영역에 맞는 MCP를 찾으면 같은 패턴으로 자동화 가능. Slack·GitHub·구글 드라이브 등 다양한 MCP가 있어요.
 
 ## [실습] arxiv-mcp-server 설치
 
