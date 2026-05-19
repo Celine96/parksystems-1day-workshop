@@ -73,6 +73,8 @@ cd ~/Desktop/parksystems-workshop/5_매뉴얼
 
 ```
 arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
+참고: https://github.com/blazickjp/arxiv-mcp-server
+
 내 OS 자동 확인하고, 필요하면 uv(Python 도구 매니저)도 같이 설치해줘.
 설치 진행 상황을 단계별로 알려주고, 끝나면 다음에 뭘 해야 하는지 안내해줘.
 ```
