@@ -9,19 +9,19 @@
 
 Anthropic은 같은 Claude AI를 세 가지 다른 환경으로 제공해요. 같은 프롬프트("월간 판매 보고서 읽고 상위 5가지 통찰력 요약")라도 제품에 따라 결과가 다릅니다.
 
-<SectionTitle icon="💬" title="Claude.ai" sub="대화 중심 / 생각 도구" />
+<SectionTitle title="Claude.ai" sub="대화 중심 / 생각 도구" />
 
 > - **위치** — 웹 브라우저
 > - **하는 일** — 구조·문구·추론 도움 → 생각의 틀 제공
 > - **잘 맞는 일** — 질문·탐색·초안 작성·분석
 
-<SectionTitle icon="💻" title="Claude Code" sub="기술 환경 / 실행 도구" />
+<SectionTitle title="Claude Code" sub="기술 환경 / 실행 도구" />
 
 > - **위치** — 터미널 (내 컴퓨터)
 > - **하는 일** — 파일·코드·스크립트 직접 다룸 → 코드/파일 결과물
 > - **잘 맞는 일** — 코딩·디버깅·테스트·시스템 수정
 
-<SectionTitle icon="🤝" title="Claude Co-work" sub="비즈니스 도구 / 실행 도구" />
+<SectionTitle title="Claude Co-work" sub="비즈니스 도구 / 실행 도구" />
 
 > - **위치** — 데스크톱 + Slack·문서·이메일
 > - **하는 일** — 보고서 찾고·열고·요약본 작성 → 업무 완료
