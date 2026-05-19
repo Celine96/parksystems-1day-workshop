@@ -191,31 +191,25 @@ claude
 
 ```
 ● 정리 완료. 10개 파일 모두 이동했고 raw_files/는 비었음.
-
-  ┌──────────────────────┬─────────────────────────────────────────────────────────┐
-  │         폴더         │                          파일                           │
-  ├──────────────────────┼─────────────────────────────────────────────────────────┤
-  │ RFM/RFM(S)/raw_data/ │ (S) NX-Interferom_input.stp, (S) NX-Interferom_v1.stp   │
-  ├──────────────────────┼─────────────────────────────────────────────────────────┤
-  │ RFM/RFM(S)/working/  │ (S) NX-Interferom_draft_v2.pdf                          │
-  ├──────────────────────┼─────────────────────────────────────────────────────────┤
-  │ RFM/RFM(S)/feedback/ │ (S) NX-Interferom_review.pdf                            │
-  ├──────────────────────┼─────────────────────────────────────────────────────────┤
-  │ RFM/RFM(B)/raw_data/ │ (B) Manual_update_input.stp, (B) Manual_update_raw.stp  │
-  ├──────────────────────┼─────────────────────────────────────────────────────────┤
-  │ RFM/RFM(B)/working/  │ (B) Manual_update_working.pdf, (B) Manual_update_v3.pdf │
-  ├──────────────────────┼─────────────────────────────────────────────────────────┤
-  │ RFM/RFM(B)/feedback/ │ (비어 있음)                                             │
-  ├──────────────────────┼─────────────────────────────────────────────────────────┤
-  │ RFM/LOM/             │ final_Manual_B.pdf, final_NX_S.pdf                      │
-  └──────────────────────┴─────────────────────────────────────────────────────────┘
-
-  판단 메모:
-  - (S) NX-Interferom_v1.stp — 파일명에 v1 버전 표시가 있지만 .stp 확장자 우선 적용해서 raw_data로 보냄. 버전 표시 규칙은 ".pdf일 때 working"으로 한정되어 있고, .stp는 무조건 원본 CAD/입력 자료라고 판단.
-  - (B) Manual_update_v3.pdf — 'working'·'draft' 키워드는 없지만 _v3 버전 표시 + .pdf 조합이라 규칙대로 working으로 분류.
-  - (B) Manual_update_raw.stp — 'raw' 키워드와 .stp 확장자 모두 매치, raw_data로 분류.
-  - RFM(B)/feedback은 해당 파일이 없어 빈 폴더로 생성해 둠 (작업자별 단계 구조 일관성 유지).
+  폴더별 파일 목록은 아래 표 참고.
 ```
+
+| 폴더 | 파일 |
+|---|---|
+| RFM/RFM(S)/raw_data/ | (S) NX-Interferom_input.stp, (S) NX-Interferom_v1.stp |
+| RFM/RFM(S)/working/ | (S) NX-Interferom_draft_v2.pdf |
+| RFM/RFM(S)/feedback/ | (S) NX-Interferom_review.pdf |
+| RFM/RFM(B)/raw_data/ | (B) Manual_update_input.stp, (B) Manual_update_raw.stp |
+| RFM/RFM(B)/working/ | (B) Manual_update_working.pdf, (B) Manual_update_v3.pdf |
+| RFM/RFM(B)/feedback/ | (비어 있음) |
+| RFM/LOM/ | final_Manual_B.pdf, final_NX_S.pdf |
+
+**판단 메모**:
+
+- **(S) NX-Interferom_v1.stp** — 파일명에 `v1` 버전 표시가 있지만 `.stp` 확장자 우선 적용해서 `raw_data`로 보냄. 버전 표시 규칙은 ".pdf일 때 working"으로 한정되어 있고, `.stp`는 무조건 원본 CAD/입력 자료라고 판단.
+- **(B) Manual_update_v3.pdf** — 'working'·'draft' 키워드는 없지만 `_v3` 버전 표시 + `.pdf` 조합이라 규칙대로 `working`으로 분류.
+- **(B) Manual_update_raw.stp** — 'raw' 키워드와 `.stp` 확장자 모두 매치, `raw_data`로 분류.
+- **RFM(B)/feedback** — 해당 파일이 없어 빈 폴더로 생성해 둠 (작업자별 단계 구조 일관성 유지).
 
 > 💡 **포인트**: 클로드는 그냥 명령 따르는 게 아니라 (1) **계획을 먼저** 보여주고 (2) **판단한 근거까지 메모**로 남겨요. 결과가 의도와 다르면 바로 잡을 수 있고, ".stp 확장자라 raw로 분류" 같은 추론 과정이 투명하게 드러나요.
 >
