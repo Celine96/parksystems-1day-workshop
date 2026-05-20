@@ -180,7 +180,7 @@ output 결과물과 비교해서 디자인 프롬프트를 개선해주세요.
 
 ## [체크포인트]
 
-- [ ] `.claude/commands/publish-manual.md` 슬래시 커맨드를 만듦
+- [ ] 슬래시 커맨드 정의(`.claude/commands/publish-manual.md`)를 보고 어떻게 만드는지 이해함
 - [ ] 매뉴얼.md → 로컬 HTML 변환 → 더블클릭으로 브라우저에서 봄
 - [ ] (선택) Cloudflare Pages로 인터넷 URL 만들어봄
 

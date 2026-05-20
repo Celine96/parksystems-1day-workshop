@@ -224,7 +224,7 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 
 - [ ] **MCP = 클로드가 외부 도구를 안전하게 쓰는 표준** 이라는 점을 이해함
 - [ ] `uv tool install arxiv-mcp-server` 설치 + Claude Code 재시작 확인
-- [ ] `.claude/commands/find-evidence.md` 슬래시 커맨드를 만들었음
+- [ ] 슬래시 커맨드 정의(`.claude/commands/find-evidence.md`)를 보고 어떻게 만드는지 이해함
 - [ ] `/find-evidence` 한 번으로 학술 자료 5개 + BibTeX가 정리되는 걸 직접 봄
 - [ ] 매뉴얼 본문에 학술 인용이 자연스럽게 통합되는 걸 확인함
 

@@ -283,8 +283,8 @@ claude
 
 ## [체크포인트]
 
-- [ ] `.claude/agents/PM.md` 파일에 PM 에이전트를 만들었음
-- [ ] `.claude/commands/progress.md` 슬래시 커맨드를 만듦
+- [ ] PM 에이전트 정의(`.claude/agents/PM.md`)를 보고 어떻게 만드는지 이해함
+- [ ] 슬래시 커맨드 정의(`.claude/commands/progress.md`)를 보고 어떻게 만드는지 이해함
 - [ ] `/progress` 한 줄로 PM 에이전트가 RFM 폴더를 분석해 보고하는 걸 직접 봄
 - [ ] 응용 명령 1~2개를 시도해 에이전트를 더 깊이 부려봄
 - [ ] 본인 회사 폴더에 적용하려면 어떻게 시작할지 감을 얻음

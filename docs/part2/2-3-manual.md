@@ -229,9 +229,9 @@ Figure 1.1 NX-Interferom
 
 ## [체크포인트]
 
-- [ ] `.claude/agents/Editor.md` 에디터 에이전트가 만들어짐
+- [ ] 에디터 에이전트 정의(`.claude/agents/Editor.md`)를 보고 어떻게 만드는지 이해함
 - [ ] NX-Interferom raw data가 Chapter 1 Introduction 형식으로 변환됨
-- [ ] **PM 에이전트**와 **에디터 에이전트** 두 명이 같은 `.claude/agents/` 폴더에 살고 있다는 점을 확인함
+- [ ] **PM 에이전트**와 **에디터 에이전트** 두 정의가 같은 `.claude/agents/` 디렉터리에 저장되어 있다는 점을 확인함
 - [ ] 내 업무에 적용하는 패턴을 이해함
 
 ---
