@@ -152,7 +152,7 @@ cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
 <SectionTitle icon="🤖" title="이 명령이 시키는 일" sub="클로드 코드가 알아서 처리" />
 
 > 1. `raw_files/` 폴더를 들여다봄
-> 2. 파일명 앞 `(S)` `(B)`로 누구 파일인지 구분
+> 2. 누구 파일인지 구분 — 일반 파일은 **앞** `(S)` `(B)` prefix, final 파일은 **끝** `_S` / `_B` suffix
 > 3. 파일명에 `raw` · `working` · `feedback` 단어로 어느 단계인지 구분
 > 4. **3층 폴더 구조**를 만들고 파일을 옮김 (다음 챕터에서 쓸 `4_PM에이전트/` 안에):
 >    ```
