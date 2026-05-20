@@ -37,11 +37,13 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 
 **(참고)** 직접 실행하면 `.claude/commands/publish-manual.md` 파일이 만들어져요.
 
-이제 `/publish-manual [파일 경로]` 한 줄로 HTML 변환 가능.
+이제 `/publish-manual [파일 경로]` 한 줄로 **로컬 HTML 파일** 변환 가능. (같은 폴더에 `.html` 파일이 생기고, 브라우저에서 더블클릭으로 열어볼 수 있어요.)
 
-## [옵션 A] 로컬에서 보기
+> 변환된 HTML을 어떻게 보고 공유할지 두 가지 방법이 있어요. 본인 상황에 맞게 진행하세요.
 
-가장 단순한 방법. 본인 컴퓨터에서만 봐요.
+## 로컬에서 보기 — 본인 컴퓨터에서만
+
+가장 단순한 방법.
 
 📝 **프롬프트 입력**
 
@@ -67,7 +69,7 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 
 > 💡 **포인트**: 본인만 보거나, 메일에 첨부할 때 충분해요.
 
-## [옵션 B] 인터넷에 띄우기 — Cloudflare Pages
+## 인터넷에 띄우기 — Cloudflare Pages (URL로 공유)
 
 회사가 아닌 인터넷에 띄워서 URL로 공유하는 방법. **가입 1회 + 폴더 드래그**로 1~2분 안에 가능해요.
 
@@ -98,7 +100,7 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 
 ### Step 4. **"Drag and drop your files"** 선택
 
-> ("Import an existing Git repository" 옵션도 있지만 무시)
+> ("Import an existing Git repository" 메뉴도 있지만 무시)
 
 ### Step 5. 프로젝트명 입력
 
