@@ -14,7 +14,7 @@
 
 평소 흐름:
 
-<SectionTitle icon="📌" title="손으로 하면 4단계" sub="손으로 하면 오래 걸리는 일" />
+<SectionTitle icon="📌" title="직접하면 4단계" sub="상당히 오래 걸리는 일" />
 
 > 1. Google Scholar 또는 학술 사이트 검색
 > 2. 논문 클릭 → 초록 읽기
