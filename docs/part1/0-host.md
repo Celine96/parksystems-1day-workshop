@@ -7,7 +7,7 @@
 <div style="flex: 1; min-width: 280px;">
 
 <p style="font-size: 1.05em; color: var(--vp-c-text-1); font-weight: 600; margin: 0 0 4px;">AI Technical PM · AX</p>
-<p style="color: var(--vp-c-text-2); font-size: 0.9em; margin: 0 0 4px;">서안개발(주) 부동산 컨설팅팀 (신사업팀) 대리</p>
+<p style="color: var(--vp-c-text-2); font-size: 0.9em; margin: 0 0 4px;">서안개발(주) 부동산 컨설팅팀 (신사업팀)</p>
 <p style="color: var(--vp-c-text-2); font-size: 0.9em; margin: 0 0 16px;">디랩스 대표</p>
 
 오늘 4시간 워크숍 동안 함께할 강사예요. RAG·LLM 챗봇부터 콘텐츠·KPI 자동화 파이프라인까지 전 과정 기획-구현-운영하고 있어요. 부동산 도메인 안에서 AX: 하네스 엔지니어링, 온톨로지에 대한 고민을 하고 있어요.
