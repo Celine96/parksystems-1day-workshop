@@ -205,6 +205,15 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 > 3. 결과 5개를 정해준 형식으로 정리
 > 4. BibTeX 참고문헌까지 함께 출력
 
+```
+● Skill(/find-evidence)
+  ⎿  Successfully loaded skill
+
+● arxiv MCP의 search_papers 도구 스키마를 로드한 다음 검색할게요.
+
+  Called arxiv-mcp-server (ctrl+o to expand)
+```
+
 <SectionTitle icon="💬" title="클로드 코드는 이렇게 답해요" sub="학술 자료 + 매뉴얼 인용 코멘트" />
 
 ```
@@ -215,9 +224,15 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
    - 매뉴얼 인용: Park's NX-Interferom의 기술적 배경 강화 가능
 
 2. ...
+
+판단 메모: 5건 중 매뉴얼 본문 인용으로 실효성 있는 건 1번 (Delacroix 2014) 한 건이에요.
+WLI + AFM + SEM을 동일 시료에 대해 보완적으로 운용한 직접 사례라서
+NX-Interferom의 multi-scale metrology 가치 제안을 학술적으로 뒷받침해줘요.
+더 풍부한 후보가 필요하면 surface metrology coherence scanning interferometry
+correlative microscopy 같은 키워드로 추가 검색을 권장해요.
 ```
 
-> 💡 **포인트**: 오래 걸리는 일이 30초. 그것도 인용 형식까지 정리됨.
+> 💡 **포인트**: 오래 걸리는 일이 30초. 그것도 인용 형식 + 학습자가 어떤 자료를 골라야 할지 **판단 메모**까지.
 
 ## [실습] 매뉴얼에 근거 통합
 
