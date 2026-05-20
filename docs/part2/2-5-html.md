@@ -84,8 +84,8 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 
 ### 준비
 
-- 배포할 폴더 안에 **`index.html`이 있어야 해요** (Cloudflare가 자동 진입점으로 사용).
 - Cloudflare 계정 가입·로그인 — https://dash.cloudflare.com/sign-up (이메일 한 줄)
+- 배포할 폴더 안에 **`index.html`이 있어야 해요** (Cloudflare가 자동 진입점으로 사용).
 
 > 💡 우리는 `Chapter1_Intro.html` 만 있죠. 클로드한테 한 줄로 부탁하세요:
 >
