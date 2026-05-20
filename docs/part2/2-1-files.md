@@ -84,9 +84,9 @@ raw_files/
 
 ## [실습] 명령 한 번으로 파일 정리
 
-이제 터미널 창으로 가서 클로드 코드를 실행하세요.
+앞 챕터에서 띄운 클로드 코드 창에서, **작업할 폴더로 `cd` 이동**만 하면 돼요.
 
-> ⚠️ **`CLAUDE.md` 파일이 있는 위치에서 실행해야 해요** (가장 중요!)
+> ⚠️ **`CLAUDE.md` 파일이 있는 위치로 이동해야 해요** (가장 중요!)
 >
 > 바탕화면에 zip을 풀면 Windows 자동 풀기 특성상 **같은 이름 폴더가 한 단계 더 생겨요**:
 >
@@ -100,11 +100,10 @@ raw_files/
 >         └── .claude/
 > ```
 >
-> **`CLAUDE.md`가 있는 안쪽 폴더로 들어가서** `claude`를 실행해야 워크북의 모든 파일 경로가 맞아요.
+> **`CLAUDE.md`가 있는 안쪽 폴더로 이동**해야 워크북의 모든 파일 경로가 맞아요.
 
 ```
 cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
-claude
 ```
 
 > 💡 Mac/Linux는: `cd ~/Desktop/parksystems-workshop/parksystems-workshop`
