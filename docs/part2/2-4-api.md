@@ -251,6 +251,22 @@ correlative microscopy 같은 키워드로 추가 검색을 권장해요.
 파일 끝에 References 섹션을 추가해서 인용한 자료 정리.
 ```
 
+<SectionTitle icon="💬" title="클로드 코드는 이렇게 답해요" sub="인용 배치 + References 섹션 추가" />
+
+```
+● 완료. Chapter1_Intro.md에 인용 2건 자연스럽게 삽입했어요.
+
+  인용 배치
+  - [1] Delacroix 2014 — 1번째 단락 끝, WLI+AFM 통합 metrology를 학술적으로 뒷받침
+    (subwavelength grating에서 두 modality가 spatial scale과 accuracy 측면에서
+    상보적임을 입증한 직접 사례)
+  - [2] Eerqing 2021 — 5번째 단락 끝(3-mode 워크플로 설명), 상보적 다중 측정 컨셉의
+    일반 근거로 사용
+
+  추가 사항
+  - 파일 끝 푸터 위에 ## References 섹션 추가 (IEEE 스타일, arXiv URL 포함)
+```
+
 `Chapter1_Intro.md` 파일이 업데이트되었습니다. **본문에 학술 인용이 자연스럽게 녹아든 매뉴얼**이 손에 들어와요.
 
 ## [마무리] 본인 업무 응용 가이드
