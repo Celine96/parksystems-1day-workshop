@@ -78,14 +78,53 @@ arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
 
 > 💡 **권한 에러가 뜨면** 클로드한테 "이 에러가 떴어. 어떻게 해결해?"라고 그대로 붙여넣어 물어보세요.
 
-### Step 2. 클로드가 안내한 대로 따라가기
+<SectionTitle icon="💬" title="클로드 코드의 진행 과정" sub="강사 샘플 — Windows 11 환경" spacious />
 
-보통 이런 흐름으로 안내해요:
-1. Claude Code 종료 (`/exit`)
-2. **일반 PowerShell/터미널**에서 `claude mcp add ...` 명령어 한 줄 실행
-3. `claude` 로 다시 시작
+```
+● OS는 Windows 11이에요. 단계별로 진행할게요.
 
-받은 명령어·안내 그대로 따라하시면 돼요. 디테일은 클로드가 본인 환경에 맞춰 만들어줘요.
+1단계: 현재 환경 확인 — uv / python / 기존 MCP 설정 점검
+● uv 0.10.6 / Python 3.13 이미 설치돼 있어요. 설치 단계는 건너뛰고 MCP 등록만 하면 돼요.
+
+2단계: arxiv-mcp-server 등록 상태 확인
+● arxiv-mcp-server는 아직 등록 안 됐어요. 진행할게요.
+
+3단계: arxiv-mcp-server 설치 (uv tool 방식)
+● 설치 성공 (PowerShell stderr 처리에서 경고가 떴지만 마지막 줄
+  "Installed 1 executable: arxiv-mcp-server" 확인).
+
+4단계: 논문 저장 폴더 만들고 Claude Code MCP에 등록
+● 등록은 됐는데 project scope가 RFM 하위 폴더로 잡혔어요. 워크숍 루트로 옮길게요.
+
+● 완료! 등록 + 연결 확인됐어요.
+```
+
+| 항목 | 상태 |
+|---|---|
+| OS | Windows 11 |
+| uv | 0.10.6 (이미 설치돼 있어 스킵) |
+| Python | 3.13 (이미 설치) |
+| arxiv-mcp-server | ✓ uv tool install로 설치 |
+| 논문 저장 폴더 | `6_학술근거/arxiv-papers/` 생성 |
+| Claude Code MCP 등록 | ✓ user scope, Connected |
+
+> 💡 본인 OS·환경에 따라 단계가 살짝 달라질 수 있어요. 큰 흐름(환경 확인 → 설치 → 등록 → 연결 확인)만 같으면 정상이에요.
+
+### Step 2. Claude Code 재시작
+
+클로드가 안내한 등록 명령을 일반 PowerShell에서 실행한 다음, 새 MCP 도구를 인식시키려면 **Claude Code를 한 번 재시작**해야 해요.
+
+<SectionTitle icon="🔄" title="재시작 방법" sub="2단계로 끝" />
+
+> **1) 지금 세션 종료**
+>
+> - 터미널에서 `Ctrl + C` 두 번 누르거나
+> - `/exit` 입력
+>
+> **2) 같은 폴더에서 다시 실행**
+>
+> - PowerShell 열어서 워크숍 폴더로 이동 후 `claude` 입력
+> - 또는 이전에 쓰던 터미널 창에서 `claude` 다시 입력
 
 ### Step 3. 등록 확인
 
@@ -95,7 +134,11 @@ arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
 /mcp
 ```
 
-→ `arxiv-mcp-server`가 **connected** 상태로 보이면 셋업 완료. 다음 단계로.
+설치가 완료되면 아래 화면처럼 `/arxiv-mcp-server:` 로 시작하는 도구 목록이 보여요.
+
+![/mcp 명령으로 arxiv-mcp-server 등록 확인](/images/mcp-installed.png)
+
+→ `arxiv-mcp-server` 관련 도구(`search_papers`, `summarize_paper`, `literature_review` 등)가 보이면 셋업 완료. 다음 단계로.
 
 ## [실습] 학술 근거 수집 슬래시 커맨드 만들기
 
