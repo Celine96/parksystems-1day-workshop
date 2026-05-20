@@ -114,19 +114,11 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 - **영문 소문자 + 하이픈** (예: `nx-interferom-manual`)
 - 이 이름이 그대로 URL이 돼요.
 
-### Step 6. **Create project** 클릭
-
-### Step 7. 폴더 드래그 업로드 → **Deploy site** 클릭
+### Step 6. **Upload your project assets:** 에 `output` 폴더 드래그 업로드 → **Deploy site** 클릭
 
 - 10~30초 후 "Next steps" 화면이 뜨면 성공
 - 좌측 상단 프로젝트 이름 클릭 → 라이브 URL 확인
 - URL 형식: `https://{프로젝트명}.pages.dev/`
-
-### (참고) 파일 수정 후 재배포
-
-1. **Build → Compute** → 만든 프로젝트 클릭
-2. 우측 상단 **Create new deployment**
-3. 수정된 폴더 다시 드래그 → 배포
 
 > 💡 **포인트**: 무료 + 본인 도메인 연결 가능.
 
