@@ -192,13 +192,7 @@ Figure 1.1 NX-Interferom
 > - [ ] raw data의 핵심 정보(AFM·AFP·WLI 통합, SEMI 표준 등)가 빠지지 않았나요?
 > - [ ] 문장 흐름이 자연스럽나요?
 
-**결과 파일 열어보기**: 파일 탐색기에서 `5_매뉴얼/output/Chapter1_Intro.md`를 더블클릭하거나, 클로드 코드에 이렇게 물어보세요:
-
-📝 **프롬프트 입력**
-
-```
-방금 만든 5_매뉴얼/output/Chapter1_Intro.md 파일을 열어서 보여줘.
-```
+> 💡 점검을 위해 본인 파일을 열어보세요 — 파일 탐색기에서 `5_매뉴얼/output/Chapter1_Intro.md` 더블클릭, 또는 클로드 코드에 `"방금 만든 5_매뉴얼/output/Chapter1_Intro.md 파일을 열어서 보여줘"`라고 부탁.
 
 ## [마무리] 두 에이전트 정리
 
