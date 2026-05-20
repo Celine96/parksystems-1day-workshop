@@ -47,9 +47,8 @@ raw_files/
   ├── (S) NX-Interferom_review.pdf
   ├── (B) Manual_update_raw.stp
   ├── (B) Manual_update_working.pdf
-  ├── final_NX_S.pdf
   ├── final_Manual_B.pdf
-  └── ... (10개 정도)
+  └── ... (9개)
 ```
 
 **이게 평소 작업하는 회사 폴더의 흔한 모습이에요.**
@@ -77,8 +76,8 @@ raw_files/
 >   예: `(B) Manual_update_working.pdf`, `(S) NX-Interferom_draft_v2.pdf`
 > - **`feedback` / `review`** — 3단계 리뷰 받은 자료
 >   예: `(S) NX-Interferom_review.pdf`
-> - **`final`** — 5단계 배포 완료 매뉴얼
->   예: `final_Manual_B.pdf`
+> - **`final`** — 5단계 배포 완료 매뉴얼 (파일명 끝의 `_S` / `_B`는 담당자)
+>   예: `final_Manual_B.pdf` (담당자 B의 배포 완료 매뉴얼)
 
 손으로 정리하면? 2명 × 4단계 = 8개 폴더 만들고, 파일을 하나씩 옮겨야 해요. 오래 걸리는 일이죠.
 
@@ -187,13 +186,13 @@ cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
   - working/ → (B) Manual_update_working.pdf, (B) Manual_update_v3.pdf
   - feedback/ → (없음)
 
-  4_PM에이전트/RFM/LOM/ → final_Manual_B.pdf, final_NX_S.pdf
+  4_PM에이전트/RFM/LOM/ → final_Manual_B.pdf
 ```
 
 > **② 실행하고 결과를 표로 보고해요** — 실행 후 "이렇게 끝났어요"
 
 ```
-● 정리 완료. 10개 파일 모두 이동했고 raw_files/는 비었음.
+● 정리 완료. 9개 파일 모두 이동했고 raw_files/는 비었음.
   폴더별 파일 목록은 아래 표 참고.
 ```
 
@@ -205,7 +204,7 @@ cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
 | RFM/RFM(B)/raw_data/ | (B) Manual_update_input.stp, (B) Manual_update_raw.stp |
 | RFM/RFM(B)/working/ | (B) Manual_update_working.pdf, (B) Manual_update_v3.pdf |
 | RFM/RFM(B)/feedback/ | (비어 있음) |
-| RFM/LOM/ | final_Manual_B.pdf, final_NX_S.pdf |
+| RFM/LOM/ | final_Manual_B.pdf |
 
 **판단 메모**:
 
@@ -245,7 +244,7 @@ parksystems-workshop/
 
 - [ ] 2명 × 3단계 = 6개 하위 폴더가 자동으로 만들어졌나요?
 - [ ] 파일이 올바른 폴더로 이동했나요?
-- [ ] `LOM/` 폴더에 final 파일들이 모였나요?
+- [ ] `LOM/` 폴더에 final 파일이 모였나요?
 
 > 💬 "정리 결과를 표로 요약해줘" 라고 추가로 물어보세요. 어떤 작업자 폴더에 몇 개 파일이 있는지 보고서까지 자동으로 만들어줘요.
 

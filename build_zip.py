@@ -119,7 +119,6 @@ dummy_files = [
     "(B) Manual_update_working.pdf",
     "(B) Manual_update_v3.pdf",
     "(B) Manual_update_input.stp",
-    "final_NX_S.pdf",
     "final_Manual_B.pdf",
 ]
 for fname in dummy_files:

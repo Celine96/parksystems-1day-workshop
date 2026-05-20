@@ -58,7 +58,7 @@ JARVIS는 회사 폴더를 들여다보고 진행 상황을 파악해서, 내가
         │     ├── raw_data/             ← (B)_raw.stp, _input.stp (1단계)
         │     ├── working/              ← (B)_working.pdf, _v3.pdf (2~4단계 draft)
         │     └── feedback/             (비어 있음)
-        └── LOM/                        ← final_NX_S.pdf, final_Manual_B.pdf (5단계 배포)
+        └── LOM/                        ← final_Manual_B.pdf (담당자 B 5단계 배포 완료)
 ```
 
 이게 PM 에이전트가 들여다볼 작업장이에요.
