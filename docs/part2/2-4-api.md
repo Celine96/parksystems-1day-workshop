@@ -121,8 +121,8 @@ arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
 >
 > **2) 같은 폴더에서 다시 실행**
 >
-> - PowerShell 열어서 워크숍 폴더로 이동 후 `claude` 입력
-> - 또는 이전에 쓰던 터미널 창에서 `claude` 다시 입력
+> - 이전에 쓰던 터미널 창에서 `claude` 다시 입력
+> - (창을 껐을 경우) PowerShell/Terminal 열어서 워크숍 폴더로 이동 후 `claude` 입력
 
 ### Step 3. 등록 확인
 
