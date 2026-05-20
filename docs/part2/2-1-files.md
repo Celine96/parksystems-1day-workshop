@@ -130,18 +130,20 @@ cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
 - final 붙은 파일은 별도 4_PM에이전트/RFM/LOM/ 폴더 (5단계 배포 완료)
 
 분류 규칙:
-- 파일명 앞 (S) (B) 로 작업자 구분
+- 작업자(담당자) 구분:
+  - raw/working/feedback 파일: 파일명 **앞** `(S)` `(B)` prefix로 구분
+  - final 파일: 파일명 **끝** `_S` / `_B` suffix로 담당자 구분 (예: `final_Manual_B.pdf` → 담당자 B의 배포 완료 매뉴얼)
 - 단계 분류 (매뉴얼 작업 5단계 기준):
   - 1단계 원본 자료 → raw_data : 파일명에 'raw'·'input', 또는 .stp 확장자
   - 2~4단계 Draft pdf → working : 파일명에 'working'·'draft', 또는 _v1/_v2/_v3 같은 버전 표시가 붙은 .pdf
   - 3단계 리뷰 받은 자료 → feedback : 파일명에 'feedback'·'review'
-  - 5단계 배포 완료 → RFM/LOM/ : 파일명에 'final'
+  - 5단계 배포 완료 → 4_PM에이전트/RFM/LOM/ : 파일명에 'final' (담당자 무관 모두 LOM/으로)
 - 위 키워드에 안 맞는 파일은 파일명·확장자 패턴으로 가장 가까운 단계 추론 (확장자만으로도 판단 가능)
 
 출력 순서 (이 형식으로 답해줘):
 1. "● 확인 끝. 분류 계획:" — 작업자별로 그룹 묶어 폴더/파일 bullet 나열
 2. 파일 이동 실행
-3. "● 정리 완료. N개 파일 모두 이동했고 raw_files/는 비었음." + ASCII box-drawing 표(┌─┐ ├─┤ └─┘)로 폴더/파일 정리 (S → B → LOM 순)
+3. "● 정리 완료. N개 파일 모두 이동했고 raw_files/는 비었음." + markdown 표로 폴더/파일 정리 (S → B → LOM 순)
 4. "판단 메모:" — 비표준 파일별 분류 근거 bullet
 ```
 
