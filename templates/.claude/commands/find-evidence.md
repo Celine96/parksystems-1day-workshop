@@ -20,4 +20,4 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 
 **중요 — 호출 규칙**:
 - 도구를 **한 번에 바로 호출** (sleep 명령 사용 금지)
-- MCP 서버 미설치 시 사용자에게 "uv tool install arxiv-mcp-server 실행 후 클로드 코드 재시작 필요" 안내
+- MCP 서버 미등록 시 사용자에게 "워크북 6 챕터 Step 1~4 (uv tool install → claude mcp add --scope user → claude 재시작 → /mcp 확인) 진행 필요" 안내
