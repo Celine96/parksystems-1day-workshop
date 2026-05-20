@@ -56,16 +56,7 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 ## [실습] arxiv-mcp-server 설치
 
-### Step 1. 작업 폴더에서 시작
-
-`5_매뉴얼` 폴더에서 계속 작업해요.
-
-```
-cd ~/Desktop/parksystems-workshop/5_매뉴얼
-```
-> 5번에서 이미 이 폴더에 있었다면 cd 생략 OK. 새 터미널이라면 본인 경로로 이동.
-
-### Step 2. arxiv-mcp-server 설치 — 클로드한테 자연어로 부탁
+### Step 1. arxiv-mcp-server 설치 — 클로드한테 자연어로 부탁
 
 명령어 외울 필요 없어요. 클로드한테 그냥 부탁하면 알아서 본인 OS 확인하고 설치해줘요.
 
@@ -87,7 +78,7 @@ arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
 
 > 💡 **권한 에러가 뜨면** 클로드한테 "이 에러가 떴어. 어떻게 해결해?"라고 그대로 붙여넣어 물어보세요. 호스트가 도와드릴 수도 있어요.
 
-### Step 3. Claude Code 재시작
+### Step 2. Claude Code 재시작
 
 설치된 MCP 도구를 클로드가 인식하려면 한 번 재시작이 필요해요.
 

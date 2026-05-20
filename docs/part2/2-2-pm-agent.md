@@ -43,17 +43,7 @@ JARVIS는 회사 폴더를 들여다보고 진행 상황을 파악해서, 내가
 
 ## [실습] PM 에이전트 만들기 — 5단계
 
-### Step 1. 작업 폴더 확인
-
-`parksystems-workshop/4_PM에이전트/` 폴더로 이동하세요. (3번 파일 정리에서 정리한 RFM 폴더가 여기 있어요. 같은 폴더에서 PM 에이전트를 만들 거예요.)
-
-```
-cd ~/Desktop/parksystems-workshop/4_PM에이전트
-claude
-```
-> Windows: `cd C:\Users\USER\Desktop\parksystems-workshop\4_PM에이전트`
->
-> 💡 3 챕터에서 작업한 `parksystems-workshop\` 폴더에서 `4_PM에이전트` 로 한 단계 더 들어가는 거예요. 본인 경로가 다르면 본인 경로로 수정.
+### Step 1. 폴더 구조 확인
 
 3번에서 정리한 폴더 구조:
 
