@@ -72,26 +72,29 @@ claude --version
 
 **Step 2. 사전에 공유받은 zip 파일을 바탕화면에 압축 해제해 주세요.**
 
-압축을 풀면 어딘가에 **`parksystems-workshop`** 폴더가 생겨요 (압축 도구·OS마다 한두 단계 깊이 차이 있을 수 있음). 안에 `3_파일정리`, `4_PM에이전트`, `5_매뉴얼`, `.claude` 등이 보이면 정답.
+압축을 풀면 바탕화면에 **`parksystems-workshop`** 폴더가 생겨요. **Windows는 자동 풀기 특성상 같은 이름 폴더가 한 단계 더 생겨요.** 안쪽 `parksystems-workshop\` 폴더 안에 `CLAUDE.md`, `.claude`, `3_파일정리`, `4_PM에이전트`, `5_매뉴얼`이 보이면 정답이에요.
 
-**Step 3. 터미널에서 해당 폴더로 이동해 주세요.**
+![작업 폴더 구조 — 안쪽 parksystems-workshop 안에 CLAUDE.md가 있어야 정답](/images/workshop-folder-structure.png)
 
-`cd`는 "change directory(폴더 이동)"의 줄임말이에요.
+> ⭐ 위 이미지처럼 **`CLAUDE.md` 파일이 보이는 폴더가 우리의 작업 폴더**예요. 이 위치에서 클로드 코드를 실행해야 워크북의 모든 파일 경로가 맞아요.
 
-> 💡 **가장 쉬운 방법**: 파일 탐색기/Finder에서 `parksystems-workshop\` 폴더 우클릭 → "터미널에서 열기" (Windows 11) / "새 터미널" (Mac). 그러면 `cd` 명령 안 써도 돼요.
+**Step 3. 터미널에서 작업 폴더로 이동해 주세요.**
 
-Windows PowerShell (Desktop에 풀린 경우 예시):
+`cd`는 "change directory(폴더 이동)"의 줄임말이에요. **안쪽 `parksystems-workshop\` 폴더까지 한 번에 들어가요.**
+
+Windows PowerShell — 아래 명령어 그대로 복사해서 붙여넣어 주세요:
 ```
-cd C:\Users\USER\Desktop\parksystems-workshop
+cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
 ```
-> "USER" 부분은 본인의 Windows 사용자명으로 바꿔주세요. 사용자명을 모르겠다면 파일 탐색기에서 `C:\Users` 폴더를 열어 본인 폴더명을 확인할 수 있어요.
+> 💡 위 명령어가 본인 경로와 다르다면 (Windows 사용자명이 `User`가 아니거나 다른 위치에 풀었으면), 파일 탐색기에서 `CLAUDE.md`가 보이는 폴더를 연 다음 **주소창을 클릭**해서 전체 경로를 복사하고 `cd ` 뒤에 붙여넣으세요.
 >
-> 다른 위치에 풀었거나 한 단계 더 들어갔으면 본인 경로로 수정.
+> 💡 **더 쉬운 방법**: 파일 탐색기에서 **`CLAUDE.md`가 보이는 폴더 우클릭 → "터미널에서 열기"** (Windows 11). 그러면 `cd` 명령 안 써도 돼요.
 
 Mac/Linux 터미널:
 ```
-cd ~/Desktop/parksystems-workshop
+cd ~/Desktop/parksystems-workshop/parksystems-workshop
 ```
+> 💡 Mac은 보통 한 단계 폴더만 생기지만 (`~/Desktop/parksystems-workshop`만으로 OK일 수도), `CLAUDE.md`가 보이는 위치까지 들어가는 게 핵심이에요.
 
 **Step 4. 클로드 코드를 실행해 주세요.**
 
