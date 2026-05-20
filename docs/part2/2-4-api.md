@@ -164,7 +164,7 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 
 **중요 — 호출 규칙**:
 - 도구를 **한 번에 바로 호출** (sleep 명령 사용 금지)
-- MCP 서버 미설치 시 사용자에게 "uv tool install arxiv-mcp-server 실행 후 클로드 코드 재시작 필요" 안내
+- MCP 서버 미등록 시 사용자에게 "워크북 6 챕터 Step 1~4 (uv tool install → claude mcp add --scope user → claude 재시작 → /mcp 확인) 진행 필요" 안내
 ```
 
 > 💡 이 파일은 zip에 미리 들어 있어요. 위 프롬프트는 학습 흐름 이해용으로만 보고, 실행 없이 다음 단계로 넘어가세요.
@@ -248,7 +248,7 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 ## [체크포인트]
 
 - [ ] **MCP = 클로드가 외부 도구를 안전하게 쓰는 표준** 이라는 점을 이해함
-- [ ] `uv tool install arxiv-mcp-server` 설치 + Claude Code 재시작 확인
+- [ ] `claude mcp add --scope user` 명령으로 arxiv-mcp-server 등록 + `/mcp` 에서 connected 확인
 - [ ] 슬래시 커맨드 정의(`.claude/commands/find-evidence.md`)를 보고 어떻게 만드는지 이해함
 - [ ] `/find-evidence` 한 번으로 학술 자료 5개 + BibTeX가 정리되는 걸 직접 봄
 - [ ] 매뉴얼 본문에 학술 인용이 자연스럽게 통합되는 걸 확인함
