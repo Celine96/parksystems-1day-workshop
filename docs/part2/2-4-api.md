@@ -56,56 +56,44 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 ## [실습] arxiv-mcp-server 설치
 
-### Step 1. arxiv-mcp-server 설치 — 클로드한테 자연어로 부탁
+### Step 1. arxiv-mcp-server 셋업 — 클로드한테 자연어로 부탁
 
-명령어 외울 필요 없어요. 클로드한테 그냥 부탁하면 알아서 본인 OS 확인하고 설치해줘요.
+명령어 외울 필요 없어요. 클로드한테 **한 번에** 부탁하면 설치 + 등록 명령어까지 다 만들어줘요.
 
 📝 **프롬프트 입력**
 
 ```
-arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
+arxiv 학술 검색을 위해 arxiv-mcp-server를 Claude Code에 셋업하고 싶어.
 참고: https://github.com/blazickjp/arxiv-mcp-server
 
-내 OS 자동 확인하고, 필요하면 uv(Python 도구 매니저)도 같이 설치해줘.
-설치 진행 상황을 단계별로 알려주고, 끝나면 다음에 뭘 해야 하는지 안내해줘.
+내 OS·현재 작업 폴더 자동 확인하고:
+1. 필요하면 uv(Python 도구 매니저) 설치
+2. arxiv-mcp-server 패키지 설치
+3. 워크숍 폴더 안 6_arxiv_papers/ 폴더 생성 (논문 캐시용)
+4. 'claude mcp add arxiv-mcp-server --scope user --' 형태의 등록 명령어 한 줄 만들어주기
+   (storage-path는 6_arxiv_papers/ 절대 경로로, --scope user로 본업 재사용 가능하게)
+
+각 단계 진행 상황 알려주고, 마지막에 등록 명령어를 보여줘.
 ```
 
 클로드가 알아서:
 - 본인 OS 확인 (Mac / Windows / Linux)
 - uv 설치 (없으면)
 - arxiv-mcp-server 설치
-- 결과 보고
+- `6_arxiv_papers/` 폴더 생성
+- 마지막에 **등록 명령어 한 줄** 출력
 
 > 💡 **권한 에러가 뜨면** 클로드한테 "이 에러가 떴어. 어떻게 해결해?"라고 그대로 붙여넣어 물어보세요.
 
-### Step 2. MCP 등록 명령어 받기 — 클로드한테 자연어로 부탁
+### Step 2. 받은 명령어를 일반 터미널에서 실행
 
-설치한 MCP를 Claude Code에 **등록**해야 사용할 수 있어요. 등록 명령어는 본인 환경마다 경로가 다른데, 클로드한테 부탁하면 알아서 만들어줘요.
-
-📝 **프롬프트 입력**
-
-```
-arxiv-mcp-server를 Claude Code에 등록하고 싶어. 내 환경(현재 작업 폴더)에 맞춰서
-'claude mcp add' 명령어 한 줄을 만들어줘.
-
-- storage-path는 워크숍 폴더 안 6_arxiv_papers/ (없으면 만들어줘)
-- --scope user로 등록 (본업에서도 같은 MCP 재사용 가능하게)
-```
-
-클로드가 알아서:
-- 현재 경로 확인
-- `6_arxiv_papers/` 폴더 생성
-- 본인 환경에 맞는 `claude mcp add ...` 명령어 한 줄 생성
-
-### Step 3. 받은 명령어 실행 — 일반 터미널에서
-
-현재 Claude Code 세션 종료:
+Claude Code 세션 종료:
 
 ```
 /exit
 ```
 
-위에서 클로드가 만들어준 명령어를 **일반 PowerShell/터미널**(Claude Code 안이 아닌)에 그대로 붙여넣어 실행하세요. 형태는 이런 모양:
+위에서 클로드가 만들어준 등록 명령어를 **일반 PowerShell/터미널**(Claude Code 안이 아닌)에 그대로 붙여넣어 실행하세요. 형태는 이런 모양:
 
 ```
 claude mcp add arxiv-mcp-server --scope user -- uv tool run arxiv-mcp-server --storage-path "C:\...\6_arxiv_papers"
@@ -113,7 +101,7 @@ claude mcp add arxiv-mcp-server --scope user -- uv tool run arxiv-mcp-server --s
 
 > 💡 `--scope user`로 등록해두면 본업에서 다른 폴더로 가도 같은 MCP를 그대로 쓸 수 있어요.
 
-### Step 4. Claude Code 재시작 → 등록 확인
+### Step 3. Claude Code 재시작 → 등록 확인
 
 터미널에서 다시:
 
@@ -164,7 +152,7 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 
 **중요 — 호출 규칙**:
 - 도구를 **한 번에 바로 호출** (sleep 명령 사용 금지)
-- MCP 서버 미등록 시 사용자에게 "워크북 6 챕터 Step 1~4 (uv tool install → claude mcp add --scope user → claude 재시작 → /mcp 확인) 진행 필요" 안내
+- MCP 서버 미등록 시 사용자에게 "워크북 6 챕터 Step 1~3 (클로드한테 셋업 부탁 → 받은 명령어 일반 터미널에서 실행 → claude 재시작 후 /mcp 확인) 진행 필요" 안내
 ```
 
 > 💡 이 파일은 zip에 미리 들어 있어요. 위 프롬프트는 학습 흐름 이해용으로만 보고, 실행 없이 다음 단계로 넘어가세요.
@@ -248,7 +236,7 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 ## [체크포인트]
 
 - [ ] **MCP = 클로드가 외부 도구를 안전하게 쓰는 표준** 이라는 점을 이해함
-- [ ] `claude mcp add --scope user` 명령으로 arxiv-mcp-server 등록 + `/mcp` 에서 connected 확인
+- [ ] arxiv-mcp-server 설치 + `claude mcp add --scope user`로 등록 + `/mcp` 에서 connected 확인
 - [ ] 슬래시 커맨드 정의(`.claude/commands/find-evidence.md`)를 보고 어떻게 만드는지 이해함
 - [ ] `/find-evidence` 한 번으로 학술 자료 5개 + BibTeX가 정리되는 걸 직접 봄
 - [ ] 매뉴얼 본문에 학술 인용이 자연스럽게 통합되는 걸 확인함
