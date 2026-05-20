@@ -56,58 +56,38 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 ## [실습] arxiv-mcp-server 설치
 
-### Step 1. arxiv-mcp-server 셋업 — 클로드한테 자연어로 부탁
+### Step 1. 클로드한테 셋업 부탁
 
-명령어 외울 필요 없어요. 클로드한테 **한 번에** 부탁하면 설치 + 등록 명령어까지 다 만들어줘요.
+명령어 외울 필요 없어요. 클로드한테 그냥 부탁하면 알아서 본인 OS 확인하고, 설치하고, 다음에 뭘 해야 하는지까지 안내해줘요.
 
 📝 **프롬프트 입력**
 
 ```
-arxiv 학술 검색을 위해 arxiv-mcp-server를 Claude Code에 셋업하고 싶어.
+arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
 참고: https://github.com/blazickjp/arxiv-mcp-server
 
-내 OS·현재 작업 폴더 자동 확인하고:
-1. 필요하면 uv(Python 도구 매니저) 설치
-2. arxiv-mcp-server 패키지 설치
-3. 워크숍 폴더 안 6_arxiv_papers/ 폴더 생성 (논문 캐시용)
-4. 'claude mcp add arxiv-mcp-server --scope user --' 형태의 등록 명령어 한 줄 만들어주기
-   (storage-path는 6_arxiv_papers/ 절대 경로로, --scope user로 본업 재사용 가능하게)
-
-각 단계 진행 상황 알려주고, 마지막에 등록 명령어를 보여줘.
+내 OS 자동 확인하고, 필요하면 uv(Python 도구 매니저)도 같이 설치해줘.
+설치 진행 상황을 단계별로 알려주고, 끝나면 다음에 뭘 해야 하는지 안내해줘.
 ```
 
 클로드가 알아서:
 - 본인 OS 확인 (Mac / Windows / Linux)
 - uv 설치 (없으면)
 - arxiv-mcp-server 설치
-- `6_arxiv_papers/` 폴더 생성
-- 마지막에 **등록 명령어 한 줄** 출력
+- **다음 단계 안내** (등록 명령어 한 줄 + 재시작 방법)
 
 > 💡 **권한 에러가 뜨면** 클로드한테 "이 에러가 떴어. 어떻게 해결해?"라고 그대로 붙여넣어 물어보세요.
 
-### Step 2. 받은 명령어를 일반 터미널에서 실행
+### Step 2. 클로드가 안내한 대로 따라가기
 
-Claude Code 세션 종료:
+보통 이런 흐름으로 안내해요:
+1. Claude Code 종료 (`/exit`)
+2. **일반 PowerShell/터미널**에서 `claude mcp add ...` 명령어 한 줄 실행
+3. `claude` 로 다시 시작
 
-```
-/exit
-```
+받은 명령어·안내 그대로 따라하시면 돼요. 디테일은 클로드가 본인 환경에 맞춰 만들어줘요.
 
-위에서 클로드가 만들어준 등록 명령어를 **일반 PowerShell/터미널**(Claude Code 안이 아닌)에 그대로 붙여넣어 실행하세요. 형태는 이런 모양:
-
-```
-claude mcp add arxiv-mcp-server --scope user -- uv tool run arxiv-mcp-server --storage-path "C:\...\6_arxiv_papers"
-```
-
-> 💡 `--scope user`로 등록해두면 본업에서 다른 폴더로 가도 같은 MCP를 그대로 쓸 수 있어요.
-
-### Step 3. Claude Code 재시작 → 등록 확인
-
-터미널에서 다시:
-
-```
-claude
-```
+### Step 3. 등록 확인
 
 대화창에서:
 
