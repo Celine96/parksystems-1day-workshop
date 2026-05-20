@@ -6,7 +6,7 @@
 
 <div style="flex: 1; min-width: 280px;">
 
-<p style="font-size: 1.05em; color: var(--vp-c-text-1); font-weight: 600; margin: 0 0 4px;">AI Technical PM · AX</p>
+<p style="font-size: 1.05em; color: var(--vp-c-text-1); font-weight: 600; margin: 0 0 4px;">AI Technical PM · AX 담당</p>
 <p style="color: var(--vp-c-text-2); font-size: 0.9em; margin: 0 0 4px;">서안개발(주) 부동산 컨설팅팀 (신사업팀)</p>
 <p style="color: var(--vp-c-text-2); font-size: 0.9em; margin: 0 0 16px;">디랩스 대표</p>
 
