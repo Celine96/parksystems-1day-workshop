@@ -78,38 +78,44 @@ claude --version
 
 > ⭐ 위 이미지처럼 **`CLAUDE.md` 파일이 보이는 폴더가 우리의 작업 폴더**예요. 이 위치에서 클로드 코드를 실행해야 워크북의 모든 파일 경로가 맞아요.
 
-**Step 3. 터미널에서 작업 폴더로 이동해 주세요.**
+**Step 3. 작업 폴더에서 클로드 코드 실행**
 
-`cd`는 "change directory(폴더 이동)"의 줄임말이에요. **안쪽 `parksystems-workshop\` 폴더까지 한 번에 들어가요.**
+`CLAUDE.md`가 보이는 폴더에서 클로드 코드를 실행해야 워크북의 모든 파일 경로가 맞아요. 두 가지 방법 중 편한 걸 선택하세요.
 
-Windows PowerShell — 아래 명령어 그대로 복사해서 붙여넣어 주세요:
-```
-cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
-```
-> 💡 위 명령어가 본인 경로와 다르다면 (Windows 사용자명이 `User`가 아니거나 다른 위치에 풀었으면), 파일 탐색기에서 `CLAUDE.md`가 보이는 폴더를 연 다음 **주소창을 클릭**해서 전체 경로를 복사하고 `cd ` 뒤에 붙여넣으세요.
->
-> 💡 **더 쉬운 방법**: 파일 탐색기에서 **`CLAUDE.md`가 보이는 폴더 우클릭 → "터미널에서 열기"** (Windows 11). 그러면 `cd` 명령 안 써도 돼요.
+**🅰️ 우클릭 → 터미널에서 열기** (Windows 11 / Mac, 가장 쉬움 — `cd` 안 써도 됨)
 
-Mac/Linux 터미널:
-```
-cd ~/Desktop/parksystems-workshop/parksystems-workshop
-```
-> 💡 Mac은 보통 한 단계 폴더만 생기지만 (`~/Desktop/parksystems-workshop`만으로 OK일 수도), `CLAUDE.md`가 보이는 위치까지 들어가는 게 핵심이에요.
-
-**Step 4. 클로드 코드를 실행해 주세요.**
+1. 파일 탐색기/Finder에서 위 이미지처럼 `CLAUDE.md`가 보이는 폴더 우클릭
+2. "터미널에서 열기" (Windows 11) 또는 "새 터미널" (Mac) 선택
+3. 열린 터미널에 아래 입력:
 
 ```
 claude
 ```
 
-**Step 5. 로그인해 주세요.**
+**🅱️ cd 명령으로 이동 후 실행** (직접 경로 입력)
+
+Windows PowerShell — 아래 두 줄 그대로 복사해서 붙여넣어 주세요:
+```
+cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
+claude
+```
+
+Mac/Linux:
+```
+cd ~/Desktop/parksystems-workshop/parksystems-workshop
+claude
+```
+
+> 💡 본인 경로와 다르다면 (Windows 사용자명이 `User`가 아니거나 다른 위치에 풀었으면), 파일 탐색기에서 `CLAUDE.md`가 보이는 폴더를 연 다음 **주소창 클릭**해서 전체 경로를 복사하고 `cd ` 뒤에 붙여넣으세요.
+
+**Step 4. 로그인해 주세요.**
 
 - "Claude account with subscription"을 선택해 주세요. (Anthropic Console이 아닌, 구독 계정 옵션을 선택하세요.)
 - 브라우저가 열리면 Claude 계정으로 로그인해 주세요.
 - 로그인 완료 후 터미널로 돌아와 주세요.
 - 텍스트 스타일을 선택하라는 안내가 나오면, 원하는 스타일을 선택해 주세요.
 
-**Step 6. 아래와 비슷한 화면이 나오면 성공이에요:**
+**Step 5. 아래와 비슷한 화면이 나오면 성공이에요:**
 
 ```
 ╭──────────────────────────────────────╮
