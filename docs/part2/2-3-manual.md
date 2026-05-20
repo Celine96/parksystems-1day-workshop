@@ -151,7 +151,25 @@ NX-Interferom 매뉴얼의 Chapter 1 General Information / Introduction
 
 `5_매뉴얼/output/Chapter1_Intro.md` 파일이 생성되었습니다.
 
-<SectionTitle icon="💬" title="에디터 에이전트는 이렇게 답해요" sub="회사 스타일로 변환된 결과" />
+<SectionTitle icon="💬" title="에디터 에이전트는 이렇게 답해요" sub="변환 완료 보고 → 변환 결과" spacious />
+
+> **① 변환 완료 보고**
+
+```
+● Editor 에이전트가 변환 완료했어요.
+
+  저장 위치: 5_매뉴얼/output/Chapter1_Intro.md
+
+  구성 확인:
+  - Chapter 1 General Information → Introduction → Key Features 구조
+  - AFM·AFP·WLI 약어 첫 등장 시 풀네임 병기
+  - (Figure 1.1 NX-Interferom) placeholder만 자리잡음
+  - 푸터 NXT1518-IN2-C0.00-EN May 20, 2026 형식 적용
+  - raw data 5개 단락 핵심 정보(제품 정의, 3-in-1 통합, AFM Z-scanner 활용,
+    4대 proprietary 기술, SEMI 표준·반도체 응용) 모두 반영
+```
+
+> **② 변환된 본문**
 
 ```markdown
 # Chapter 1
