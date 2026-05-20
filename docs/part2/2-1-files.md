@@ -167,7 +167,7 @@ cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
 
 **Enter 누르기 전에 — Nimbalyst에서 `4_PM에이전트/` 폴더 위치를 한 번 펼쳐두세요.** 정리 결과(RFM, LOM)가 그 안에 만들어지니, 미리 보고 있어야 변화를 놓치지 않아요.
 
-**Enter 누르고 옆 창문을 보세요.** 폴더가 하나씩 만들어지고, 파일이 옮겨지는 모습이 눈앞에서 펼쳐져요.
+**Enter 누르고 옆 Nimbalyst 창을 보세요.** 폴더가 하나씩 만들어지고, 파일이 옮겨지는 모습이 눈앞에서 펼쳐져요.
 
 > ⏱️ 30초~1분이면 끝나요. 손으로 했으면 30분이 걸렸을 일이에요.
 
