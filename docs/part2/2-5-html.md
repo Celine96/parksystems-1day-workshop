@@ -54,15 +54,22 @@ description: 매뉴얼 .md 파일을 보기 좋은 HTML 페이지로 변환하�
 <SectionTitle icon="💬" title="클로드 코드는 이렇게 답해요" sub="HTML 변환 결과" />
 
 ```
-● Markdown 내용을 회사 매뉴얼 스타일 HTML로 변환합니다.
+● HTML 변환 완료. 저장 위치: 5_매뉴얼/output/Chapter1_Intro.html
 
-  파일 위치
+  적용된 스타일
+  - 격식 톤 — Park Systems 매뉴얼 느낌의 네이비 액센트(#003a70), 본문 justify 정렬,
+    사이드 라벨("Chapter 1 / General Information")
+  - 챕터 헤더 — 큰 챕터 번호 + 서브타이틀 2단 구성, 액센트 룰 라인
+  - 본문 가독성 — Helvetica/Pretendard 폴백, line-height 1.7, 880px 페이퍼 폭, 패딩 넉넉
+  - 인용 표시 — [1] [2]를 <sup>로 윗첨자 처리, References 섹션은 hanging indent
+  - Figure 자리 — 점선 박스 placeholder + 캡션
+  - 표·코드 블록 — 액센트 컬러 좌측 보더, 호버 효과 포함
+  - 모바일 반응형 — 720px 이하에서 패딩 축소·정렬 좌측·폰트 크기 조정
+  - 인쇄 CSS — @page 마진, 컬러 흑백 변환, 링크 URL 자동 출력,
+    page-break 제어, 푸터 고정
 
-  5_매뉴얼/output/
-  ├── Chapter1_Intro.md
-  └── Chapter1_Intro.html   ← 새로 생성
-
-  브라우저에서 확인하고, 필요하면 Ctrl+P로 인쇄 미리보기까지 점검해보세요.
+  브라우저에서 바로 열거나 PDF로 인쇄하면 양쪽 다 깔끔하게 나옵니다.
+  다음 챕터도 같은 스타일로 변환할 수 있어요.
 ```
 
 생성된 `Chapter1_Intro.html` 파일을 파일 탐색기에서 **더블클릭** 하세요. 기본 브라우저에서 깔끔한 웹페이지로 열려요.
