@@ -92,9 +92,9 @@ You: 이 raw data 가지고 NX-Hybrid WLI Chapter 1 형식으로 매뉴얼 써�
 5. 페이지 하단 문서 번호·발행일 형식
 ```
 
-> 💡 이 파일은 zip에 미리 들어 있어요. **새로 만들지 않고 다음 단계로 넘어가세요.**
+> 💡 이 파일은 zip에 미리 들어 있어요. 위 프롬프트는 학습 흐름 이해용으로만 보고, 실행 없이 다음 단계로 넘어가세요.
 
-`.claude/agents/Editor.md` 파일이 생성되었습니다.
+**(참고)** 직접 실행하면 `.claude/agents/Editor.md` 파일이 만들어져요.
 
 <SectionTitle icon="💬" title="에디터 에이전트는 이렇게 답해요" sub="추출한 회사 형식 9개 섹션 보고" spacious />
 
