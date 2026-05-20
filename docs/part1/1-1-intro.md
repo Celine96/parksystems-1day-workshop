@@ -54,8 +54,8 @@ AI 도구는 시대별로 **달성하려는 목적**이 달라졌어요.
 
 <SectionTitle icon="🌐" title="AI Native 흐름" sub="비개발자도 기획부터 구현까지" />
 
-> - 다양한 제품의 **MCP 연동성**과 **스킬 제작**으로 Claude Code에서 기획부터 구현까지 AI Native로 업무 자동화·위임이 가능
 > - 비개발자 도메인의 사람들도 터미널 허들만 한 번 넘기면, **기획-구현-검수 에이전트들을 개별로 만들어 loop로 완성도 있는 결과물**을 만들어내는 추세
+> - 다양한 제품의 **MCP 연동성**과 **스킬 제작**으로 Claude Code에서 기획부터 구현까지 AI Native로 업무 자동화·위임이 가능
 
 <SectionTitle icon="✅" title="Claude Code의 강점" sub="파일·자체 처리·md 전달" />
 
