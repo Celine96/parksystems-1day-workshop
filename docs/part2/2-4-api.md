@@ -78,31 +78,56 @@ arxiv 학술 검색을 위해 arxiv-mcp-server를 설치하고 싶어.
 
 > 💡 **권한 에러가 뜨면** 클로드한테 "이 에러가 떴어. 어떻게 해결해?"라고 그대로 붙여넣어 물어보세요.
 
-### Step 2. Claude Code 재시작
+### Step 2. MCP 등록 명령어 받기 — 클로드한테 자연어로 부탁
 
-설치된 MCP 도구를 클로드가 인식하려면 한 번 재시작이 필요해요.
-
-대화창에서:
-```
-/exit
-```
-
-터미널에서 다시:
-```
-claude
-```
-
-> 💡 zip 안 `.claude/settings.json`에 arxiv-mcp-server가 **미리 등록**되어 있어서 재시작만 하면 자동 로드됩니다.
-
-### Step 4. MCP 도구 인식 확인
+설치한 MCP를 Claude Code에 **등록**해야 사용할 수 있어요. 등록 명령어는 본인 환경마다 경로가 다른데, 클로드한테 부탁하면 알아서 만들어줘요.
 
 📝 **프롬프트 입력**
 
 ```
-지금 사용 가능한 MCP 도구 목록 보여줘. arxiv 관련 도구(search_papers, download_paper 등)가 있는지 확인.
+arxiv-mcp-server를 Claude Code에 등록하고 싶어. 내 환경(현재 작업 폴더)에 맞춰서
+'claude mcp add' 명령어 한 줄을 만들어줘.
+
+- storage-path는 워크숍 폴더 안 6_arxiv_papers/ (없으면 만들어줘)
+- --scope user로 등록 (본업에서도 같은 MCP 재사용 가능하게)
 ```
 
-→ `search_papers`, `download_paper`, `read_paper` 등이 보이면 셋업 완료. 다음 단계로.
+클로드가 알아서:
+- 현재 경로 확인
+- `6_arxiv_papers/` 폴더 생성
+- 본인 환경에 맞는 `claude mcp add ...` 명령어 한 줄 생성
+
+### Step 3. 받은 명령어 실행 — 일반 터미널에서
+
+현재 Claude Code 세션 종료:
+
+```
+/exit
+```
+
+위에서 클로드가 만들어준 명령어를 **일반 PowerShell/터미널**(Claude Code 안이 아닌)에 그대로 붙여넣어 실행하세요. 형태는 이런 모양:
+
+```
+claude mcp add arxiv-mcp-server --scope user -- uv tool run arxiv-mcp-server --storage-path "C:\...\6_arxiv_papers"
+```
+
+> 💡 `--scope user`로 등록해두면 본업에서 다른 폴더로 가도 같은 MCP를 그대로 쓸 수 있어요.
+
+### Step 4. Claude Code 재시작 → 등록 확인
+
+터미널에서 다시:
+
+```
+claude
+```
+
+대화창에서:
+
+```
+/mcp
+```
+
+→ `arxiv-mcp-server`가 **connected** 상태로 보이면 셋업 완료. 다음 단계로.
 
 ## [실습] 학술 근거 수집 슬래시 커맨드 만들기
 

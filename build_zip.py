@@ -147,7 +147,8 @@ print(f"[OK] .claude/ 미리 셋업 ({len(preset_files)}개 파일):")
 for p in preset_files:
     print(f"     - {p}")
 
-# .claude/settings.json — 권한 자동 허용 + arxiv MCP 셋업
+# .claude/settings.json — 권한 자동 허용
+# (arxiv MCP는 워크북 6 챕터에서 학습자가 'claude mcp add --scope user'로 직접 등록)
 settings_payload = {
     "permissions": {
         "defaultMode": "auto",
@@ -157,18 +158,6 @@ settings_payload = {
             "Edit(./.claude/agents/**)",
             "Edit(./.claude/commands/**)"
         ]
-    },
-    "mcpServers": {
-        "arxiv-mcp-server": {
-            "command": "uv",
-            "args": [
-                "tool",
-                "run",
-                "arxiv-mcp-server",
-                "--storage-path",
-                "./.arxiv-papers"
-            ]
-        }
     }
 }
 (ROOT / ".claude" / "settings.json").write_text(
