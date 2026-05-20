@@ -86,24 +86,28 @@ raw_files/
 
 이제 터미널 창으로 가서 클로드 코드를 실행하세요.
 
-> ⚠️ **`parksystems-workshop` 폴더 찾아 들어가기** (가장 중요!)
+> ⚠️ **`CLAUDE.md` 파일이 있는 위치에서 실행해야 해요** (가장 중요!)
 >
-> zip 압축 해제 도구·OS마다 결과가 달라요. **공통점: 어딘가에 `parksystems-workshop\` 폴더가 있어요.**
+> 바탕화면에 zip을 풀면 Windows 자동 풀기 특성상 **같은 이름 폴더가 한 단계 더 생겨요**:
 >
-> 1. 파일 탐색기(Windows) 또는 Finder(Mac)에서 압축 푼 위치를 열어요
-> 2. 안으로 한두 단계 들어가면 **`parksystems-workshop\` 폴더**가 보여요 (그 안에 `3_파일정리`, `4_PM에이전트`, `5_매뉴얼`, `.claude` 등이 있어야 정답)
-> 3. **그 폴더에서 `claude` 를 실행**해야 워크북의 모든 파일 경로가 맞아요
+> ```
+> C:\Users\User\Desktop\parksystems-workshop\          ← 바깥 껍데기
+>   └── parksystems-workshop\                          ← ⭐ 여기에 CLAUDE.md 있음
+>         ├── CLAUDE.md
+>         ├── 3_파일정리/
+>         ├── 4_PM에이전트/
+>         ├── 5_매뉴얼/
+>         └── .claude/
+> ```
 >
-> 💡 가장 쉬운 방법: 파일 탐색기에서 `parksystems-workshop\` 폴더 우클릭 → "터미널에서 열기" (Windows 11) / "새 터미널" (Mac).
->
-> 터미널에서 직접 `cd` 명령 쓰는 분은 본인 경로에 맞춰 (Desktop에 풀었으면 예시 그대로 OK):
+> **`CLAUDE.md`가 있는 안쪽 폴더로 들어가서** `claude`를 실행해야 워크북의 모든 파일 경로가 맞아요.
 
 ```
-cd ~/Desktop/parksystems-workshop      # Mac/Linux
+cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
 claude
 ```
-> Windows: `cd "C:\Users\USER\Desktop\parksystems-workshop"`
-> (Windows 자동 풀기는 같은 이름 폴더 한 단계 더 만들 수 있어요. 예: `cd ~/Desktop/parksystems-workshop/parksystems-workshop`)
+
+> 💡 Mac/Linux는: `cd ~/Desktop/parksystems-workshop/parksystems-workshop`
 
 클로드 코드 대화창이 열리면, 옆 **Nimbalyst** 창(또는 fallback으로 파일 탐색기/Finder)을 잘 보면서 아래 명령을 그대로 복사해서 붙여넣어 주세요.
 
