@@ -83,31 +83,7 @@ raw_files/
 
 ## [실습] 명령 한 번으로 파일 정리
 
-앞 챕터에서 띄운 클로드 코드 창에서, **작업할 폴더로 `cd` 이동**만 하면 돼요.
-
-> ⚠️ **`CLAUDE.md` 파일이 있는 위치로 이동해야 해요** (가장 중요!)
->
-> 바탕화면에 zip을 풀면 Windows 자동 풀기 특성상 **같은 이름 폴더가 한 단계 더 생겨요**:
->
-> ```
-> C:\Users\User\Desktop\parksystems-workshop\          ← 바깥 껍데기
->   └── parksystems-workshop\                          ← ⭐ 여기에 CLAUDE.md 있음
->         ├── CLAUDE.md
->         ├── 3_파일정리/
->         ├── 4_PM에이전트/
->         ├── 5_매뉴얼/
->         └── .claude/
-> ```
->
-> **`CLAUDE.md`가 있는 안쪽 폴더로 이동**해야 워크북의 모든 파일 경로가 맞아요.
-
-```
-cd C:\Users\User\Desktop\parksystems-workshop\parksystems-workshop
-```
-
-> 💡 Mac/Linux는: `cd ~/Desktop/parksystems-workshop/parksystems-workshop`
-
-클로드 코드 대화창이 열리면, 옆 **Nimbalyst** 창(또는 fallback으로 파일 탐색기/Finder)을 잘 보면서 아래 명령을 그대로 복사해서 붙여넣어 주세요.
+앞 챕터에서 띄운 클로드 코드 창에 아래 명령을 그대로 복사해서 붙여넣어 주세요. 옆 **Nimbalyst** 창(또는 fallback으로 파일 탐색기/Finder)을 잘 보면서 진행하면 변화가 한눈에 보여요.
 
 <SectionTitle icon="📌" title="명령에 쓸 용어 3가지" sub="회사 매뉴얼 작업 폴더 구조" />
 
