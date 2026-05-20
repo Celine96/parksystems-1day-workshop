@@ -72,7 +72,7 @@ claude --version
 
 **Step 2. 사전에 공유받은 zip 파일을 바탕화면에 압축 해제해 주세요.**
 
-압축을 풀면 바탕화면에 **`parksystems-workshop`** 폴더가 생겨요. **Windows는 자동 풀기 특성상 같은 이름 폴더가 한 단계 더 생겨요.** 안쪽 `parksystems-workshop\` 폴더 안에 `CLAUDE.md`, `.claude`, `3_파일정리`, `4_PM에이전트`, `5_매뉴얼`이 보이면 정답이에요.
+압축을 풀면 바탕화면에 **`parksystems-workshop`** 폴더가 생겨요. **Windows는 자동 풀기 특성상 같은 이름 폴더가 한 단계 더 생기고, Mac/Linux는 한 단계만 생겨요.** 어느 쪽이든 **`CLAUDE.md`, `.claude`, `3_파일정리`, `4_PM에이전트`, `5_매뉴얼`이 보이는 폴더**가 작업 폴더예요.
 
 ![작업 폴더 구조 — 안쪽 parksystems-workshop 안에 CLAUDE.md가 있어야 정답](/images/workshop-folder-structure.png)
 
@@ -102,7 +102,7 @@ claude
 
 Mac/Linux:
 ```
-cd ~/Desktop/parksystems-workshop/parksystems-workshop
+cd ~/Desktop/parksystems-workshop
 claude
 ```
 
