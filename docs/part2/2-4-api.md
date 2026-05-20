@@ -205,6 +205,10 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
 > 3. 결과 5개를 정해준 형식으로 정리
 > 4. BibTeX 참고문헌까지 함께 출력
 
+<SectionTitle icon="💬" title="클로드 코드는 이렇게 답해요" sub="진행 → 결과 → 판단 메모" spacious />
+
+> **① 먼저 스킬과 MCP 도구를 로드해요** — 실행 전 "이렇게 진행할 거예요" 안내
+
 ```
 ● Skill(/find-evidence)
   ⎿  Successfully loaded skill
@@ -214,7 +218,7 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
   Called arxiv-mcp-server (ctrl+o to expand)
 ```
 
-<SectionTitle icon="💬" title="클로드 코드는 이렇게 답해요" sub="학술 자료 + 매뉴얼 인용 코멘트" />
+> **② 결과 5개를 정해준 형식으로 정리해요** — 학술 자료 + 매뉴얼 인용 코멘트
 
 ```
 1. Hybrid Metrology Combining AFM and White Light Interferometry
@@ -224,7 +228,11 @@ description: arxiv MCP 도구로 학술 프리프린트 5개를 찾고 한 줄�
    - 매뉴얼 인용: Park's NX-Interferom의 기술적 배경 강화 가능
 
 2. ...
+```
 
+> **③ 마지막에 판단 메모로 추천을 남겨요** — 학습자가 어떤 자료를 골라야 할지 안내
+
+```
 판단 메모: 5건 중 매뉴얼 본문 인용으로 실효성 있는 건 1번 (Delacroix 2014) 한 건이에요.
 WLI + AFM + SEM을 동일 시료에 대해 보완적으로 운용한 직접 사례라서
 NX-Interferom의 multi-scale metrology 가치 제안을 학술적으로 뒷받침해줘요.
@@ -232,7 +240,9 @@ NX-Interferom의 multi-scale metrology 가치 제안을 학술적으로 뒷받�
 correlative microscopy 같은 키워드로 추가 검색을 권장해요.
 ```
 
-> 💡 **포인트**: 오래 걸리는 일이 30초. 그것도 인용 형식 + 학습자가 어떤 자료를 골라야 할지 **판단 메모**까지.
+> 💡 **포인트**: 클로드는 결과만 던지는 게 아니라 (1) **진행 과정**을 투명하게 알려주고 (2) **결과를 정해준 형식**으로 정리하고 (3) **학습자가 어떤 자료를 골라야 할지 추천 메모**까지 함께 줘요.
+>
+> 💬 학습자 화면의 실제 출력은 사람마다 살짝 달라질 수 있어요. 큰 흐름(진행 → 결과 → 판단)만 같으면 정상이에요.
 
 ## [실습] 매뉴얼에 근거 통합
 
