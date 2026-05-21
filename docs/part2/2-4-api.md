@@ -41,8 +41,8 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 **MCP** (Model Context Protocol) 라는 단어가 자주 보일 거예요. 어렵게 들리지만 풀어쓰면:
 
-> **MCP = 클로드가 외부 도구를 쓰는 표준 약속**
-> Anthropic이 만든 규약. 학술 검색·Slack·GitHub·구글 드라이브 등 다양한 도구를 클로드가 직접 쓸 수 있게 해줘요.
+> **MCP = AI 모델(ChatGPT, Claude Code 같은 LLM)이 외부 도구·데이터·앱과 표준 방식으로 연결되도록 만든 프로토콜입니다.**
+> 학술 검색·Slack·GitHub·구글 드라이브 등 다양한 도구를 클로드가 직접 쓸 수 있게 해줘요.
 
 오늘 우리는 **arxiv-mcp-server**라는 MCP를 써요. 클로드가 arXiv 학술 자료를 직접 검색·요약할 수 있게 해주는 무료 도구예요.
 
