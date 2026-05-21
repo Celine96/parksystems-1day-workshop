@@ -39,7 +39,7 @@ You: NX-Interferom 관련해서 White Light Interferometry + AFM 통합 메트�
 
 ## [개념] 어떻게 가능한 일인가요? — MCP 한 줄로
 
-**MCP** (Model Context Protocol) 라는 단어가 자주 보일 거예요. 어렵게 들리지만 풀어쓰면:
+이번 챕터에서 **MCP** (Model Context Protocol) 라는 단어가 자주 보일 거예요. 어렵게 들리지만 풀어쓰면:
 
 > **MCP = AI 모델(ChatGPT, Claude Code 같은 LLM)이 외부 도구·데이터·앱과 표준 방식으로 연결되도록 만든 프로토콜입니다.**
 > 학술 검색·Slack·GitHub·구글 드라이브 등 다양한 도구를 클로드가 직접 쓸 수 있게 해줘요.
