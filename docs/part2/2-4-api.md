@@ -248,7 +248,7 @@ correlative microscopy 같은 키워드로 추가 검색을 권장해요.
 
 ### Step 7. 매뉴얼에 근거 끼워넣기
 
-5번에서 만든 Chapter 1 Introduction에 학술 근거를 더해봅시다.
+5번 챕터에서 만든 Chapter 1 Introduction에 학술 근거를 더해봅시다.
 
 📝 **프롬프트 입력**
 
